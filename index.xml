@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DCK Solution</title>
+    <title>Hugo Relearn Theme on DCK Solution</title>
     <link>https://dcksol.github.io/index.html</link>
-    <description>Recent content on DCK Solution</description>
+    <description>Recent content in Hugo Relearn Theme on DCK Solution</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 11 Dec 2022 01:19:44 +0900</lastBuildDate><atom:link href="https://dcksol.github.io/index.xml" rel="self" type="application/rss+xml" />
