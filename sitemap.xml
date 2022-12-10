@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/categories/index.html</loc>
+    <loc>https://dcksol.github.io/index.html</loc>
+    <lastmod>2022-12-11T01:19:44+09:00</lastmod>
   </url>
   <url>
-    <loc>http://example.org/index.html</loc>
+    <loc>https://dcksol.github.io/posts/index.html</loc>
+    <lastmod>2022-12-11T01:19:44+09:00</lastmod>
   </url>
   <url>
-    <loc>http://example.org/tags/index.html</loc>
+    <loc>https://dcksol.github.io/posts/test/index.html</loc>
+    <lastmod>2022-12-11T01:19:44+09:00</lastmod>
+  </url>
+  <url>
+    <loc>https://dcksol.github.io/categories/index.html</loc>
+  </url>
+  <url>
+    <loc>https://dcksol.github.io/tags/index.html</loc>
   </url>
 </urlset>

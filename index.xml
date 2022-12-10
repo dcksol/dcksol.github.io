@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://example.org/index.html</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>DCK Solution</title>
+    <link>https://dcksol.github.io/index.html</link>
+    <description>Recent content on DCK Solution</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Dec 2022 01:19:44 +0900</lastBuildDate><atom:link href="https://dcksol.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Posts</title>
+      <link>https://dcksol.github.io/posts/index.html</link>
+      <pubDate>Sun, 11 Dec 2022 01:19:44 +0900</pubDate>
+      <guid>https://dcksol.github.io/posts/index.html</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
