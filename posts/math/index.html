@@ -5,9 +5,8 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.107.0">
     <meta name="generator" content="Relearn 5.8.0+tip">
-    <meta name="description" content="">
-    <title>DCK Solution</title>
-    <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="DCK Solution">
+    <meta name="description" content="Beautiful math and chemical formulae">
+    <title>Math - DCK Solution</title>
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/css/fontawesome-all.min.css?1670724418" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1670724418" rel="stylesheet"></noscript>
     <link href="/css/featherlight.min.css?1670724418" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1670724418" rel="stylesheet"></noscript>
@@ -40,7 +39,7 @@
     </script>
     <script src="/js/jquery.min.js?1670724418" defer></script>
   </head>
-  <body class="mobile-support html" data-url="/posts/index.html">
+  <body class="mobile-support html" data-url="/posts/math/index.html">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
@@ -50,9 +49,37 @@
             <span id="sidebar-toggle-span">
               <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
             </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
             <span class="links">
-              DCK Solution
+              Math
             </span>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper" dir="ltr">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#parameter">Parameter</a></li>
+      </ul>
+    </li>
+    <li><a href="#configuration">Configuration</a>
+      <ul>
+        <li><a href="#global-configuration-file">Global Configuration File</a></li>
+        <li><a href="#pages-frontmatter">Page&rsquo;s Frontmatter</a></li>
+      </ul>
+    </li>
+    <li><a href="#examples">Examples</a>
+      <ul>
+        <li><a href="#inline-math">Inline Math</a></li>
+        <li><a href="#blocklevel-math-with-right-alignment">Blocklevel Math with Right Alignment</a></li>
+        <li><a href="#codefence">Codefence</a></li>
+        <li><a href="#chemical-formulae">Chemical Formulae</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
           </div>
         </div>
       </nav>
@@ -61,9 +88,152 @@
           <div id="head-tags">
           </div>
           <article class="default">
-<h1 id="dck-solution">DCK Solution</h1>
+<h1 id="math">Math</h1>
 
-<p>DCK Solution 메인 페이지입니다.</p>
+<p>The <code>math</code> shortcode generates beautiful formatted math and chemical formulae using the <a href="https://mathjax.org/">MathJax</a> library.</p>
+
+<span class="math align-center">
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+</span>
+
+<div class="box notices cstyle note">
+  <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
+  <div class="box-content">
+<p>This only works in modern browsers.</p>
+  </div>
+</div>
+<h2 id="usage">Usage</h2>
+<p>While the examples are using shortcodes with named parameter it is recommended to use codefences instead. This is because more and more other software supports Math codefences (eg. GitHub) and so your markdown becomes more portable.</p>
+<p>You are free to also call this shortcode from your own partials.</p>
+
+<div class="box notices cstyle note">
+  <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
+  <div class="box-content">
+<p>To use codefence syntax you have to turn off <code>guessSyntax</code> for the <code>markup.highlight</code> setting (<a href="#configuration">see the configuration section</a>).</p>
+  </div>
+</div>
+
+<div class="tab-panel">
+  <div class="tab-nav">
+    <button
+      data-tab-item="codefence"
+      data-tab-group="shortcode-parameter"
+      class="tab-nav-button direction-ltr active"
+      onclick="switchTab('shortcode-parameter','codefence')"
+      ><span>codefence</span></button>
+    <button
+      data-tab-item="shortcode"
+      data-tab-group="shortcode-parameter"
+      class="tab-nav-button direction-ltr "
+      onclick="switchTab('shortcode-parameter','shortcode')"
+      ><span>shortcode</span></button>
+    <button
+      data-tab-item="partial"
+      data-tab-group="shortcode-parameter"
+      class="tab-nav-button direction-ltr "
+      onclick="switchTab('shortcode-parameter','partial')"
+      ><span>partial</span></button>
+  </div>
+  <div class="tab-content">
+    <div data-tab-item="codefence" data-tab-group="shortcode-parameter" class="tab-item active">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>```math { align=&#34;center&#34; }
+</span></span><span style="display:flex;"><span>$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+</span></span><span style="display:flex;"><span>```
+</span></span></code></pre></div>
+    </div>
+    <div data-tab-item="shortcode" data-tab-group="shortcode-parameter" class="tab-item ">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{&lt; <span style="color:#a6e22e">math</span> <span style="color:#a6e22e">align</span>=<span style="color:#e6db74">&#34;center&#34;</span> &gt;}}
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">$$\</span><span style="color:#a6e22e">left</span>( <span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">sum_</span>{<span style="color:#a6e22e">k</span>=<span style="color:#ae81ff">1</span>}^<span style="color:#a6e22e">n</span> <span style="color:#a6e22e">a_k</span> <span style="color:#a6e22e">b_k</span> <span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">right</span>)^<span style="color:#ae81ff">2</span> <span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">leq</span> <span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">left</span>( <span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">sum_</span>{<span style="color:#a6e22e">k</span>=<span style="color:#ae81ff">1</span>}^<span style="color:#a6e22e">n</span> <span style="color:#a6e22e">a_k</span>^<span style="color:#ae81ff">2</span> <span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">right</span>) <span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">left</span>( <span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">sum_</span>{<span style="color:#a6e22e">k</span>=<span style="color:#ae81ff">1</span>}^<span style="color:#a6e22e">n</span> <span style="color:#a6e22e">b_k</span>^<span style="color:#ae81ff">2</span> <span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">right</span>)<span style="color:#960050;background-color:#1e0010">$$</span>
+</span></span><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">/</span><span style="color:#a6e22e">math</span> &gt;}}
+</span></span></code></pre></div>
+    </div>
+    <div data-tab-item="partial" data-tab-group="shortcode-parameter" class="tab-item ">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;shortcodes/math.html&#34;</span> (<span style="color:#a6e22e">dict</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;context&#34;</span> .
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;content&#34;</span> <span style="color:#e6db74">&#34;$$left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;align&#34;</span>   <span style="color:#e6db74">&#34;center&#34;</span>
+</span></span><span style="display:flex;"><span>)}}
+</span></span></code></pre></div>
+    </div>
+  </div>
+</div>
+<h3 id="parameter">Parameter</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Default</th>
+<th style="text-align:left">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>align</strong></td>
+<td style="text-align:left"><code>center</code></td>
+<td style="text-align:left">Allowed values are <code>left</code>, <code>center</code> or <code>right</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em><strong>&lt;content&gt;</strong></em></td>
+<td style="text-align:left"><em>&lt;empty&gt;</em></td>
+<td style="text-align:left">Your formuale.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="configuration">Configuration</h2>
+<p>MathJax is configured with default settings. You can customize MathJax&rsquo;s default settings for all of your files thru a JSON object in your <code>config.toml</code> or override these settings per page thru your pages frontmatter.</p>
+<p>The JSON object of your <code>config.toml</code> / frontmatter is forwarded into MathJax&rsquo;s configuration object.</p>
+<p>See <a href="https://docs.mathjax.org/en/latest/options/index.html">MathJax documentation</a> for all allowed settings.</p>
+
+<div class="box notices cstyle note">
+  <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
+  <div class="box-content">
+<p>To use codefence syntax you have to turn off <code>guessSyntax</code> for the <code>markup.highlight</code> setting.</p>
+  </div>
+</div>
+<h3 id="global-configuration-file">Global Configuration File</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mathJaxInitialize</span> = <span style="color:#e6db74">&#34;{ \&#34;chtml\&#34;: { \&#34;displayAlign\&#34;: \&#34;left\&#34; } }&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">markup</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">highlight</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># if `guessSyntax = true`, there will be no unstyled code even if no language</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># was given BUT Mermaid and Math codefences will not work anymore! So this is a</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># mandatory setting for your site if you want to use Math codefences</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">guessSyntax</span> = <span style="color:#66d9ef">false</span>
+</span></span></code></pre></div><h3 id="pages-frontmatter">Page&rsquo;s Frontmatter</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">mathJaxInitialize</span> = <span style="color:#e6db74">&#34;{ \&#34;chtml\&#34;: { \&#34;displayAlign\&#34;: \&#34;left\&#34; } }&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">+++</span>
+</span></span></code></pre></div><h2 id="examples">Examples</h2>
+<h3 id="inline-math">Inline Math</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>Inline math is generated if you use a single <span style="color:#e6db74">`$`</span> as a delimiter around your formulae: {{&lt; <span style="color:#f92672">math</span> &gt;}}$\sqrt{3}${{&lt; /<span style="color:#f92672">math</span> &gt;}}
+</span></span></code></pre></div><p>Inline math is generated if you use a single <code>$</code> as a delimiter around your formulae: 
+<span class="math align-center">$\sqrt{3}$</span></p>
+<h3 id="blocklevel-math-with-right-alignment">Blocklevel Math with Right Alignment</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>If you delimit your formulae by two consecutive <span style="color:#e6db74">`$$`</span> it generates a new block.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">math</span> <span style="color:#a6e22e">align</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;right&#34;</span> &gt;}}
+</span></span><span style="display:flex;"><span>$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+</span></span><span style="display:flex;"><span>{{&lt; /<span style="color:#f92672">math</span> &gt;}}
+</span></span></code></pre></div><p>If you delimit your formulae by two consecutive <code>$$</code> it generates a new block.</p>
+
+<span class="math align-right">
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+</span>
+<h3 id="codefence">Codefence</h3>
+<p>You can also use codefences but without further parameter.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span><span style="color:#e6db74">```math
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span>$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
+</span></span></code></pre></div>
+<span class="math align-center">$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$</span><h3 id="chemical-formulae">Chemical Formulae</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>{{&lt; <span style="color:#f92672">math</span> &gt;}}
+</span></span><span style="display:flex;"><span>$$\ce{Hg^2+ -&gt;[I-] HgI2 -&gt;[I-] [Hg^{II}I4]^2-}$$
+</span></span><span style="display:flex;"><span>{{&lt; /<span style="color:#f92672">math</span> &gt;}}
+</span></span></code></pre></div>
+<span class="math align-center">
+$$\ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-}$$
+</span>
 
             <footer class="footline">
             </footer>
@@ -152,9 +322,9 @@
       </div>
       <div id="content-wrapper" class="highlightable">
         <ul class="topics">
-          <li data-nav-id="/posts/index.html" class="dd-item active parent alwaysopen"><a href="/posts/index.html">DCK Solution<i class="fas fa-check read-icon"></i></a><ul id="subsections-a07783f405300745807d39eacf150420">
+          <li data-nav-id="/posts/index.html" class="dd-item parent alwaysopen"><a href="/posts/index.html">DCK Solution<i class="fas fa-check read-icon"></i></a><ul id="subsections-a07783f405300745807d39eacf150420">
           <li data-nav-id="/posts/test/index.html" class="dd-item"><a href="/posts/test/index.html">Test<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/posts/math/index.html" class="dd-item"><a href="/posts/math/index.html">Math<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/posts/math/index.html" class="dd-item active"><a href="/posts/math/index.html">Math<i class="fas fa-check read-icon"></i></a></li></ul></li>
         </ul>
         <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
         <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">
