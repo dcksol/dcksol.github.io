@@ -1,33 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dcksol.github.io/index.html</loc>
+    <loc>http://dcksol.site/index.html</loc>
     <lastmod>2022-12-11T01:19:44+09:00</lastmod>
   </url>
   <url>
-    <loc>https://dcksol.github.io/posts/index.html</loc>
+    <loc>http://dcksol.site/posts/index.html</loc>
     <lastmod>2022-12-11T01:19:44+09:00</lastmod>
   </url>
   <url>
-    <loc>https://dcksol.github.io/posts/test/index.html</loc>
+    <loc>http://dcksol.site/posts/test/index.html</loc>
     <lastmod>2022-12-11T01:19:44+09:00</lastmod>
   </url>
   <url>
-    <loc>https://dcksol.github.io/%EC%83%88-%ED%8F%B4%EB%8D%94/index.html</loc>
+    <loc>http://dcksol.site/%EC%83%88-%ED%8F%B4%EB%8D%94/index.html</loc>
   </url>
   <url>
-    <loc>https://dcksol.github.io/categories/index.html</loc>
+    <loc>http://dcksol.site/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/index.html</loc>
   </url>
   <url>
-    <loc>https://dcksol.github.io/posts/qm/%EC%83%88-%ED%8F%B4%EB%8D%94/index.html</loc>
+    <loc>http://dcksol.site/categories/index.html</loc>
   </url>
   <url>
-    <loc>https://dcksol.github.io/posts/math/index.html</loc>
+    <loc>http://dcksol.site/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/philip-nelson/chapter7/index.html</loc>
   </url>
   <url>
-    <loc>https://dcksol.github.io/posts/qm/index.html</loc>
+    <loc>http://dcksol.site/posts/qm/%EC%83%88-%ED%8F%B4%EB%8D%94/index.html</loc>
   </url>
   <url>
-    <loc>https://dcksol.github.io/tags/index.html</loc>
+    <loc>http://dcksol.site/posts/math/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dcksol.site/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/philip-nelson/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dcksol.site/posts/qm/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dcksol.site/tags/index.html</loc>
   </url>
 </urlset>

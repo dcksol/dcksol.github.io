@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Philip Nelson on DCK Solution</title>
+    <link>http://dcksol.site/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/philip-nelson/index.html</link>
+    <description>Recent content in Philip Nelson on DCK Solution</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://dcksol.site/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/philip-nelson/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chapter 7</title>
+      <link>http://dcksol.site/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/philip-nelson/chapter7/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/philip-nelson/chapter7/index.html</guid>
+      <description>온도가 고정된 시스템에서 일어나는 모든 변환 과정은 자유 에너지 $F=E-TS$를 감소하는 방향으로 일어난다.
+예를 들어, 돌이 진흙에 떨어졌을 때, 돌의 운동 에너지는 열 에너지의 형태로 비가역적으로 변환된다. 따라서 $E$는 감소하고 $F$ 또한 감소한다. 비슷하게, 물에서 확산되는 잉크는 엔트로피를 최대하하여 $S$를 증가시키고 $F$를 감소시킨다. 일반적으로, 에너지와 엔트로피가 바뀔 때, 열원과 접촉하고 있는 macroscopic system의 free energy는 감소한다.</description>
+    </item>
+  </channel>
+</rss>

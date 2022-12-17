@@ -2,9 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Another on DCK Solution</title>
-    <link>https://dcksol.github.io/%EC%83%88-%ED%8F%B4%EB%8D%94/index.html</link>
+    <link>http://dcksol.site/%EC%83%88-%ED%8F%B4%EB%8D%94/index.html</link>
     <description>Recent content in Another on DCK Solution</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://dcksol.github.io/%EC%83%88-%ED%8F%B4%EB%8D%94/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://dcksol.site/%EC%83%88-%ED%8F%B4%EB%8D%94/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Biological Physics</title>
+      <link>http://dcksol.site/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/index.html</guid>
+      <description>DCK Solution 메인 페이지입니다.!
+Philip Nelson</description>
+    </item>
   </channel>
 </rss>
