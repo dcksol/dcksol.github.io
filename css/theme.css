@@ -11,6 +11,7 @@ html {
 body {
     display: flex;
     flex-direction: row-reverse; /* IE11 to allow body to have initial focus for PS and better SEO and a11y */
+    font-family: 'Work Sans', sans-serif;
     font-size: 16.25px;
     font-weight: 300;
     height: 100%;
@@ -667,7 +668,7 @@ td {
     color: #fff;
     content: attr(aria-label);
     display: none;
-    font: normal normal 11px/1.5 "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font: normal normal 11px/1.5 "Noto Sans KR" "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     -webkit-font-smoothing: subpixel-antialiased;
     letter-spacing: normal;
     padding: 5px 8px;
@@ -1488,7 +1489,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 #sidebar .collapsible-menu input.toggle:before {
     content: "\f054";
-    font-family: "Font Awesome 5 Free";
+    font-family: "Noto Sans KR", "Font Awesome 5 Free";
     font-size: .8rem;
     font-weight: 900;
     margin-left: -1rem;
