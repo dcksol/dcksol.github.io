@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chapter2 on DCK Solution</title>
+    <link>http://dcksol.site/posts/relativity/hartle/chap2/index.html</link>
+    <description>Recent content in Chapter2 on DCK Solution</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://dcksol.site/posts/relativity/hartle/chap2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2.9</title>
+      <link>http://dcksol.site/posts/relativity/hartle/chap2/9/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/relativity/hartle/chap2/9/index.html</guid>
+      <description>Line element는 $$dS^2 = a^2 (d\theta ^2 + f^2 (\theta) d\phi^2)$$이고, 여기서 $f(\theta) = \sin \theta (1 + \epsilon \sin^2 \theta)$이다.
+적도를 포함하는 원의 원주는 $$C(\theta = \pi / 2) = \int_0^{2\pi} af(\theta)d\phi = 2\pi a f(\pi / 2) = 2\pi a(1 + \epsilon)$$이다.
+$a$와 $a(1+\epsilon)$은 각각 극 반경과 적도 반경에 해당하며, 그 비는 $$1+\epsilon = \frac{6378}{6357} = 1 + 0.00330$$이다.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hartle on DCK Solution</title>
+    <link>http://dcksol.site/posts/relativity/hartle/index.html</link>
+    <description>Recent content in Hartle on DCK Solution</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://dcksol.site/posts/relativity/hartle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chapter2</title>
+      <link>http://dcksol.site/posts/relativity/hartle/chap2/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/relativity/hartle/chap2/index.html</guid>
+      <description>2.9</description>
+    </item>
+  </channel>
+</rss>
