@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chapter3 on DCK Solution</title>
+    <link>http://dcksol.site/posts/relativity/hartle/chap3/index.html</link>
+    <description>Recent content in Chapter3 on DCK Solution</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://dcksol.site/posts/relativity/hartle/chap3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3.3</title>
+      <link>http://dcksol.site/posts/relativity/hartle/chap3/3/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/relativity/hartle/chap3/3/index.html</guid>
+      <description> 만약 오직 지구의 자전만을 고려한다면, 24시간에 한 바퀴, 즉 한 시간에 15도를 돌 것이다. 그런데 지구는 태양을 중심으로 공전도 하므로, 실제 지구는 24시간동안 $360^\circ + \frac{360^\circ}{24} \approx 360.986^\circ$만큼 회전하며, 이는 시간당 약 $15.041^\circ$를 도는 것과 같다. </description>
+    </item>
+  </channel>
+</rss>

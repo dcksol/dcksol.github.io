@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chapter4 on DCK Solution</title>
+    <link>http://dcksol.site/posts/relativity/hartle/chap4/index.html</link>
+    <description>Recent content in Chapter4 on DCK Solution</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://dcksol.site/posts/relativity/hartle/chap4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>4.2</title>
+      <link>http://dcksol.site/posts/relativity/hartle/chap4/3/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/relativity/hartle/chap4/3/index.html</guid>
+      <description>(a) 로켓의 관성계에서 빛이 로켓의 앞부분까지 도달하는 데 걸리는 시간은 단순히 $L/c$이다. (b) 지구의 관성계에서 빛이 로켓의 앞부분까지 도달하는 데 걸린 시간을 $T$라 하자. 지구의 관성계에서 로켓의 길이는 수축된 길이인 $$\frac{L}{\gamma} = L \sqrt{1 - \qty(\frac{4}{5})^2} = \frac{3L}{5}$$이다. 따라서 $t = 0$일 때 $\frac{3}{5}L$만큼 떨어져 있던 로켓의 앞부분은 $t=T$일 때, $\frac{3}{5}L + \frac{4}{5}c T$만큼 더 멀어져 있다. 빛은 시간 $T$ 동안 이 거리를 이동해야 하므로, $$cT = \frac{3}{5}L + \frac{4}{5}c T, \quad T = \frac{3L}{c}$$이다.</description>
+    </item>
+  </channel>
+</rss>
