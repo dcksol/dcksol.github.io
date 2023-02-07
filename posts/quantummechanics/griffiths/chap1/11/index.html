@@ -6,8 +6,7 @@
     <meta name="generator" content="Hugo 0.107.0">
     <meta name="generator" content="Relearn 5.8.0+tip">
     <meta name="description" content="">
-    <title>Tags - DCK Solution</title>
-    <link href="/tags/index.xml" rel="alternate" type="application/rss+xml" title="Tags - DCK Solution">
+    <title>1.11 - DCK Solution</title>
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/css/fontawesome-all.min.css?1675776293" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1675776293" rel="stylesheet"></noscript>
     <link href="/css/featherlight.min.css?1675776293" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1675776293" rel="stylesheet"></noscript>
@@ -42,7 +41,7 @@
 
 
   </head>
-  <body class="mobile-support html" data-url="/tags/index.html">
+  <body class="mobile-support html" data-url="/posts/quantummechanics/griffiths/chap1/11/index.html">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
@@ -52,9 +51,25 @@
             <span id="sidebar-toggle-span">
               <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
             </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
             <span class="links">
-              Tags
+              1.11
             </span>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper" dir="ltr">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#a">(a)</a></li>
+        <li><a href="#b">(b)</a></li>
+        <li><a href="#c">(c)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
           </div>
         </div>
       </nav>
@@ -62,14 +77,111 @@
         <div class="flex-block-wrapper">
           <div id="head-tags">
           </div>
-          <article>
-<h1 id="tags">Tags</h1>
+          <article class="default">
+<h1 id="1.11">1.11</h1>
+
+<h3 id="a">(a)</h3>
 <ul>
+<li>에너지 보존에 의해
+
+<span class="math align-center">
+  $$E = \frac{1}{2}mv(x)^2 + V(x)$$
+  </span>
+가 성립하므로
+
+<span class="math align-center">
+  $$v(x) = \sqrt{\frac{2(E - V(x))}{m}}$$
+  </span>
+이다.</li>
+</ul>
+<h3 id="b">(b)</h3>
+<ul>
+<li>
+<span class="math align-center">$V(x) = kx^2/2$</span>인 경우,
+<ul>
+<li>
+<span class="math align-center">$a = -b$</span>이고,</li>
+<li>
+<span class="math align-center">$E = ka^2/2 = kb^2/2$</span>이다.</li>
+</ul>
+</li>
+<li>따라서 먼저 속력은
+
+<span class="math align-center">
+  $$v(x) = \sqrt{\frac{2(E - kx^2/2)}{m}} = \sqrt{\frac{k}{m}}\sqrt{a^2-x^2}$$이다.
+  </span></li>
+<li>먼저 규격화를 위해 
+<span class="math align-center">$T$</span>를 계산하자.
+
+<span class="math align-center">
+  $$T = \int_a^b \frac{1}{v(x)}dx = 2\int_0^b\frac{1}{v(x)}dx = 2\sqrt{\frac{m}{k}}\int_0^b \frac{1}{\sqrt{a^2-x^2}}dx$$
+  </span>
+이고, 여기서
+
+<span class="math align-center">
+  $$\int \frac{1}{\sqrt{a^2 - x^2}}dx = \sin^{-1}\frac{x}{a}\quad (a > 0)$$
+  </span>
+임을 이용하면,
+
+<span class="math align-center">
+  $$T = 2\sqrt{\frac{m}{k}}\qty[\sin^{-1}\frac{x}{-a}]^b_0 = \pi \sqrt{\frac{m}{k}}$$
+  </span>
+이다.</li>
+<li>따라서
+
+<span class="math align-center">
+  $$\rho(x) = \frac{1}{v(x)T} = \frac{1}{\pi}\sqrt{\frac{k}{m}}\sqrt{\frac{m}{k}}\frac{1}{\sqrt{a^2-x^2}} = \frac{1}{\pi \sqrt{a^2 - x^2}}$$
+  </span>
+이다.</li>
+<li>편의상 
+<span class="math align-center">$a = 1$</span>이라 하고, Mathematica를 통해
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mathematica" data-lang="mathematica"><span style="display:flex;"><span>Plot[<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>(<span style="color:#960050;background-color:#1e0010">π</span> <span style="color:#f92672">*</span> Sqrt[<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> x<span style="color:#f92672">^</span><span style="color:#ae81ff">2</span>]), {x, <span style="color:#ae81ff">-1</span>, <span style="color:#ae81ff">1</span>}]
+</span></span></code></pre></div>을 입력해 다음과 같은 그림을 얻을 수 있다. 
+<a href="/qm_griffiths_1_11_1.png" data-featherlight="image">
+<img src="/qm_griffiths_1_11_1.png" alt="fig1" style="height: auto; width: auto;" loading="lazy">
+</a></li>
+</ul>
+<h3 id="c">(c)</h3>
+<ul>
+<li>
+<span class="math align-center">$\expval{x}$</span>의 경우 
+<span class="math align-center">$0$</span>임을 쉽게 알 수 있는데,
+
+<span class="math align-center">
+  $$\expval{x} = \int_a^bx\rho(x)dx$$
+  </span>
+에서 
+<span class="math align-center">$x\rho(x)$</span>가 기함수이고, 적분 범위가 
+<span class="math align-center">$0$</span>에 대해 대칭이기 때문이다.</li>
+<li>
+<span class="math align-center">$\expval{x^2}$</span>은 다음과 같이 계산할 수 있다.
+
+<span class="math align-center">
+  $$\expval{x^2} = \int_a^bx^2\rho(x)dx = \int_a^b\frac{x^2}{\pi \sqrt{a^2-x^2}}$$
+  </span>
+여기서
+
+<span class="math align-center">
+  $$\int \frac{x^2}{\sqrt{a^2-x^2}}dx = \frac{1}{2}a^2\qty( \sin^{-1}\frac{x}{a} - \frac{1}{2}\sin \qty(2\sin^{-1}\frac{x}{a}))$$
+  </span>
+임을 이용하면
+
+<span class="math align-center">
+  $$\expval{x^2} = \frac{a^2}{2pi}\pi = \frac{a^2}{2}$$
+  </span>
+임을 알 수 있다.</li>
+<li>마지막으로
+
+<span class="math align-center">
+  $$\sigma_x = \sqrt{\expval{x^2} - \expval{x}^2} = \frac{a}{\sqrt{2}}$$
+  </span>
+이다.</li>
 </ul>
 
             <footer class="footline">
             </footer>
-          </article>        </div>
+          </article>
+        </div>
       </main>
     </div>
     <aside id="sidebar" class="default-animation showVisitedLinks" dir="ltr">
@@ -122,14 +234,14 @@
       </div>
       <div id="content-wrapper" class="highlightable">
         <ul class="topics">
-          <li data-nav-id="/posts/index.html" class="dd-item"><a href="/posts/index.html">DCK Solutions<i class="fas fa-check read-icon"></i></a><ul id="subsections-a07783f405300745807d39eacf150420">
+          <li data-nav-id="/posts/index.html" class="dd-item parent"><a href="/posts/index.html">DCK Solutions<i class="fas fa-check read-icon"></i></a><ul id="subsections-a07783f405300745807d39eacf150420">
           <li data-nav-id="/posts/test/index.html" class="dd-item"><a href="/posts/test/index.html">Test<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/posts/math/index.html" class="dd-item"><a href="/posts/math/index.html">Math<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/posts/quantummechanics/index.html" class="dd-item"><a href="/posts/quantummechanics/index.html">Quantum Mechanics<i class="fas fa-check read-icon"></i></a><ul id="subsections-14474e6644bd8a887bb72a60d455d515">
-          <li data-nav-id="/posts/quantummechanics/griffiths/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/index.html">Griffiths<i class="fas fa-check read-icon"></i></a><ul id="subsections-77f9534280830eb728124659092808f4">
-          <li data-nav-id="/posts/quantummechanics/griffiths/chap1/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/index.html">Chapter1<i class="fas fa-check read-icon"></i></a><ul id="subsections-b09ec7afa12da2cfdd3b9eb03d77dfb7">
+          <li data-nav-id="/posts/quantummechanics/index.html" class="dd-item parent"><a href="/posts/quantummechanics/index.html">Quantum Mechanics<i class="fas fa-check read-icon"></i></a><ul id="subsections-14474e6644bd8a887bb72a60d455d515">
+          <li data-nav-id="/posts/quantummechanics/griffiths/index.html" class="dd-item parent"><a href="/posts/quantummechanics/griffiths/index.html">Griffiths<i class="fas fa-check read-icon"></i></a><ul id="subsections-77f9534280830eb728124659092808f4">
+          <li data-nav-id="/posts/quantummechanics/griffiths/chap1/index.html" class="dd-item parent"><a href="/posts/quantummechanics/griffiths/chap1/index.html">Chapter1<i class="fas fa-check read-icon"></i></a><ul id="subsections-b09ec7afa12da2cfdd3b9eb03d77dfb7">
           <li data-nav-id="/posts/quantummechanics/griffiths/chap1/1/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/1/index.html">1.1<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/posts/quantummechanics/griffiths/chap1/11/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/11/index.html">1.11<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
+          <li data-nav-id="/posts/quantummechanics/griffiths/chap1/11/index.html" class="dd-item active"><a href="/posts/quantummechanics/griffiths/chap1/11/index.html">1.11<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
           <li data-nav-id="/posts/relativity/index.html" class="dd-item"><a href="/posts/relativity/index.html">Relativity<i class="fas fa-check read-icon"></i></a><ul id="subsections-baa1e1cb0e3e633a43391b86eae21f22">
           <li data-nav-id="/posts/relativity/hartle/index.html" class="dd-item"><a href="/posts/relativity/hartle/index.html">Hartle<i class="fas fa-check read-icon"></i></a><ul id="subsections-0abece8efbfcdc3104cdb5ecabefed9a">
           <li data-nav-id="/posts/relativity/hartle/chap2/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap2/index.html">Chapter2<i class="fas fa-check read-icon"></i></a><ul id="subsections-84992a7ce5c61e33688f5a47eb5b4f86">

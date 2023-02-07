@@ -6,8 +6,7 @@
     <meta name="generator" content="Hugo 0.107.0">
     <meta name="generator" content="Relearn 5.8.0+tip">
     <meta name="description" content="">
-    <title>Tags - DCK Solution</title>
-    <link href="/tags/index.xml" rel="alternate" type="application/rss+xml" title="Tags - DCK Solution">
+    <title>1.1 - DCK Solution</title>
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/css/fontawesome-all.min.css?1675776293" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1675776293" rel="stylesheet"></noscript>
     <link href="/css/featherlight.min.css?1675776293" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1675776293" rel="stylesheet"></noscript>
@@ -42,7 +41,7 @@
 
 
   </head>
-  <body class="mobile-support html" data-url="/tags/index.html">
+  <body class="mobile-support html" data-url="/posts/quantummechanics/griffiths/chap1/1/index.html">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
@@ -52,9 +51,25 @@
             <span id="sidebar-toggle-span">
               <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
             </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
             <span class="links">
-              Tags
+              1.1
             </span>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper" dir="ltr">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#a">(a)</a></li>
+        <li><a href="#b">(b)</a></li>
+        <li><a href="#c">(c)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
           </div>
         </div>
       </nav>
@@ -62,14 +77,93 @@
         <div class="flex-block-wrapper">
           <div id="head-tags">
           </div>
-          <article>
-<h1 id="tags">Tags</h1>
+          <article class="default">
+<h1 id="1.1">1.1</h1>
+
 <ul>
+<li>주어진 나이 분포로부터 다음 확률을 계산할 수 있다.
+<ul>
+<li>
+<span class="math align-center">$N(14) = 1 \rightarrow P(14) = \frac{1}{14}$</span></li>
+<li>
+<span class="math align-center">$N(15) = 1 \rightarrow P(15) = \frac{1}{14}$</span></li>
+<li>
+<span class="math align-center">$N(16) = 3 \rightarrow P(16) = \frac{3}{14}$</span></li>
+<li>
+<span class="math align-center">$N(22) = 2 \rightarrow P(22) = \frac{2}{14}$</span></li>
+<li>
+<span class="math align-center">$N(24) = 2 \rightarrow P(24) = \frac{2}{14}$</span></li>
+<li>
+<span class="math align-center">$N(25) = 5 \rightarrow P(25) = \frac{5}{14}$</span></li>
+</ul>
+</li>
+</ul>
+<h3 id="a">(a)</h3>
+<ul>
+<li>
+<span class="math align-center">$\expval{j^2} = \frac{1}{N}\sum_{j=0}^{\infty}j^2P(j) = \frac{1\cdot 14^2 + 1 \cdot 15^2 + 3 \cdot 16^2 + 2\cdot 22^2 + 2\cdot 24^2 + 5\cdot 25^2}{14} = \frac{6434}{14}$</span>이다.</li>
+<li>
+<span class="math align-center">$\expval{j} = \frac{1}{N}\sum_{j=0}^{\infty}jP(j) = \frac{1\cdot 14 + 1 \cdot 15 + 3 \cdot 16 + 2\cdot 22 + 2\cdot 24 + 5\cdot 25}{14} = \frac{294}{14} = 21$</span>이므로 
+<span class="math align-center">$\expval{j}^2 = 21^2 = 441$</span>이다.</li>
+</ul>
+<h3 id="b">(b)</h3>
+<ul>
+<li>
+<p>
+<span class="math align-center">$\Delta j = j - \expval{j}$</span>이고, 
+<span class="math align-center">$\expval{j} = 21$</span>임을 (a)에서 구했다. 따라서 각각의 
+<span class="math align-center">$j$</span>에 대하여</p>
+<ul>
+<li>
+<span class="math align-center">$j = 14 \rightarrow \Delta j = 14 - 21 = -7$</span></li>
+<li>
+<span class="math align-center">$j = 15 \rightarrow \Delta j = 15 - 21 = -6$</span></li>
+<li>
+<span class="math align-center">$j = 16 \rightarrow \Delta j = 16 - 21 = -5$</span></li>
+<li>
+<span class="math align-center">$j = 22 \rightarrow \Delta j = 22 - 21 = 1$</span></li>
+<li>
+<span class="math align-center">$j = 24 \rightarrow \Delta j = 24 - 21 = 3$</span></li>
+<li>
+<span class="math align-center">$j = 25 \rightarrow \Delta j = 25 - 21 = 4$</span></li>
+</ul>
+<p>이다.</p>
+</li>
+<li>
+<p>표준편차의 제곱(분산)은 교재의 식
+
+<span class="math align-center">
+  $$\sigma^2 \equiv \expval{(\Delta j)^2}$$
+  </span>로 정의되고, 다음과 같이 계산할 수 있다.</p>
+</li>
+<li>
+
+<span class="math align-center">$\sigma^2 \equiv \expval{(\Delta j)^2} = \frac{1\cdot (-7)^2+1\cdot (-6)^2+3\cdot (-5)^2+2\cdot 1^2+2\cdot 3^2+5\cdot 4^2}{14} = \frac{260}{14}$</span>
+</li>
+<li>
+<p>따라서 표준편차는 
+<span class="math align-center">$\sigma =\sqrt{\frac{260}{14}}$</span>이다.</p>
+</li>
+</ul>
+<h3 id="c">(c)</h3>
+<ul>
+<li>교재의 식(1.12)는
+
+<span class="math align-center">
+  $$\sigma = \sqrt{\expval{j^2} - \expval{j}^2}$$
+  </span>
+이다. (b)에서 계산한 표준편차는 
+<span class="math align-center">$\sigma =\sqrt{\frac{260}{14}}$</span>이다.</li>
+<li>또한 (a)에서 계산한 
+<span class="math align-center">$\expval{j^2} = \frac{6434}{14}$</span>, 
+<span class="math align-center">$\expval{j}^2 = 441$</span>을 대입하면 우변은 
+<span class="math align-center">$\sqrt{\frac{6434 - 6174}{14}} = \sqrt{\frac{260}{14}}$</span>로, 좌변과 우변이 같음을 확인할 수 있다.</li>
 </ul>
 
             <footer class="footline">
             </footer>
-          </article>        </div>
+          </article>
+        </div>
       </main>
     </div>
     <aside id="sidebar" class="default-animation showVisitedLinks" dir="ltr">
@@ -122,13 +216,13 @@
       </div>
       <div id="content-wrapper" class="highlightable">
         <ul class="topics">
-          <li data-nav-id="/posts/index.html" class="dd-item"><a href="/posts/index.html">DCK Solutions<i class="fas fa-check read-icon"></i></a><ul id="subsections-a07783f405300745807d39eacf150420">
+          <li data-nav-id="/posts/index.html" class="dd-item parent"><a href="/posts/index.html">DCK Solutions<i class="fas fa-check read-icon"></i></a><ul id="subsections-a07783f405300745807d39eacf150420">
           <li data-nav-id="/posts/test/index.html" class="dd-item"><a href="/posts/test/index.html">Test<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/posts/math/index.html" class="dd-item"><a href="/posts/math/index.html">Math<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/posts/quantummechanics/index.html" class="dd-item"><a href="/posts/quantummechanics/index.html">Quantum Mechanics<i class="fas fa-check read-icon"></i></a><ul id="subsections-14474e6644bd8a887bb72a60d455d515">
-          <li data-nav-id="/posts/quantummechanics/griffiths/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/index.html">Griffiths<i class="fas fa-check read-icon"></i></a><ul id="subsections-77f9534280830eb728124659092808f4">
-          <li data-nav-id="/posts/quantummechanics/griffiths/chap1/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/index.html">Chapter1<i class="fas fa-check read-icon"></i></a><ul id="subsections-b09ec7afa12da2cfdd3b9eb03d77dfb7">
-          <li data-nav-id="/posts/quantummechanics/griffiths/chap1/1/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/1/index.html">1.1<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/quantummechanics/index.html" class="dd-item parent"><a href="/posts/quantummechanics/index.html">Quantum Mechanics<i class="fas fa-check read-icon"></i></a><ul id="subsections-14474e6644bd8a887bb72a60d455d515">
+          <li data-nav-id="/posts/quantummechanics/griffiths/index.html" class="dd-item parent"><a href="/posts/quantummechanics/griffiths/index.html">Griffiths<i class="fas fa-check read-icon"></i></a><ul id="subsections-77f9534280830eb728124659092808f4">
+          <li data-nav-id="/posts/quantummechanics/griffiths/chap1/index.html" class="dd-item parent"><a href="/posts/quantummechanics/griffiths/chap1/index.html">Chapter1<i class="fas fa-check read-icon"></i></a><ul id="subsections-b09ec7afa12da2cfdd3b9eb03d77dfb7">
+          <li data-nav-id="/posts/quantummechanics/griffiths/chap1/1/index.html" class="dd-item active"><a href="/posts/quantummechanics/griffiths/chap1/1/index.html">1.1<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/posts/quantummechanics/griffiths/chap1/11/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/11/index.html">1.11<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
           <li data-nav-id="/posts/relativity/index.html" class="dd-item"><a href="/posts/relativity/index.html">Relativity<i class="fas fa-check read-icon"></i></a><ul id="subsections-baa1e1cb0e3e633a43391b86eae21f22">
           <li data-nav-id="/posts/relativity/hartle/index.html" class="dd-item"><a href="/posts/relativity/hartle/index.html">Hartle<i class="fas fa-check read-icon"></i></a><ul id="subsections-0abece8efbfcdc3104cdb5ecabefed9a">

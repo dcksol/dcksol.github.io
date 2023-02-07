@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quantum Mechanics on DCK Solution</title>
+    <link>http://dcksol.site/posts/quantummechanics/index.html</link>
+    <description>Recent content in Quantum Mechanics on DCK Solution</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://dcksol.site/posts/quantummechanics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Griffiths</title>
+      <link>http://dcksol.site/posts/quantummechanics/griffiths/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/quantummechanics/griffiths/index.html</guid>
+      <description>&amp;lt;Introduction to Quantum Mechanics 3rd Edition by David J. Griffiths, Darrell F. Schroeter&amp;gt;의 솔루션을 포함하고 있습니다.
+Chapter11.11.11</description>
+    </item>
+  </channel>
+</rss>
