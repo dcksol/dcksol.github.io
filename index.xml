@@ -23,5 +23,13 @@ TestMathQuantum MechanicsRelativity</description>
       <description>DCK Solution 메인 페이지입니다.!
 Biological Physics</description>
     </item>
+    <item>
+      <title>Manim</title>
+      <link>http://dcksol.site/manim/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/manim/index.html</guid>
+      <description>Manim community에 대한 정보를 포함하고 있습니다.
+Configuration커스텀 패키지 사용하기</description>
+    </item>
   </channel>
 </rss>
