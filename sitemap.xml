@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://dcksol.site/manim/example/index.html</loc>
+  </url>
+  <url>
     <loc>http://dcksol.site/index.html</loc>
     <lastmod>2022-12-11T01:19:44+09:00</lastmod>
   </url>
@@ -79,13 +82,22 @@
     <loc>http://dcksol.site/posts/math/index.html</loc>
   </url>
   <url>
+    <loc>http://dcksol.site/manim/example/moving_dot/index.html</loc>
+  </url>
+  <url>
     <loc>http://dcksol.site/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/philip-nelson/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dcksol.site/manim/example/pointwithtrace/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/posts/quantummechanics/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/posts/relativity/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dcksol.site/manim/example/simplemaths/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/tags/index.html</loc>

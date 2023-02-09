@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Examples on DCK Solution</title>
+    <link>http://dcksol.site/manim/example/index.html</link>
+    <description>Recent content in Examples on DCK Solution</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://dcksol.site/manim/example/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Moving dot</title>
+      <link>http://dcksol.site/manim/example/moving_dot/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/manim/example/moving_dot/index.html</guid>
+      <description>이 곳의 예제를 v0.17.2에 맞추어 수정 및 추가하였다.
+from manim import * class Sample(Scene): def construct(self): self.moving_dot() def moving_dot(self): x_axis = NumberLine([-5, 5, 0.5]) dot = Dot(color=RED, radius=0.15).move_to(x_axis.get_left()) number = DecimalNumber(-5, color=RED).next_to(dot, UP) number.add_updater(lambda m: m.next_to(dot, UP)) number.add_updater(lambda m: m.set_value(dot.get_center()[0])) t = ValueTracker(-5) dot.add_updater(lambda x: x.move_to(t)) self.add(x_axis, dot, number) self.play(t.animate.set_value(5), rate_func=double_smooth, run_time=5) self.wait() 영상 확인</description>
+    </item>
+    <item>
+      <title>Point with trace</title>
+      <link>http://dcksol.site/manim/example/pointwithtrace/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/manim/example/pointwithtrace/index.html</guid>
+      <description>이 곳의 예제가 점의 궤적을 바꿀 경우 앞선 궤적이 사라지는 문제를 해결하지 못하여 TracedPath를 사용하여 해결하였다.
+from manim import * class Sample(Scene): def construct(self): self.PointWithTrace() def PointWithTrace(self): dot = Dot() b = TracedPath(dot.get_center) self.add(dot, b) self.play(Rotating(dot, radians=PI, about_point=RIGHT, run_time=2, rate_func=double_smooth)) self.wait() self.play(dot.animate.shift(UP + LEFT)) self.play(dot.animate.shift(DOWN + LEFT)) self.wait() 영상 확인</description>
+    </item>
+    <item>
+      <title>Simple math equations</title>
+      <link>http://dcksol.site/manim/example/simplemaths/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/manim/example/simplemaths/index.html</guid>
+      <description>Bernard F. Schutz의 A First Course in General Relativity의 수식 전개 중 일부이다.
+from manim import * class Sample(Scene): def construct(self): self.Maths() def Maths(self): text1 = Tex( r&amp;#34;교재와 같이&amp;#34; ) eq1 = MathTex( &amp;#34;\\bar{h}^{\\alpha \\beta} := h^{\\alpha\\beta} - \\frac{1}{2}\\eta^{\\alpha\\beta}h&amp;#34; ) eq2 = MathTex( &amp;#34;\\bar{h}:= \\bar{h}^\\alpha {}_\\alpha&amp;#34; ) text2 = Tex( r&amp;#34;라 정의하면,&amp;#34; ) eq12 = VGroup(eq1, eq2) eq3 = MathTex( &amp;#34;\\bar{h}^{\\alpha}{}_\\alpha = &amp;#34;, &amp;#34;\\eta_{\\alpha\\beta}&amp;#34;, &amp;#34;\\bar{h}^{\\alpha\\beta}&amp;#34; ) framebox1 = SurroundingRectangle(eq3[2], buff=.1) eq4 = MathTex( &amp;#34;\\bar{h}^{\\alpha}{}_\\alpha = &amp;#34;, &amp;#34;\\eta_{\\alpha\\beta}&amp;#34;, &amp;#34;\\qty(h^{\\alpha\\beta} - \\frac{1}{2}\\eta^{\\alpha \\beta}h)&amp;#34; ) eq5 = MathTex( &amp;#34;\\bar{h}^{\\alpha}{}_\\alpha = &amp;#34;, &amp;#34;\\eta_{\\alpha\\beta}&amp;#34;, &amp;#34;h^{\\alpha\\beta} - \\frac{1}{2}&amp;#34;, &amp;#34;\\eta^{\\alpha\\beta}&amp;#34;, &amp;#34;\\eta_{\\alpha\\beta}&amp;#34;, &amp;#34;h&amp;#34; ) eq6 = MathTex( &amp;#34;\\bar{h}^{\\alpha}{}_\\alpha = &amp;#34;, &amp;#34;h^{\\alpha}{}_\\alpha - \\frac{1}{2}\\delta^\\alpha{}_\\alpha h&amp;#34; ) eq7 = MathTex( &amp;#34;\\bar{h}^{\\alpha}{}_\\alpha = &amp;#34;, &amp;#34;h - 2h&amp;#34; ) eq8 = MathTex( &amp;#34;\\bar{h}^{\\alpha}{}_\\alpha = &amp;#34;, &amp;#34;-h&amp;#34; ) text3 = Tex( r&amp;#34;이므로 교재의 식(8.</description>
+    </item>
+  </channel>
+</rss>
