@@ -15,24 +15,11 @@
 Moving dotPoint with traceSimple math equations</description>
     </item>
     <item>
-      <title>Configuration</title>
-      <link>http://dcksol.site/manim/configuration/index.html</link>
+      <title>Tips</title>
+      <link>http://dcksol.site/manim/tips/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://dcksol.site/manim/configuration/index.html</guid>
-      <description>참고 - 공식 문서
-manim에서 작성한 코드로부터 여러 작업을 거쳐 영상 파일을 만들기 위해 터미널에서 써야 하는 명령어는 대략 다음과 같다.
-manim [OPTIONS] FILE [SCENES] 뒤의 SCENES에는 class의 이름을 적으면 된다. 앞의 OPTIONS에는 많은 옵션들이 올 수 있는데, 모든 옵션에 대한 자세한 내용은 위의 공식 문서를 참고하자.
-보통 테스트로 실행할 때는
-manim -pql main.py Sample 와 같은 명령어를 사용하는데, -pql은 p : preview, ql : quality low를 뜻한다. 따라서 낮은 퀄리티로 렌더링하고(대신 빠른 속도를 가져간다) 끝난 후 영상을 프리뷰할 수 있다.</description>
-    </item>
-    <item>
-      <title>커스텀 패키지 사용하기</title>
-      <link>http://dcksol.site/manim/preamble/index.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://dcksol.site/manim/preamble/index.html</guid>
-      <description>manim을 업그레이드 하면 아래 설정이 초기화 되니 주의하자. (같은 커뮤니티 버전이어도 다른 하위 버전간 호환성이 안 좋은 편이다. 또한 초기 버전인 v0.1.0이 2020년 10월 22일 릴리즈된 이후로 거의 매달 새로운 버전이 릴리즈되었다.)
-v0.15 이하의 버전에 해당 manim\utils\tex_templates.py을 살펴보면 manim의 기본 preamble로 다음과 같은 템플릿을 사용한다는 것을 알 수 있다.
-\usepackage[english]{babel} \usepackage[utf8]{inputenc} \usepackage[T1]{fontenc} \usepackage{lmodern} \usepackage{amsmath} \usepackage{amssymb} \usepackage{dsfont} \usepackage{setspace} \usepackage{tipa} \usepackage{relsize} \usepackage{textcomp} \usepackage{mathrsfs} \usepackage{calligra} \usepackage{wasysym} \usepackage{ragged2e} \usepackage{physics} \usepackage{xcolor} \usepackage{microtype} \DisableLigatures{encoding = *, family = * } \linespread{1} 만약 위의 패키지 외에 추가로 사용하고 싶은 패키지가 있다면, 공식 문서에서는 다음과 같이 템플릿을 만들어 사용하는 것을 설명한다.</description>
+      <guid>http://dcksol.site/manim/tips/index.html</guid>
+      <description>Configuration커스텀 패키지 사용하기</description>
     </item>
   </channel>
 </rss>

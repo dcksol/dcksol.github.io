@@ -67,7 +67,7 @@
     <loc>http://dcksol.site/posts/relativity/hartle/chap5/index.html</loc>
   </url>
   <url>
-    <loc>http://dcksol.site/manim/configuration/index.html</loc>
+    <loc>http://dcksol.site/manim/tips/configuration/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/posts/quantummechanics/griffiths/index.html</loc>
@@ -103,6 +103,9 @@
     <loc>http://dcksol.site/tags/index.html</loc>
   </url>
   <url>
-    <loc>http://dcksol.site/manim/preamble/index.html</loc>
+    <loc>http://dcksol.site/manim/tips/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dcksol.site/manim/tips/preamble/index.html</loc>
   </url>
 </urlset>
