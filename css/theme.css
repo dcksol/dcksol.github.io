@@ -13,7 +13,7 @@ body {
     flex-direction: row-reverse; /* IE11 to allow body to have initial focus for PS and better SEO and a11y */
     font-family: 'Work Sans', sans-serif;
     font-size: 16.25px;
-    font-weight: 300;
+    font-weight: 600;
     height: 100%;
     justify-content: flex-end;
     line-height: 1.574;
