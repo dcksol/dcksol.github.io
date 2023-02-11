@@ -7,6 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="http://dcksol.site/manim/example/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Code Snippet</title>
+      <link>http://dcksol.site/manim/example/codesnippet/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/manim/example/codesnippet/index.html</guid>
+      <description>참고 - 공식 문서
+from manim import * class Sample(Scene): def construct(self): self.code() def code(self): code = &amp;#39;&amp;#39;&amp;#39;from manim import Scene, Square class FadeInSquare(Scene): def construct(self): s = Square() self.play(FadeIn(s)) self.play(s.animate.scale(2)) self.wait() &amp;#39;&amp;#39;&amp;#39; rendered_code = Code(code=code, tab_width=4, background=&amp;#34;rectangle&amp;#34;, language=&amp;#34;Python&amp;#34;, font=&amp;#34;JetBrains Mono&amp;#34;, style=&amp;#39;vim&amp;#39;) self.play(Write(rendered_code)) self.wait() 다음은 style에 들어갈 수 있는 파라미터 목록이다.
+[&amp;#39;default&amp;#39;, &amp;#39;emacs&amp;#39;, &amp;#39;friendly&amp;#39;, &amp;#39;colorful&amp;#39;, &amp;#39;autumn&amp;#39;, &amp;#39;murphy&amp;#39;, &amp;#39;manni&amp;#39;, &amp;#39;material&amp;#39;, &amp;#39;monokai&amp;#39;, &amp;#39;perldoc&amp;#39;, &amp;#39;pastie&amp;#39;, &amp;#39;borland&amp;#39;, &amp;#39;trac&amp;#39;, &amp;#39;native&amp;#39;, &amp;#39;fruity&amp;#39;, &amp;#39;bw&amp;#39;, &amp;#39;vim&amp;#39;, &amp;#39;vs&amp;#39;, &amp;#39;tango&amp;#39;, &amp;#39;rrt&amp;#39;, &amp;#39;xcode&amp;#39;, &amp;#39;igor&amp;#39;, &amp;#39;paraiso-light&amp;#39;, &amp;#39;paraiso-dark&amp;#39;, &amp;#39;lovelace&amp;#39;, &amp;#39;algol&amp;#39;, &amp;#39;algol_nu&amp;#39;, &amp;#39;arduino&amp;#39;, &amp;#39;rainbow_dash&amp;#39;, &amp;#39;abap&amp;#39;, &amp;#39;solarized-dark&amp;#39;, &amp;#39;solarized-light&amp;#39;, &amp;#39;sas&amp;#39;, &amp;#39;stata&amp;#39;, &amp;#39;stata-light&amp;#39;, &amp;#39;stata-dark&amp;#39;, &amp;#39;inkpot&amp;#39;, &amp;#39;zenburn&amp;#39;, &amp;#39;gruvbox-dark&amp;#39;, &amp;#39;gruvbox-light&amp;#39;] 영상 확인</description>
+    </item>
+    <item>
       <title>Moving dot</title>
       <link>http://dcksol.site/manim/example/moving_dot/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
