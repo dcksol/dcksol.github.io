@@ -6,8 +6,7 @@
     <meta name="generator" content="Hugo 0.107.0">
     <meta name="generator" content="Relearn 5.8.0+tip">
     <meta name="description" content="">
-    <title>Another - DCK Solution</title>
-    <link href="/%EC%83%88-%ED%8F%B4%EB%8D%94/index.xml" rel="alternate" type="application/rss+xml" title="Another - DCK Solution">
+    <title>Delta function Identities - DCK Solution</title>
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/css/fontawesome-all.min.css?1676124852" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1676124852" rel="stylesheet"></noscript>
     <link href="/css/featherlight.min.css?1676124852" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1676124852" rel="stylesheet"></noscript>
@@ -53,7 +52,7 @@
       gtag('config', 'G-86EFE70L83');
     </script>
   </head>
-  <body class="mobile-support html" data-url="/%EC%83%88-%ED%8F%B4%EB%8D%94/index.html">
+  <body class="mobile-support html" data-url="/docs/physics/em/delta-function-identities/index.html">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
@@ -63,9 +62,24 @@
             <span id="sidebar-toggle-span">
               <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
             </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
             <span class="links">
-              Another
+              Delta function Identities
             </span>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper" dir="ltr">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#항등식">항등식</a></li>
+        <li><a href="#증명">증명</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
           </div>
         </div>
       </nav>
@@ -74,14 +88,79 @@
           <div id="head-tags">
           </div>
           <article class="default">
-<h1 id="another">Another</h1>
+<h1 id="delta-function-identities">Delta function Identities</h1>
 
-<p>DCK Solution 메인 페이지입니다.!</p>
-
-<ul class="children children-li children-sort-weight">
-	
-<li><a href="/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/index.html">Biological Physics</a></li>
+<h3 id="항등식">항등식</h3>
+<ul>
+<li>
+<span class="math align-center">
+$$\laplacian{\frac{1}{r}} = - 4\pi \delta(\vb{r})\label{1}\tag{1}$$
+</span></li>
+<li>
+<span class="math align-center">
+$$\pdv{r_k}\pdv{r_m}\frac{1}{r} = -\frac{4\pi}{3}\delta_{km}\delta(\vb{r})+\frac{3r_kr_m-r^2\delta_{km}}{r^5}\label{2}\tag{2}$$
+</span></li>
 </ul>
+<h3 id="증명">증명</h3>
+<p>
+<span class="math align-center">$\eqref{2}$</span>
+(<a href="https://doi.org/10.1119/1.13127" target="_blank" rel="noopener">Reference</a>를 참고하자. 아래 증명 전에 몇 가지 관찰로부터 간단하게 결과를 보이는 방법을 포함하고 있다. 또한 
+<span class="math align-center">$\pdv{r_i}\pdv{r_j}\pdv{r_k}\frac{1}{r}$</span>)에 대한 항등식도 다룬다.) 주어진 항등식이 성립하기 위해서 임의의 매끈한 함수 
+<span class="math align-center">$F$</span>에 대해 다음 식이 
+<span class="math align-center">$R$</span>가 
+<span class="math align-center">$0$</span>으로 가는 극한에서 성립해야 한다.
+
+<span class="math align-center">
+$$\int_V F(\vb{r})\pdv{r_k}\pdv{r_m}\frac{1}{r}dV = \int_V F(r)\qty(-\frac{4\pi}{3}\delta_{km}\delta(\vb{r})+\frac{3r_kr_m-r^2\delta_{km}}{r^5})dV$$
+</span>
+우변에서 
+<span class="math align-center">$F$</span>를 테일러 전개하면,
+
+<span class="math align-center">
+$$\vb{RHS} = - \frac{4\pi}{3}\delta_{km}F(0)+\int_0^{R}\int_\Omega [F(0)+r_l\partial_lF(0)+\cdots]\times\qty(\frac{3r_kr_m}{r^2}-\delta_{km})d\Omega \frac{dr}{r}$$
+</span>
+이다. 여기서 
+<span class="math align-center">$\Omega$</span>는 입체각이다. 편의상 
+<span class="math align-center">$\pdv{r_k}\equiv \partial_k$</span>라 하자. 테일러 급수에서 2차 이상의 항들은 
+<span class="math align-center">$R$</span>에 대한 양의 거듭제곱을 가지므로 
+<span class="math align-center">$R\rightarrow 0$</span>의 극한에서 사라질 것이다.</p>
+<p>두 번째 항은 홀수 개의 
+<span class="math align-center">$r_l$</span>항을 가지므로 각에 대한 적분에서 사라질 것이며, 첫 번째 항 또한 다음과 같이 계산되어 각에 대한 적분에서 사라질 것이다.
+
+<span class="math align-center">
+$$\int_\Omega \frac{r_k r_m}{R^2}d\Omega = \frac{4\pi}{3}\delta_{km}$$
+</span></p>
+<p>따라서 우변의 극한은
+
+<span class="math align-center">
+$$\lim_{R\rightarrow0}\vb{RHS} = - \frac{4\pi}{3}\delta_{km}F(0)$$
+</span>
+이다.</p>
+<p>한편 좌변에서 가우스 정리를 사용하면,
+
+<span class="math align-center">
+\begin{align}
+\vb{LHS} &= \int_V \partial_k\qty[F\partial_m\qty(\frac{1}{r})]dV - \int_V \partial_k F\partial_m\qty(\frac{1}{r})dV\\
+&= \oint_S F\partial_m \qty(\frac{1}{r})dS_k - \int_V \partial_k F\partial_m\qty(\frac{1}{r})dV
+\end{align}
+</span>
+이고, 
+<span class="math align-center">$F$</span>가 매끈하므로
+
+<span class="math align-center">
+\begin{align}
+\vb{LHS} = &- \int_\Omega \qty[F(0)+r_l\partial_lF(0)+\cdots]\frac{r_kr_m}{R^2}d\Omega \\&+ \int_0^R\int_\Omega \qty[\partial_kF(0)+r_l\partial_lF(0)+\cdots]\frac{r_m}{r}d\Omega dr
+\end{align}
+</span>
+이다. 각에 대한 적분에서 모든 홀수 개의 
+<span class="math align-center">$r_l$</span>을 가지는 항들이 사라지고, 
+<span class="math align-center">$F(0)$</span>항을 제외한 나머지 다른 항들은 
+<span class="math align-center">$R$</span>에 대한 양의 거듭제곱을 가지므로 반지름에 대한 적분에서 사라질 것이다. 따라서 좌변의 극한은
+
+<span class="math align-center">
+$$\lim_{R\rightarrow 0} \vb{LHS} = -F(0) \int_\Omega \frac{r_kr_m}{R^2}d\Omega = -\frac{4\pi}{3}\delta_{km}F(0)$$
+</span>
+이다. 따라서 우변과 좌변이 같고 증명 완료.</p>
 
             <footer class="footline">
             </footer>
@@ -159,10 +238,10 @@
           <li data-nav-id="/posts/relativity/hartle/chap5/1/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap5/1/index.html">5.1<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
           <li data-nav-id="/posts/test/index.html" class="dd-item"><a href="/posts/test/index.html">Test<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/posts/math/index.html" class="dd-item"><a href="/posts/math/index.html">Math<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/docs/index.html" class="dd-item"><a href="/docs/index.html">Docs<i class="fas fa-check read-icon"></i></a><ul id="subsections-2f67fdc9a362fd86f1cfd4450ed56551">
-          <li data-nav-id="/docs/physics/index.html" class="dd-item"><a href="/docs/physics/index.html">Physics<i class="fas fa-check read-icon"></i></a><ul id="subsections-2d49e7dfb4c72adddcb1e6c5844fd248">
-          <li data-nav-id="/docs/physics/em/index.html" class="dd-item"><a href="/docs/physics/em/index.html">Electrodynamics<i class="fas fa-check read-icon"></i></a><ul id="subsections-b2e467d583ad2cbbb407ac4d510934b5">
-          <li data-nav-id="/docs/physics/em/delta-function-identities/index.html" class="dd-item"><a href="/docs/physics/em/delta-function-identities/index.html">Delta function Identities<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docs/index.html" class="dd-item parent"><a href="/docs/index.html">Docs<i class="fas fa-check read-icon"></i></a><ul id="subsections-2f67fdc9a362fd86f1cfd4450ed56551">
+          <li data-nav-id="/docs/physics/index.html" class="dd-item parent"><a href="/docs/physics/index.html">Physics<i class="fas fa-check read-icon"></i></a><ul id="subsections-2d49e7dfb4c72adddcb1e6c5844fd248">
+          <li data-nav-id="/docs/physics/em/index.html" class="dd-item parent"><a href="/docs/physics/em/index.html">Electrodynamics<i class="fas fa-check read-icon"></i></a><ul id="subsections-b2e467d583ad2cbbb407ac4d510934b5">
+          <li data-nav-id="/docs/physics/em/delta-function-identities/index.html" class="dd-item active"><a href="/docs/physics/em/delta-function-identities/index.html">Delta function Identities<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/docs/physics/em/earnshaw/index.html" class="dd-item"><a href="/docs/physics/em/earnshaw/index.html">Earnshaw&#39;s Theorem<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
           <li data-nav-id="/manim/index.html" class="dd-item"><a href="/manim/index.html">Manim<i class="fas fa-check read-icon"></i></a><ul id="subsections-ebfb7ad9532e691873d74c98efc8f3c4">
           <li data-nav-id="/manim/example/index.html" class="dd-item"><a href="/manim/example/index.html">Examples<i class="fas fa-check read-icon"></i></a><ul id="subsections-b96dda4c702353d0783c921560fa65e5">
@@ -173,7 +252,7 @@
           <li data-nav-id="/manim/tips/index.html" class="dd-item"><a href="/manim/tips/index.html">Tips<i class="fas fa-check read-icon"></i></a><ul id="subsections-6224915234e36bf69d4e97db6c18b8da">
           <li data-nav-id="/manim/tips/configuration/index.html" class="dd-item"><a href="/manim/tips/configuration/index.html">Configuration<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/manim/tips/preamble/index.html" class="dd-item"><a href="/manim/tips/preamble/index.html">커스텀 패키지 사용하기<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
-          <li data-nav-id="/%EC%83%88-%ED%8F%B4%EB%8D%94/index.html" class="dd-item active parent"><a href="/%EC%83%88-%ED%8F%B4%EB%8D%94/index.html">Another<i class="fas fa-check read-icon"></i></a><ul id="subsections-eed0f06040f9206a3f4ac12154d7eb88">
+          <li data-nav-id="/%EC%83%88-%ED%8F%B4%EB%8D%94/index.html" class="dd-item"><a href="/%EC%83%88-%ED%8F%B4%EB%8D%94/index.html">Another<i class="fas fa-check read-icon"></i></a><ul id="subsections-eed0f06040f9206a3f4ac12154d7eb88">
           <li data-nav-id="/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/index.html" class="dd-item"><a href="/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/index.html">Biological Physics<i class="fas fa-check read-icon"></i></a><ul id="subsections-a6afa61597d35eef57fd8a96739a150a">
           <li data-nav-id="/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/philip-nelson/index.html" class="dd-item"><a href="/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/philip-nelson/index.html">Philip Nelson<i class="fas fa-check read-icon"></i></a><ul id="subsections-7984fe136d2253483aa1b3d65dcc8fd2">
           <li data-nav-id="/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/philip-nelson/chapter7/index.html" class="dd-item"><a href="/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/philip-nelson/chapter7/index.html">Chapter 7<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>

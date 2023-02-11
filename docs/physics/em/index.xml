@@ -5,7 +5,14 @@
     <link>http://dcksol.site/docs/physics/em/index.html</link>
     <description>Recent content in Electrodynamics on DCK Solution</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko-kr</language><atom:link href="http://dcksol.site/docs/physics/em/index.xml" rel="self" type="application/rss+xml" />
+    <language>ko-KR</language><atom:link href="http://dcksol.site/docs/physics/em/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Delta function Identities</title>
+      <link>http://dcksol.site/docs/physics/em/delta-function-identities/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/docs/physics/em/delta-function-identities/index.html</guid>
+      <description>항등식 $$\laplacian{\frac{1}{r}} = - 4\pi \delta(\vb{r})\label{1}\tag{1}$$$$\pdv{r_k}\pdv{r_m}\frac{1}{r} = -\frac{4\pi}{3}\delta_{km}\delta(\vb{r})+\frac{3r_kr_m-r^2\delta_{km}}{r^5}\label{2}\tag{2}$$증명 $\eqref{2}$ (Reference를 참고하자. 아래 증명 전에 몇 가지 관찰로부터 간단하게 결과를 보이는 방법을 포함하고 있다. 또한 $\pdv{r_i}\pdv{r_j}\pdv{r_k}\frac{1}{r}$)에 대한 항등식도 다룬다.) 주어진 항등식이 성립하기 위해서 임의의 매끈한 함수 $F$에 대해 다음 식이 $R$가 $0$으로 가는 극한에서 성립해야 한다. $$\int_V F(\vb{r})\pdv{r_k}\pdv{r_m}\frac{1}{r}dV = \int_V F(r)\qty(-\frac{4\pi}{3}\delta_{km}\delta(\vb{r})+\frac{3r_kr_m-r^2\delta_{km}}{r^5})dV$$우변에서 $F$를 테일러 전개하면, $$\vb{RHS} = - \frac{4\pi}{3}\delta_{km}F(0)+\int_0^{R}\int_\Omega [F(0)+r_l\partial_lF(0)+\cdots]\times\qty(\frac{3r_kr_m}{r^2}-\delta_{km})d\Omega \frac{dr}{r}$$이다. 여기서 $\Omega$는 입체각이다. 편의상 $\pdv{r_k}\equiv \partial_k$라 하자. 테일러 급수에서 2차 이상의 항들은 $R$에 대한 양의 거듭제곱을 가지므로 $R\rightarrow 0$의 극한에서 사라질 것이다.</description>
+    </item>
     <item>
       <title>Earnshaw&#39;s Theorem</title>
       <link>http://dcksol.site/docs/physics/em/earnshaw/index.html</link>
