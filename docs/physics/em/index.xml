@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Electrodynamics on DCK Solution</title>
+    <link>http://dcksol.site/docs/physics/em/index.html</link>
+    <description>Recent content in Electrodynamics on DCK Solution</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://dcksol.site/docs/physics/em/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Earnshaw&#39;s Theorem</title>
+      <link>http://dcksol.site/docs/physics/em/earnshaw/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/docs/physics/em/earnshaw/index.html</guid>
+      <description>Earnshaw(언쇼) 정리는 다음과 같다.
+유한하고 전하가 없는 공간 $R$에서 스칼라 퍼텐셜 $\phi (\boldsymbol{\mathrm{r}})$의 극댓값 또는 극솟값은 $R$의 내부에 존재하지 않는다.
+증명) 만약 $\phi (\boldsymbol{\mathrm{r}})$가 $R$ 내부의 점 $P$에서 극솟값을 가진다고 가정해보자. 그렇다면 $P$를 둘러싸는 충분히 작은 폐곡면 $S$ 위의 임의의 점에서 $\hat{\boldsymbol{\mathrm{n}}}\cdot\grad{\phi}&gt;0$을 만족한다. 이를 $S$에서 적분하면, $$\int_S dS\; \hat{\vb{n}}\cdot \grad{\phi} &gt; 0$$이 되고, $\vb{E} = - \grad{\phi}$를 대입하고 발산 정리를 사용해 $S$가 둘러싸는 부피 $V$에 대해 적분하면, $$\int_V d^3r\; \div{\vb{E}} &lt;0$$이 된다.</description>
+    </item>
+  </channel>
+</rss>

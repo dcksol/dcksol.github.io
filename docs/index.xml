@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on DCK Solution</title>
+    <link>http://dcksol.site/docs/index.html</link>
+    <description>Recent content in Docs on DCK Solution</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://dcksol.site/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Physics</title>
+      <link>http://dcksol.site/docs/physics/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/docs/physics/index.html</guid>
+      <description>물리학과 관련된 주제를 다룹니다.
+Electrodynamics</description>
+    </item>
+  </channel>
+</rss>
