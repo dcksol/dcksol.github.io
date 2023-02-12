@@ -8,10 +8,24 @@
     <language>ko-KR</language><atom:link href="http://dcksol.site/posts/relativity/hartle/chap4/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>4.2</title>
+      <link>http://dcksol.site/posts/relativity/hartle/chap4/2/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/relativity/hartle/chap4/2/index.html</guid>
+      <description>(a) 로켓의 관성계에서 빛이 로켓의 앞부분까지 도달하는 데 걸리는 시간은 단순히 $L/c$이다. (b) 지구의 관성계에서 빛이 로켓의 앞부분까지 도달하는 데 걸린 시간을 $T$라 하자. 지구의 관성계에서 로켓의 길이는 수축된 길이인 $$\frac{L}{\gamma} = L \sqrt{1 - \qty(\frac{4}{5})^2} = \frac{3L}{5}$$이다. 따라서 $t = 0$일 때 $\frac{3}{5}L$만큼 떨어져 있던 로켓의 앞부분은 $t=T$일 때, $\frac{3}{5}L + \frac{4}{5}c T$만큼 더 멀어져 있다. 빛은 시간 $T$ 동안 이 거리를 이동해야 하므로, $$cT = \frac{3}{5}L + \frac{4}{5}c T, \quad T = \frac{3L}{c}$$이다.</description>
+    </item>
+    <item>
+      <title>4.3</title>
       <link>http://dcksol.site/posts/relativity/hartle/chap4/3/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://dcksol.site/posts/relativity/hartle/chap4/3/index.html</guid>
-      <description>(a) 로켓의 관성계에서 빛이 로켓의 앞부분까지 도달하는 데 걸리는 시간은 단순히 $L/c$이다. (b) 지구의 관성계에서 빛이 로켓의 앞부분까지 도달하는 데 걸린 시간을 $T$라 하자. 지구의 관성계에서 로켓의 길이는 수축된 길이인 $$\frac{L}{\gamma} = L \sqrt{1 - \qty(\frac{4}{5})^2} = \frac{3L}{5}$$이다. 따라서 $t = 0$일 때 $\frac{3}{5}L$만큼 떨어져 있던 로켓의 앞부분은 $t=T$일 때, $\frac{3}{5}L + \frac{4}{5}c T$만큼 더 멀어져 있다. 빛은 시간 $T$ 동안 이 거리를 이동해야 하므로, $$cT = \frac{3}{5}L + \frac{4}{5}c T, \quad T = \frac{3L}{c}$$이다.</description>
+      <description>모순이 아니다. 창고의 관성계에서 동시에 일어난 두 사건 $\mathrm{A}$, $\mathrm{B}$ 사이의 spacetime interval은 $$ds^2 = -dt^2+dx^2 = (10\,\mathrm{m})^2$$이고, 이는 spacelike이다. 따라서 장대의 관성계에서는 두 사건의 인과 관계가 바뀔 수 있다. 장대의 관성계에서 두 사건이 일어나는 거리 간격은 $20\,\mathrm{m}$이므로, spacetime interval은 $$(ds&#39;)^2 = -(dt&#39;)^2+(dx&#39;)^2 = -300\,\mathrm{m}^2+400\,\mathrm{m}^2 = 100\,\mathrm{m}^2$$이 된다. 장대의 관성계에서 시간 간격을 로렌츠 인자로부터 계산할 수도 있는데, $\gamma = 2$이므로, $v = \frac{\sqrt{3}}{2}c$이다. 따라서 장대가 뒷문에 닿고난 후 앞문에 닿기까지 $15\,\mathrm{m}$의 거리를 $\frac{\sqrt{3}}{2}c$의 속력으로 (창고가) 이동해야 하므로 $(dt&#39;)^2 = 300\,\mathrm{m}^2$이다.</description>
+    </item>
+    <item>
+      <title>4.4</title>
+      <link>http://dcksol.site/posts/relativity/hartle/chap4/4/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/relativity/hartle/chap4/4/index.html</guid>
+      <description>지구 중력을 구심력으로 하여 궤도 운동 하는 위성의 속력은 $$\frac{mv^2}{r}=\frac{GMn}{r^2}, \quad v = \sqrt{\frac{GM}{r}}$$이다. 여기서 만유인력 상수 $G = 6.67384 \times 10^{-11}\,\mathrm{J\cdot m/kg^2}$, 지구 질량 $5.9742\times 10^{24}\,\mathrm{kg}$, 위성의 궤도 반지름 $r=6600\,\mathrm{km}$를 대입하면, $$v = 7772.41\,\mathrm{m/s}$$을 얻는다. 이는 지구가 자전하지 않을 때 지구 표면에 대한 인공위성의 상대 속력에 해당한다. 적도 근처에서 지구의 자전 속도는 약 $460\,\mathrm{m/s}$이므로 실제 위성의 상대 속력은 약 $7312\,\mathrm{m/s}$이다. 이제 로렌츠 인자에 이 값을 대입하면 $$\gamma = \frac{1}{\sqrt{1-v^2/c^2}} = 1 + 2.</description>
     </item>
   </channel>
 </rss>
