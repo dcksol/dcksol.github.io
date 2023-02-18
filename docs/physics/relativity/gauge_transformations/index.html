@@ -6,7 +6,7 @@
     <meta name="generator" content="Hugo 0.107.0">
     <meta name="generator" content="Relearn 5.8.0+tip">
     <meta name="description" content="">
-    <title>커스텀 패키지 사용하기 - DCK Solution</title>
+    <title>Linearized Gravity - DCK Solution</title>
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/css/fontawesome-all.min.css?1676692734" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1676692734" rel="stylesheet"></noscript>
     <link href="/css/featherlight.min.css?1676692734" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1676692734" rel="stylesheet"></noscript>
@@ -52,7 +52,7 @@
       gtag('config', 'G-86EFE70L83');
     </script>
   </head>
-  <body class="mobile-support html" data-url="/manim/tips/preamble/index.html">
+  <body class="mobile-support html" data-url="/docs/physics/relativity/gauge_transformations/index.html">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
@@ -64,15 +64,20 @@
             </span>
             <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
             <span class="links">
-              커스텀 패키지 사용하기
+              Linearized Gravity
             </span>
           </div>
           <div class="default-animation progress">
             <div class="toc-wrapper" dir="ltr">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#v015-이하의-버전에-해당">v0.15 이하의 버전에 해당</a></li>
-    <li><a href="#v017-이후">v0.17 이후</a></li>
+    <li><a href="#weak-field-limit">Weak-field limit</a></li>
+    <li><a href="#ricci-tensor-in-weak-field">Ricci tensor in weak-field</a></li>
+    <li><a href="#linearized-field-equations">Linearized field equations</a>
+      <ul>
+        <li><a href="#gauge-transformations">Gauge transformations</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
             </div>
@@ -84,68 +89,129 @@
           <div id="head-tags">
           </div>
           <article class="default">
-<h1 id="%EC%BB%A4%EC%8A%A4%ED%85%80-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0">커스텀 패키지 사용하기</h1>
+<h1 id="linearized-gravity">Linearized Gravity</h1>
 
+<h2 id="weak-field-limit">Weak-field limit</h2>
+<p>아인슈타인의 장 방정식
 
-<div class="box notices cstyle note">
-  <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
-  <div class="box-content">
-<p>manim을 업그레이드 하면 아래 설정이 초기화 되니 주의하자.
-(같은 커뮤니티 버전이어도 다른 하위 버전간 호환성이 안 좋은 편이다. 또한 초기 버전인 v0.1.0이 2020년 10월 22일 릴리즈된 이후로 거의 매달 새로운 버전이 릴리즈되었다.)</p>
-  </div>
+<span class="math align-center">
+$$G_{\mu\nu} = 8\pi T_{\mu\nu}, \quad G_{\mu\nu} \equiv R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}R\label{1}\tag{1}$$
+</span>는 
+<span class="math align-center">$10$</span>개의 비선형 편미분 방정식으로, 어떤 특별한 조건들에 대해서만 해를 구할 수 있음이 알려져있다. 여기서는 아래와 같은 약한 중력장 내에서 선형 항들만 취함으로써 선형 근사 해를 구한다.</p>
+<p>약한 중력장에서 metric은 다음과 같이 민코프스키 시공간에 대한 작은 변화로 표현된다.
+
+<span class="math align-center">
+$$g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$$
+</span></p>
+<h2 id="ricci-tensor-in-weak-field">Ricci tensor in weak-field</h2>
+<p>크리스토펠 심볼은 약한 장에서
+
+<span class="math align-center">
+$$\Gamma^\rho{}_{\mu\nu} = \frac{1}{2}\eta^{\rho\lambda}(h_{\nu\lambda,\mu} + h_{\mu\lambda,\nu}-h_{\mu\nu,\lambda})+\mathcal{O}(h^2)$$
+</span>
+와 같이 쓸 수 있고, 리만 텐서는
+
+<span class="math align-center">
+\begin{align}
+R^\sigma {}_{\rho\mu\nu} &= (\Gamma^\sigma{}_{\nu\rho,\mu} + \Gamma^\sigma{}_{\mu\kappa}\Gamma^\kappa{}_{\nu\rho}) - (\Gamma^\rho{}_{\mu\rho,\nu}+\Gamma^\rho{}_{\nu\kappa}\Gamma^\kappa{}_{\mu\rho}) \\&= \Gamma^\sigma{}_{\nu\rho,\mu} - \Gamma^\sigma_{\mu\rho,\nu} + \mathcal{O}(h^2)
+\end{align}
+</span>
+이다. 따라서 리치 텐서는
+
+<span class="math align-center">
+\begin{align}
+R_{\mu\nu} &= R^\sigma{}_{\mu\sigma\nu} \\&= \Gamma^\sigma{}_{\mu\nu,\sigma}-\Gamma^\sigma{}_{\mu\sigma,\nu} + \mathcal{O}(h^2)\\
+&= \frac{1}{2}(h^\sigma{}_{\mu,\nu\sigma} + h^\sigma{}_{\nu,\mu\sigma}-h_{\mu\nu,\sigma}{}^{,\sigma}-h_{,\mu\nu}) + \mathcal{O}(h^2)
+\end{align}
+</span>
+이다. 여기서 
+<span class="math align-center">$h\equiv h^\alpha{}_\alpha=\eta^{\alpha\beta}h_{\alpha\beta}$</span>이다. 이어서 리치 스칼라는
+
+<span class="math align-center">
+$$R = g^{\mu\nu}R_{\mu\nu}\approx\eta^{\mu\nu}R_{\mu\nu} = h_{\alpha\beta}{}^{,\alpha\beta}-h_{,\beta}{}^{,\beta}$$
+</span>
+이다.</p>
+<h2 id="linearized-field-equations">Linearized field equations</h2>
+<p>이제 이를 식 
+<span class="math align-center">$\eqref{1}$</span>에 대입하면,
+
+<span class="math align-center">
+$$h_{\mu\alpha,\nu}{}^{,\alpha} + h_{\nu\alpha,\mu}{}^{,\alpha} - h_{\mu\nu,\alpha}{}^{,\alpha}-h_{,\mu\nu} - \eta_{\mu\nu}(h_{\alpha\beta}{}^{,\alpha\beta}-h_{,\beta}{}^{,\beta}) = 16\pi T_{\mu\nu}$$
+</span>
+이고, 다음과 같이 
+<span class="math align-center">$\bar{h}_{\mu\nu}$</span>를 정의하면,
+
+<span class="math align-center">
+$$\bar{h}_{\mu\nu}\equiv h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}h$$
+</span>
+다음과 같이 쓸 수 있다.
+
+<span class="math align-center">
+$$-\bar{h}_{\mu\nu,\alpha}{}^{,\alpha} - \eta_{\mu\nu}\bar{h}_{\alpha\beta}{}^{,\alpha\beta}+\bar{h}_{\mu\alpha,\nu}{}^{,\alpha}+\bar{h}_{\nu\alpha,\mu}{}^{,\alpha} = 16\pi T_{\mu\nu}\label{2}\tag{2}$$
+</span>
+여기서 
+<span class="math align-center">$\eta_{\mu\nu}\bar{h}_{\alpha\beta}{}^{,\alpha\beta}=\bar{h}_{\mu\alpha,\nu}{}^{,\alpha}+\bar{h}_{\nu\alpha,\mu}{}^{,\alpha}$</span>가 되도록 하는 좌표를 임의로 선택할 수 있는데, 이것이 <em>로렌츠 게이지 조건</em><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>이다. 이에 따라 식 
+<span class="math align-center">$\eqref{2}$</span>는 다음과 같이 단순화된다.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>
+
+<span class="math align-center">
+$$-\bar{h}_{\mu\nu,\alpha}{}^{,\alpha}=16\pi T_{\mu\nu}$$
+</span>
+
+<span class="math align-center">$4$</span>차원 민코프스키 시공간에서의 파동 연산자를 
+<span class="math align-center">$\square f\equiv f^{,\mu}{}_{,\mu} = \eta^{\mu\nu}f_{,\mu\nu}$</span>와 같이 정의하면, 최종적으로 약한 장에서 아인슈타인 장 방정식은
+
+<span class="math align-center">
+$$\square \bar{h}_{\mu\nu} = - 16\pi T_{\mu\nu}$$
+</span>
+이다.</p>
+<h3 id="gauge-transformations">Gauge transformations</h3>
+<p>
+<span class="math align-center">$x^{\alpha} \rightarrow {x^\alpha}'$</span>의 좌표 변환이 충분히 작은 변화여서
+
+<span class="math align-center">
+$${x^\alpha}'=x^\alpha + \xi^\alpha (x^\beta)$$
+</span>
+를 만족하고, 여전히 새로운 좌표계에서 
+<span class="math align-center">$|h'_{\alpha\beta}|\ll 1$</span>을 만족한다고 하자. 또한 
+<span class="math align-center">$\xi^\alpha{}_{,\beta}$</span>가 
+<span class="math align-center">$h_{\alpha\beta}$</span>와 같은 자릿수로 작으면
+
+<span class="math align-center">
+$$\pdv{x^\alpha}{{x^{\beta}}'} = \delta^\alpha{}_\beta-\xi^\alpha{}_{,\beta}+\mathcal{O}(\xi^\alpha{}_{,\beta}^2)$$
+</span>
+가 되어 
+<span class="math align-center">$g_{\mu\nu} = \eta_{\mu\nu}+h_{\mu\nu}$</span>에 대한 좌표 변환 
+<span class="math align-center">$g'_{\mu\nu} = g_{\mu\nu}\pdv{x^\mu}{x'^\nu}\pdv{x^\nu}{x'^\mu}$</span>으로부터
+
+<span class="math align-center">
+$$h'_{\mu\nu} = h_{\mu\nu} - \xi_{\alpha,\beta}-\xi_{\beta,\alpha}\label{3}\tag{3}$$
+</span>
+를 얻는다.</p>
+<p>전자기학에서 벡터 전위와 스칼라 전위를 다음과 같이 변환 시켜도 전기장과 자기장은 바뀌지 않는다는 것을 배웠다.
+
+<span class="math align-center">
+$$\vb{A}'=\vb{A}+\grad{\lambda}$$
+</span>
+
+<span class="math align-center">
+$$V'=V-\pdv{\lambda}{t}$$
+</span>
+따라서 편의성에 따라 쿨롱 게이지 또는 로렌츠 게이지 등을 선택하였다. 식 
+<span class="math align-center">$\eqref{3}$</span>은 전자기학에서의 게이지 변환과 같은 형태로 여기서도 마찬가지로, 
+<span class="math align-center">$h_{\mu\nu}$</span>를 적당한 
+<span class="math align-center">$\xi^\alpha$</span>를 선택하여 원하는 조건을 만족시키도록 할 수 있다.</p>
+<!-- raw HTML omitted -->
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>전자기학과의 유사성으로 로렌츠(Lorentz) 게이지, 또는 조화(Harmonic) 게이지, de Donder 게이지라는 이름으로도 부른다.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Schutz 연습문제 8-10&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
 </div>
-<h2 id="v015-이하의-버전에-해당">v0.15 이하의 버전에 해당</h2>
-<p><code>manim\utils\tex_templates.py</code>을 살펴보면 manim의 기본 preamble로 다음과 같은 템플릿을 사용한다는 것을 알 수 있다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[english]</span>{babel}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[utf8]</span>{inputenc}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[T1]</span>{fontenc}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{lmodern}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{amsmath}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{amssymb}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{dsfont}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{setspace}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{tipa}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{relsize}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{textcomp}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{mathrsfs}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{calligra}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{wasysym}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{ragged2e}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{physics}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{xcolor}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\usepackage</span>{microtype}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\DisableLigatures</span>{encoding = *, family = * }
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">\linespread</span>{1}
-</span></span></code></pre></div><p>만약 위의 패키지 외에 추가로 사용하고 싶은 패키지가 있다면, <a href="https://docs.manim.community/en/stable/guides/using_text.html#extra-latex-packages" target="_blank" rel="noopener">공식 문서</a>에서는 다음과 같이 템플릿을 만들어 사용하는 것을 설명한다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> manim <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Sample</span>(Scene):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">construct</span>(self):
-</span></span><span style="display:flex;"><span>        myTemplate <span style="color:#f92672">=</span> TexTemplate()
-</span></span><span style="display:flex;"><span>        myTemplate<span style="color:#f92672">.</span>add_to_preamble(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;\usepackage</span><span style="color:#e6db74">{kotex}</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>        tex <span style="color:#f92672">=</span> Tex(
-</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;Hi 안녕하세요, xyzabc$xyz$}&#34;</span>,
-</span></span><span style="display:flex;"><span>            tex_template<span style="color:#f92672">=</span>myTemplate,
-</span></span><span style="display:flex;"><span>            font_size<span style="color:#f92672">=</span><span style="color:#ae81ff">72</span>,
-</span></span><span style="display:flex;"><span>        )
-</span></span></code></pre></div><p>만약 일부 특정한 문자에만 특정한 패키지를 사용하고 싶다면 위와 같이 하는 것이 좋으나, 한글 사용을 위한 <code>kotex</code> 패키지와 같이 항상 사용해야할 패키지가 있다면 아예 위의 <code>tex_templates.py</code>에 추가하여 사용하는 것이 좋다. 특히 특정한 프로젝트에서 파이썬을 venv 가상 환경으로 사용한다면, 그 프로젝트에서 사용하는 preamble을 수정해 주는 것이 편리할 것이다.</p>
-<p>예를 들어 다음과 같이 쓸 수 있다. (<code>mtpro2</code> 패키지는 대부분의 물리학 교재에서 사용하는 유료 수식 폰트로 별도의 설치가 필요하다.)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>_3b1b_preamble <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;&#34;&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\usepackage[utf8]</span><span style="color:#e6db74">{inputenc}</span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\usepackage</span><span style="color:#e6db74">{kotex}</span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\usepackage</span><span style="color:#e6db74">{amsmath}</span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\usepackage</span><span style="color:#e6db74">{amsthm}</span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\usepackage</span><span style="color:#e6db74">{setspace}</span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\usepackage</span><span style="color:#e6db74">{physics}</span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\usepackage</span><span style="color:#e6db74">{newtxtext}</span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\usepackage[subscriptcorrection,mtpcal,mtphrd,nofontinfo]</span><span style="color:#e6db74">{mtpro2}</span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\usepackage[version=4]</span><span style="color:#e6db74">{mhchem}</span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\usepackage</span><span style="color:#e6db74">{physics}</span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\usepackage</span><span style="color:#e6db74">{bm}</span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
-</span></span></code></pre></div><p>추가로 <code>manim\utils\tex_file_writing.py</code>의 <code>with open(tex_file)</code>, <code>with open(log_file)</code>, <code>with open(result)</code> 부분에서 각각 파라미터 <code>encoding=&quot;utf-8&quot;</code>을 추가해야 정상적으로 한글이 출력될 수 있다.</p>
-<h2 id="v017-이후">v0.17 이후</h2>
-<p>v0.17 이후는 단순하다. <code>manim\utils\tex.py</code>에서 <code>default_preamble</code>을 수정하기만 하면 된다. 이외의 다른 파일(<code>tex_file_writing.py</code> 등)을 수정할 필요는 없다.</p>
 
             <footer class="footline">
             </footer>
@@ -234,22 +300,22 @@
           <li data-nav-id="/posts/relativity/hartle/chap5/1/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap5/1/index.html">5.1<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
           <li data-nav-id="/posts/test/index.html" class="dd-item"><a href="/posts/test/index.html">Test<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/posts/math/index.html" class="dd-item"><a href="/posts/math/index.html">Math<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/docs/index.html" class="dd-item"><a href="/docs/index.html">Docs<i class="fas fa-check read-icon"></i></a><ul id="subsections-2f67fdc9a362fd86f1cfd4450ed56551">
-          <li data-nav-id="/docs/physics/index.html" class="dd-item"><a href="/docs/physics/index.html">Physics<i class="fas fa-check read-icon"></i></a><ul id="subsections-2d49e7dfb4c72adddcb1e6c5844fd248">
+          <li data-nav-id="/docs/index.html" class="dd-item parent"><a href="/docs/index.html">Docs<i class="fas fa-check read-icon"></i></a><ul id="subsections-2f67fdc9a362fd86f1cfd4450ed56551">
+          <li data-nav-id="/docs/physics/index.html" class="dd-item parent"><a href="/docs/physics/index.html">Physics<i class="fas fa-check read-icon"></i></a><ul id="subsections-2d49e7dfb4c72adddcb1e6c5844fd248">
           <li data-nav-id="/docs/physics/em/index.html" class="dd-item"><a href="/docs/physics/em/index.html">Electrodynamics<i class="fas fa-check read-icon"></i></a><ul id="subsections-b2e467d583ad2cbbb407ac4d510934b5">
           <li data-nav-id="/docs/physics/em/delta-function-identities/index.html" class="dd-item"><a href="/docs/physics/em/delta-function-identities/index.html">Delta function Identities<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/docs/physics/em/earnshaw/index.html" class="dd-item"><a href="/docs/physics/em/earnshaw/index.html">Earnshaw&#39;s Theorem<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/docs/physics/relativity/index.html" class="dd-item"><a href="/docs/physics/relativity/index.html">Relativity<i class="fas fa-check read-icon"></i></a><ul id="subsections-8e587598e20a615e2866ded45c32e066">
-          <li data-nav-id="/docs/physics/relativity/gauge_transformations/index.html" class="dd-item"><a href="/docs/physics/relativity/gauge_transformations/index.html">Linearized Gravity<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
-          <li data-nav-id="/manim/index.html" class="dd-item parent"><a href="/manim/index.html">Manim<i class="fas fa-check read-icon"></i></a><ul id="subsections-ebfb7ad9532e691873d74c98efc8f3c4">
+          <li data-nav-id="/docs/physics/relativity/index.html" class="dd-item parent"><a href="/docs/physics/relativity/index.html">Relativity<i class="fas fa-check read-icon"></i></a><ul id="subsections-8e587598e20a615e2866ded45c32e066">
+          <li data-nav-id="/docs/physics/relativity/gauge_transformations/index.html" class="dd-item active"><a href="/docs/physics/relativity/gauge_transformations/index.html">Linearized Gravity<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
+          <li data-nav-id="/manim/index.html" class="dd-item"><a href="/manim/index.html">Manim<i class="fas fa-check read-icon"></i></a><ul id="subsections-ebfb7ad9532e691873d74c98efc8f3c4">
           <li data-nav-id="/manim/example/index.html" class="dd-item"><a href="/manim/example/index.html">Examples<i class="fas fa-check read-icon"></i></a><ul id="subsections-b96dda4c702353d0783c921560fa65e5">
           <li data-nav-id="/manim/example/codesnippet/index.html" class="dd-item"><a href="/manim/example/codesnippet/index.html">Code Snippet<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/manim/example/moving_dot/index.html" class="dd-item"><a href="/manim/example/moving_dot/index.html">Moving dot<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/manim/example/pointwithtrace/index.html" class="dd-item"><a href="/manim/example/pointwithtrace/index.html">Point with trace<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/manim/example/simplemaths/index.html" class="dd-item"><a href="/manim/example/simplemaths/index.html">Simple math equations<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/manim/tips/index.html" class="dd-item parent"><a href="/manim/tips/index.html">Tips<i class="fas fa-check read-icon"></i></a><ul id="subsections-6224915234e36bf69d4e97db6c18b8da">
+          <li data-nav-id="/manim/tips/index.html" class="dd-item"><a href="/manim/tips/index.html">Tips<i class="fas fa-check read-icon"></i></a><ul id="subsections-6224915234e36bf69d4e97db6c18b8da">
           <li data-nav-id="/manim/tips/configuration/index.html" class="dd-item"><a href="/manim/tips/configuration/index.html">Configuration<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/manim/tips/preamble/index.html" class="dd-item active"><a href="/manim/tips/preamble/index.html">커스텀 패키지 사용하기<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/manim/tips/preamble/index.html" class="dd-item"><a href="/manim/tips/preamble/index.html">커스텀 패키지 사용하기<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           <li data-nav-id="/%EC%83%88-%ED%8F%B4%EB%8D%94/index.html" class="dd-item"><a href="/%EC%83%88-%ED%8F%B4%EB%8D%94/index.html">Another<i class="fas fa-check read-icon"></i></a><ul id="subsections-eed0f06040f9206a3f4ac12154d7eb88">
           <li data-nav-id="/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/index.html" class="dd-item"><a href="/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/index.html">Biological Physics<i class="fas fa-check read-icon"></i></a><ul id="subsections-a6afa61597d35eef57fd8a96739a150a">
           <li data-nav-id="/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/philip-nelson/index.html" class="dd-item"><a href="/%EC%83%88-%ED%8F%B4%EB%8D%94/biologicalphysics/philip-nelson/index.html">Philip Nelson<i class="fas fa-check read-icon"></i></a><ul id="subsections-7984fe136d2253483aa1b3d65dcc8fd2">
