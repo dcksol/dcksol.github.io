@@ -6,7 +6,7 @@
     <meta name="generator" content="Hugo 0.107.0">
     <meta name="generator" content="Relearn 5.8.0+tip">
     <meta name="description" content="">
-    <title>3.2.2 - DCK Solution</title>
+    <title>2.28 - DCK Solution</title>
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/css/fontawesome-all.min.css?1676963423" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1676963423" rel="stylesheet"></noscript>
     <link href="/css/featherlight.min.css?1676963423" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1676963423" rel="stylesheet"></noscript>
@@ -52,7 +52,7 @@
       gtag('config', 'G-86EFE70L83');
     </script>
   </head>
-  <body class="mobile-support html" data-url="/posts/mathematicalphysics/arfken/chap3/sec2/2/index.html">
+  <body class="mobile-support html" data-url="/posts/relativity/schutz/chap2/28/index.html">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
@@ -62,9 +62,25 @@
             <span id="sidebar-toggle-span">
               <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
             </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
             <span class="links">
-              3.2.2
+              2.28
             </span>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper" dir="ltr">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#a">(a)</a></li>
+        <li><a href="#b">(b)</a></li>
+        <li><a href="#c">(c)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
           </div>
         </div>
       </nav>
@@ -73,18 +89,122 @@
           <div id="head-tags">
           </div>
           <article class="default">
-<h1 id="3.2.2">3.2.2</h1>
+<h1 id="2.28">2.28</h1>
 
+<h3 id="a">(a)</h3>
 <ul>
-<li>다음과 같은 Levi-civita symbol과 Kronecker delta를 이용해 증명할 수도 있다.
+<li>
+<span class="math align-center">$\mathcal{O}$</span>에서 임의의 벡터 
+<span class="math align-center">$\vec{V} \rightarrow (V^0, V^1, V^2, V^3)$</span>는 
+<span class="math align-center">$\mathcal{O}$</span>에 대해  
+<span class="math align-center">$x$</span>축의 양의 방향으로 
+<span class="math align-center">$v$</span>의 속력으로 움직이는 
+<span class="math align-center">$\bar{\mathcal{O}}$</span>에서 로렌츠 변환에 의해
+
 <span class="math align-center">
-\begin{align}
-(\vb{A}\times \vb{B}) \cdot (\vb{A}\times \vb{B}) &= \epsilon_{kij}A_iB_j\epsilon_{klm}A_lB_m\\
-&= (\delta_{il}\delta_{jm} - \delta_{im}\delta_{jl})A_iB_jA_lB_m\\
-&= A_iB_jA_iB_j - A_i B_j A_j B_i\\
-&= (AB)^2 - (\vb{A}\cdot\vb{B})^2
-\end{align}
-</span></li>
+$$\vec{V} \rightarrow_{\bar{\mathcal{O}}} (\gamma V^0 - v\gamma V^1, -v\gamma V^0 + \gamma V^1, V^2, V^3)$$
+</span>
+이 된다.</li>
+<li>여기서 
+<span class="math align-center">$v = 0.6$</span>이고, 
+<span class="math align-center">$\gamma = \frac{1}{\sqrt{1 - v^2}} = \frac{1}{0.8} = \frac{5}{4}$</span>이다.</li>
+<li>따라서 
+<span class="math align-center">$\vec{A}$</span>, 
+<span class="math align-center">$\vec{B}$</span>, 
+<span class="math align-center">$\vec{C}$</span>는 각각
+
+<span class="math align-center">
+  $$\vec{A} \rightarrow_{\bar{\mathcal{O}}} \qty(\frac{5}{4}\cdot 5 - \frac{3}{5}\cdot \frac{5}{4}\cdot1, -\frac{3}{5}\cdot \frac{5}{4}\cdot 5 + \frac{5}{4}\cdot 1,-1, 0) = \qty(\frac{22}{4}, -\frac{10}{4}, -1, 0)$$
+  </span>
+
+<span class="math align-center">
+  $$\vec{B} \rightarrow_{\bar{\mathcal{O}}} \qty(\frac{5}{4}\cdot (-2) - \frac{3}{5}\cdot \frac{5}{4}\cdot 3, -\frac{3}{5}\cdot \frac{5}{4}\cdot (-2) + \frac{5}{4}\cdot 3,1, 6) = \qty(-\frac{19}{4}, \frac{21}{4}, 1, 6)$$
+  </span>
+
+<span class="math align-center">
+  $$\vec{C} \rightarrow_{\bar{\mathcal{O}}} \qty(\frac{5}{4}\cdot 2 - \frac{3}{5}\cdot \frac{5}{4}\cdot (-2), -\frac{3}{5}\cdot \frac{5}{4}\cdot 2 + \frac{5}{4}\cdot (-2),0, 0) = \qty(4, -4, 0, 0)$$
+  </span>
+이다.</li>
+</ul>
+<h3 id="b">(b)</h3>
+<ul>
+<li>
+<p>
+<span class="math align-center">$\mathcal{O}$</span>에서는
+
+<span class="math align-center">
+  $$\vec{A}\cdot\vec{B} = -5\cdot(-2) + 1 \cdot 3 - 1 \cdot 1 +0 \cdot 6 = 12$$
+  </span>
+
+<span class="math align-center">
+  $$\vec{B}\cdot\vec{C} = -(-2)\cdot 2 + 3 \cdot (-2) +1\cdot 0 + 6 \cdot 0 = -2$$
+  </span>
+
+<span class="math align-center">
+  $$\vec{A}\cdot\vec{C} = -5\cdot 2 + 1 \cdot (-2) -1 \cdot 0 + 0 \cdot 0 = -12$$
+  </span>
+
+<span class="math align-center">
+  $$\vec{C}\cdot\vec{C} = -2^2 + (-2)^2 + 0^2 + 0^2 = 0$$
+  </span>
+이고, 
+<span class="math align-center">$\bar{\mathcal{O}}$</span>에서는
+
+<span class="math align-center">
+  $$\vec{A}\cdot\vec{B} = -\frac{22}{4}\cdot\qty(-\frac{19}{4}) -\frac{10}{4} \cdot \frac{21}{4} - 1 \cdot 1 +0 \cdot 6 = 12$$
+  </span>
+
+<span class="math align-center">
+  $$\vec{B}\cdot\vec{C} = -\qty(-\frac{19}{4})\cdot 4 + \frac{21}{4} \cdot (-4) +1\cdot 0 + 6 \cdot 0 = -2$$
+  </span>
+
+<span class="math align-center">
+  $$\vec{A}\cdot\vec{C} = -\frac{22}{4}\cdot 4 - \frac{10}{4} \cdot (-4) -1 \cdot 0 + 0 \cdot 0 = -12$$
+  </span>
+
+<span class="math align-center">
+  $$\vec{C}\cdot\vec{C} = -4^2 + (-4)^2 + 0^2 + 0^2 = 0$$
+  </span>
+으로 두 관성계에서 각각의 값이 모두 같다.</p>
+</li>
+<li>
+<p>일반적으로 
+<span class="math align-center">$\mathcal{O}$</span>에서 두 벡터 
+<span class="math align-center">$\vec{A} \rightarrow (A^0, A^1, A^2, A^3)$</span>, 
+<span class="math align-center">$\vec{B} \rightarrow (B^0, B^1, B^2, B^3)$</span>는 
+<span class="math align-center">$\bar{\mathcal{O}}$</span>에서
+
+<span class="math align-center">
+  $$
+  \vec{A} \rightarrow (\gamma A^0 - v\gamma A^1, -v\gamma A^0 + \gamma A^1, A^2, A^3)
+  $$
+  </span>
+
+<span class="math align-center">
+  $$
+  \vec{B} \rightarrow (\gamma B^0 - v\gamma B^1, -v\gamma B^0 + \gamma B^1, B^2, B^3)
+  $$
+  </span>
+가 되고, 이 둘의 내적은
+
+<span class="math align-center">
+  \begin{align}
+  \vec{A}\cdot \vec{B} &= - (\gamma A^0 - v\gamma A^1)(\gamma B^0 - v\gamma B^1) + (-v\gamma A^0 + \gamma A^1)(-v\gamma B^0 + \gamma B^1) + A^2B^2+A^3B^3\\
+  &= -\gamma^2 (1 - v^2)A^0B^0 + \gamma^2 (1 - v^2)A^1B^1+A^2B^2+A^3B^3\\
+  &= - A^0B^0+A^1B^1+A^2B^2+A^3B^3
+  \end{align}
+  </span>
+가 되므로 어느 관성계에서나 동일하다.</p>
+</li>
+</ul>
+<h3 id="c">(c)</h3>
+<ul>
+<li>
+<span class="math align-center">$\vec{A}^2 = -25+1+1+0=-23<0$</span>이므로 timelike,</li>
+<li>
+<span class="math align-center">$\vec{B}^2 = -4+9+1+36 = 42>0$</span>이므로 spacelike,</li>
+<li>
+<span class="math align-center">$\vec{C}^2 = -4 + 4 + 0 + 0 = 0$</span>이므로 null이다.</li>
 </ul>
 
             <footer class="footline">
@@ -144,11 +264,11 @@
       <div id="content-wrapper" class="highlightable">
         <ul class="topics">
           <li data-nav-id="/posts/index.html" class="dd-item parent"><a href="/posts/index.html">Solutions<i class="fas fa-check read-icon"></i></a><ul id="subsections-a07783f405300745807d39eacf150420">
-          <li data-nav-id="/posts/mathematicalphysics/index.html" class="dd-item parent"><a href="/posts/mathematicalphysics/index.html">Mathematical Physics<i class="fas fa-check read-icon"></i></a><ul id="subsections-47f80f8b2c75d0600f23f168deb4b4cb">
-          <li data-nav-id="/posts/mathematicalphysics/arfken/index.html" class="dd-item parent"><a href="/posts/mathematicalphysics/arfken/index.html">Arfken<i class="fas fa-check read-icon"></i></a><ul id="subsections-590828bc8a90be535a623f7b7b2835be">
-          <li data-nav-id="/posts/mathematicalphysics/arfken/chap3/index.html" class="dd-item parent"><a href="/posts/mathematicalphysics/arfken/chap3/index.html">Chapter3<i class="fas fa-check read-icon"></i></a><ul id="subsections-526c310fd4b7628b682f8c48776a6be6">
-          <li data-nav-id="/posts/mathematicalphysics/arfken/chap3/sec2/index.html" class="dd-item parent"><a href="/posts/mathematicalphysics/arfken/chap3/sec2/index.html">Section2<i class="fas fa-check read-icon"></i></a><ul id="subsections-d227aca02e7e1668cc08e50ab59a9bcc">
-          <li data-nav-id="/posts/mathematicalphysics/arfken/chap3/sec2/2/index.html" class="dd-item active"><a href="/posts/mathematicalphysics/arfken/chap3/sec2/2/index.html">3.2.2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/mathematicalphysics/index.html" class="dd-item"><a href="/posts/mathematicalphysics/index.html">Mathematical Physics<i class="fas fa-check read-icon"></i></a><ul id="subsections-47f80f8b2c75d0600f23f168deb4b4cb">
+          <li data-nav-id="/posts/mathematicalphysics/arfken/index.html" class="dd-item"><a href="/posts/mathematicalphysics/arfken/index.html">Arfken<i class="fas fa-check read-icon"></i></a><ul id="subsections-590828bc8a90be535a623f7b7b2835be">
+          <li data-nav-id="/posts/mathematicalphysics/arfken/chap3/index.html" class="dd-item"><a href="/posts/mathematicalphysics/arfken/chap3/index.html">Chapter3<i class="fas fa-check read-icon"></i></a><ul id="subsections-526c310fd4b7628b682f8c48776a6be6">
+          <li data-nav-id="/posts/mathematicalphysics/arfken/chap3/sec2/index.html" class="dd-item"><a href="/posts/mathematicalphysics/arfken/chap3/sec2/index.html">Section2<i class="fas fa-check read-icon"></i></a><ul id="subsections-d227aca02e7e1668cc08e50ab59a9bcc">
+          <li data-nav-id="/posts/mathematicalphysics/arfken/chap3/sec2/2/index.html" class="dd-item"><a href="/posts/mathematicalphysics/arfken/chap3/sec2/2/index.html">3.2.2<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/posts/mathematicalphysics/arfken/chap3/sec2/13/index.html" class="dd-item"><a href="/posts/mathematicalphysics/arfken/chap3/sec2/13/index.html">3.2.13<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/posts/mathematicalphysics/arfken/chap3/sec2/14/index.html" class="dd-item"><a href="/posts/mathematicalphysics/arfken/chap3/sec2/14/index.html">3.2.14<i class="fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/posts/mathematicalphysics/arfken/chap3/sec5/index.html" class="dd-item"><a href="/posts/mathematicalphysics/arfken/chap3/sec5/index.html">Section5<i class="fas fa-check read-icon"></i></a><ul id="subsections-ff78d7b14fa558b74d9474abfca88111">
@@ -158,7 +278,7 @@
           <li data-nav-id="/posts/quantummechanics/griffiths/chap1/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/index.html">Chapter1<i class="fas fa-check read-icon"></i></a><ul id="subsections-b09ec7afa12da2cfdd3b9eb03d77dfb7">
           <li data-nav-id="/posts/quantummechanics/griffiths/chap1/1/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/1/index.html">1.1<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/posts/quantummechanics/griffiths/chap1/11/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/11/index.html">1.11<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
-          <li data-nav-id="/posts/relativity/index.html" class="dd-item"><a href="/posts/relativity/index.html">Relativity<i class="fas fa-check read-icon"></i></a><ul id="subsections-baa1e1cb0e3e633a43391b86eae21f22">
+          <li data-nav-id="/posts/relativity/index.html" class="dd-item parent"><a href="/posts/relativity/index.html">Relativity<i class="fas fa-check read-icon"></i></a><ul id="subsections-baa1e1cb0e3e633a43391b86eae21f22">
           <li data-nav-id="/posts/relativity/hartle/index.html" class="dd-item"><a href="/posts/relativity/hartle/index.html">Hartle<i class="fas fa-check read-icon"></i></a><ul id="subsections-0abece8efbfcdc3104cdb5ecabefed9a">
           <li data-nav-id="/posts/relativity/hartle/chap2/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap2/index.html">Chapter2<i class="fas fa-check read-icon"></i></a><ul id="subsections-84992a7ce5c61e33688f5a47eb5b4f86">
           <li data-nav-id="/posts/relativity/hartle/chap2/1/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap2/1/index.html">2.1<i class="fas fa-check read-icon"></i></a></li>
@@ -172,9 +292,9 @@
           <li data-nav-id="/posts/relativity/hartle/chap4/4/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap4/4/index.html">4.4<i class="fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/posts/relativity/hartle/chap5/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap5/index.html">Chapter5<i class="fas fa-check read-icon"></i></a><ul id="subsections-31a8f39351fd0f66b9c49adeec9d146a">
           <li data-nav-id="/posts/relativity/hartle/chap5/1/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap5/1/index.html">5.1<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
-          <li data-nav-id="/posts/relativity/schutz/index.html" class="dd-item"><a href="/posts/relativity/schutz/index.html">Schutz<i class="fas fa-check read-icon"></i></a><ul id="subsections-d6a40b1b2e4202c495cd631293c7d168">
-          <li data-nav-id="/posts/relativity/schutz/chap2/index.html" class="dd-item"><a href="/posts/relativity/schutz/chap2/index.html">Chapter2<i class="fas fa-check read-icon"></i></a><ul id="subsections-29011c373d798641a542f93667f19964">
-          <li data-nav-id="/posts/relativity/schutz/chap2/28/index.html" class="dd-item"><a href="/posts/relativity/schutz/chap2/28/index.html">2.28<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/relativity/schutz/index.html" class="dd-item parent"><a href="/posts/relativity/schutz/index.html">Schutz<i class="fas fa-check read-icon"></i></a><ul id="subsections-d6a40b1b2e4202c495cd631293c7d168">
+          <li data-nav-id="/posts/relativity/schutz/chap2/index.html" class="dd-item parent"><a href="/posts/relativity/schutz/chap2/index.html">Chapter2<i class="fas fa-check read-icon"></i></a><ul id="subsections-29011c373d798641a542f93667f19964">
+          <li data-nav-id="/posts/relativity/schutz/chap2/28/index.html" class="dd-item active"><a href="/posts/relativity/schutz/chap2/28/index.html">2.28<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/posts/relativity/schutz/chap2/29/index.html" class="dd-item"><a href="/posts/relativity/schutz/chap2/29/index.html">2.29<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
           <li data-nav-id="/posts/test/index.html" class="dd-item"><a href="/posts/test/index.html">Test<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/posts/math/index.html" class="dd-item"><a href="/posts/math/index.html">Math<i class="fas fa-check read-icon"></i></a></li></ul></li>
