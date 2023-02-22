@@ -13,5 +13,12 @@
       <guid>http://dcksol.site/posts/relativity/hartle/chap3/3/index.html</guid>
       <description> 만약 오직 지구의 자전만을 고려한다면, 24시간에 한 바퀴, 즉 한 시간에 15도를 돌 것이다. 그런데 지구는 태양을 중심으로 공전도 하므로, 실제 지구는 24시간동안 $360^\circ + \frac{360^\circ}{24} \approx 360.986^\circ$만큼 회전하며, 이는 시간당 약 $15.041^\circ$를 도는 것과 같다. </description>
     </item>
+    <item>
+      <title>3.4</title>
+      <link>http://dcksol.site/posts/relativity/hartle/chap3/4/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/relativity/hartle/chap3/4/index.html</guid>
+      <description>구형 대칭을 가지므로 가우스 정리를 사용하는 것이 좋다. 구의 밀도는 $\rho = \frac{M}{V} = \frac{M}{\frac{4}{3}\pi R^3} = \frac{3M}{4\pi R^3}$으로 균일하다. 먼저 $r &gt; R$일 때, $$-g \cdot 4\pi r^2 = 4\pi G M, \quad g = -\frac{GM}{r^2}$$이다. $r \rightarrow \infty$에서 퍼텐셜이 $0$이 되도록 하자. $$\Phi = - \int g = - \frac{GM}{r}$$이다. $r \le R$일 때, $$-g \cdot 4\pi r^2 = 4\pi G \rho \frac{4\pi r^3}{3}, \quad g = -\frac{4\pi G \rho}{3}r = -\frac{GM}{R^3}r$$이고 $$\Phi = - \int g = \frac{GM}{2R^3}r^2 + \Phi_0$$이다.</description>
+    </item>
   </channel>
 </rss>
