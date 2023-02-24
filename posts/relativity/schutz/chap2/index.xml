@@ -7,6 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-KR</language><atom:link href="http://dcksol.site/posts/relativity/schutz/chap2/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>2.19</title>
+      <link>http://dcksol.site/posts/relativity/schutz/chap2/19/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/relativity/schutz/chap2/19/index.html</guid>
+      <description>(a) MCRF에서 $\vec{U} = (1, 0, 0, 0)$이고, $\vec{a}\cdot \vec{U} = 0$이므로 이러한 관성계에서 $\vec{a} = (0, a^i)$이고 기존의 가속도의 정의와 같이 $a^i = \dv[2]{x^i}{t}$이다. 만약 가속도의 방향을 $x$축으로 하는 좌표계를 선택한다면, 그러한 좌표계에서 $\vec{a}\cdot \vec{a} = \alpha^2 = (a^1)^2$에 해당한다. (b) 4-velocity는 $$\dv{t}{\tau} = U^0, \quad \dv{x}{\tau} = U^1,\quad U^\mu U_\mu = -1,$$4-acceleration은 $$\dv{U^0}{\tau} = a^0, \quad \dv{U^1}{\tau} = a^1, \quad a^\mu a_\mu = \alpha ^2,$$또한 $$U^\mu a_\mu = 0$$이다.</description>
+    </item>
+    <item>
       <title>2.28</title>
       <link>http://dcksol.site/posts/relativity/schutz/chap2/28/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
