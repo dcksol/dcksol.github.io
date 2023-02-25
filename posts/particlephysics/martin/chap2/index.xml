@@ -22,5 +22,19 @@
       <guid>http://dcksol.site/posts/particlephysics/martin/chap2/2/index.html</guid>
       <description> $$0.145\,\mathrm{kg} = 0.145\, \mathrm{kg} \frac{5.62\times 10^{26}\,\mathrm{GeV}}{1\,\mathrm{kg}} = 8.15\times 10^{25}\,\mathrm{GeV}$$$$18.44\,\mathrm{m} = 18.44\,\mathrm{m}\frac{5.09\times 10^{15}\,\mathrm{GeV^{-1}}}{1\,\mathrm{m}} = 9.39\times 10^{16}\,\mathrm{GeV^{-1}}$$$$150\,\mathrm{ms} = 150\,\mathrm{ms}\frac{10^{-3}\,\mathrm{s}}{1\,\mathrm{ms}}\frac{1.52\times 10^{24}\,\mathrm{GeV^{-1}}}{1\,\mathrm{s}} = 2.28 \times 10^{23}\,\mathrm{GeV^{-1}}$$</description>
     </item>
+    <item>
+      <title>2.5</title>
+      <link>http://dcksol.site/posts/particlephysics/martin/chap2/5/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/particlephysics/martin/chap2/5/index.html</guid>
+      <description>(c) 처음 질량이 $M$인 물체에 대해 4-momenta는 $$p^\mu = (E=M, 0, 0, 0)$$이다. 이후 질량이 각각 $m_a$, $m_b$인 두 물체의 4-momenta는 $$k_a^\mu = (E_a, 0, 0, - \sqrt{E_a^2 - m_a^2}), \quad k_b^\mu = (E_b, 0, 0, -\sqrt{E_b^2 - m_b^2})$$이다. 4-momenta가 보존되어야 하므로 $$E_a + E_b = M, \quad \sqrt{E_a^2 - m_a^2} = \sqrt{E_b^2-m_b^2}$$이다. 두 식을 연립하면 $$E_a = \frac{M^2 + m_a^2 - m_b^2}{2M}, \quad E_b = \frac{M^2+m_b^2-m_a^2}{2M}$$이다.</description>
+    </item>
+    <item>
+      <title>2.8</title>
+      <link>http://dcksol.site/posts/particlephysics/martin/chap2/8/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/particlephysics/martin/chap2/8/index.html</guid>
+      <description> \begin{align}\partial_\rho F_{\mu\nu} + \partial_\mu F_{\nu \rho} + \partial_\nu F_{\rho \mu} &amp;= \partial_\rho \partial_\mu A_\nu - \partial_\rho \partial_\nu A_\mu + \partial_\mu \partial_nu A_\rho - \partial_\mu \partial_\rho A_\nu + \partial_\nu \partial_\rho A_\mu - \partial_\nu \partial_\mu A_\rho\\ &amp;= (\partial_\rho \partial_\mu A_\nu - \partial_\mu \partial_\rho A_\nu) + (\partial_\mu \partial_\nu A_\rho - \partial_\nu \partial_\mu A_\rho) + (\partial_\nu \partial_\rho A_\mu - \partial_\rho \partial_\nu A_\mu)\\&amp;= 0\end{align}</description>
+    </item>
   </channel>
 </rss>

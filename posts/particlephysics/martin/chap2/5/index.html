@@ -6,8 +6,7 @@
     <meta name="generator" content="Hugo 0.107.0">
     <meta name="generator" content="Relearn 5.8.0+tip">
     <meta name="description" content="">
-    <title>Relativity - DCK Solution</title>
-    <link href="/posts/relativity/index.xml" rel="alternate" type="application/rss+xml" title="Relativity - DCK Solution">
+    <title>2.5 - DCK Solution</title>
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/css/fontawesome-all.min.css?1677343534" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1677343534" rel="stylesheet"></noscript>
     <link href="/css/featherlight.min.css?1677343534" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1677343534" rel="stylesheet"></noscript>
@@ -53,7 +52,7 @@
       gtag('config', 'G-86EFE70L83');
     </script>
   </head>
-  <body class="mobile-support html" data-url="/posts/relativity/index.html">
+  <body class="mobile-support html" data-url="/posts/particlephysics/martin/chap2/5/index.html">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
@@ -63,9 +62,25 @@
             <span id="sidebar-toggle-span">
               <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
             </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
             <span class="links">
-              Relativity
+              2.5
             </span>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper" dir="ltr">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#c">(c)</a></li>
+        <li><a href="#a">(a)</a></li>
+        <li><a href="#b">(b)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
           </div>
         </div>
       </nav>
@@ -74,15 +89,85 @@
           <div id="head-tags">
           </div>
           <article class="default">
-<h1 id="relativity">Relativity</h1>
+<h1 id="2.5">2.5</h1>
 
-<p>Relativity
+<h3 id="c">(c)</h3>
+<ul>
+<li>처음 질량이 
+<span class="math align-center">$M$</span>인 물체에 대해 4-momenta는
 
-<ul class="children children-li children-sort-weight">
-	
-<li><a href="/posts/relativity/hartle/index.html">Hartle</a></li>
-<li><a href="/posts/relativity/schutz/index.html">Schutz</a></li>
-</ul></p>
+<span class="math align-center">
+  $$p^\mu = (E=M, 0, 0, 0)$$
+  </span>이다.</li>
+<li>이후 질량이 각각 
+<span class="math align-center">$m_a$</span>, 
+<span class="math align-center">$m_b$</span>인 두 물체의 4-momenta는
+
+<span class="math align-center">
+  $$k_a^\mu = (E_a, 0, 0, - \sqrt{E_a^2 - m_a^2}), \quad k_b^\mu = (E_b, 0, 0, -\sqrt{E_b^2 - m_b^2})$$
+  </span>이다.</li>
+<li>4-momenta가 보존되어야 하므로
+
+<span class="math align-center">
+  $$E_a + E_b = M, \quad \sqrt{E_a^2 - m_a^2} = \sqrt{E_b^2-m_b^2}$$
+  </span>이다.</li>
+<li>두 식을 연립하면
+
+<span class="math align-center">
+  $$E_a = \frac{M^2 + m_a^2 - m_b^2}{2M}, \quad E_b = \frac{M^2+m_b^2-m_a^2}{2M}$$
+  </span>이다.</li>
+<li>따라서 4-momenta의 
+<span class="math align-center">$z$</span>성분은
+
+<span class="math align-center">
+  \begin{align}-\sqrt{E_a^2 - m_a^2} &= -\sqrt{\frac{(M^2+m_a^2-m_b^2)^2 - 4M^2m_a^2}{4M^2}}\\&=-\frac{\sqrt{M^4+m_a^4+m_b^4-2M^2m_a^2-2M^2m_b^2-2m_a^2m_b^2}}{2M}\\&=-\frac{\sqrt{\lambda}}{2M} \end{align}
+  </span>
+이고, 
+<span class="math align-center">$\sqrt{E_b^2-m_b^2}$</span> 또한 마찬가지로 계산하여
+
+<span class="math align-center">
+  $$\sqrt{E_b^2 - m_b^2} = \frac{\sqrt{\lambda}}{2M}$$
+  </span>
+을 얻는다.</li>
+<li>따라서
+
+<span class="math align-center">
+  $$k_a^\mu = \qty(\frac{M^2+m_a^2-m_b^2}{2M}, 0, 0, - \frac{\sqrt{\lambda}}{2M} )$$
+  </span>
+
+<span class="math align-center">
+  $$k_b^\mu = \qty(\frac{M^2+m_b^2-m_a^2}{2M}, 0, 0, \frac{\sqrt{\lambda}}{2M} )$$
+  </span>
+이다.</li>
+</ul>
+<h3 id="a">(a)</h3>
+<ul>
+<li>
+<span class="math align-center">$m_a = m_b = m$</span>인 경우, 
+<span class="math align-center">$\lambda = M^2(M^2-4m^2)$</span>이므로
+
+<span class="math align-center">
+  $$k_a^\mu = \qty( \frac{M}{2}, 0, 0, - \frac{\sqrt{M^2-4m^2}}{2})$$
+  </span>
+
+<span class="math align-center">
+  $$k_b^\mu = \qty(\frac{M}{2}, 0, 0, \frac{\sqrt{M^2-4m^2}}{2})$$
+  </span>이다.</li>
+</ul>
+<h3 id="b">(b)</h3>
+<ul>
+<li>
+<span class="math align-center">$m_b = 0$</span>인 경우, 
+<span class="math align-center">$\lambda = (M^2-m_a^2)^2$</span>이므로
+
+<span class="math align-center">
+  $$k_a^\mu = \qty(\frac{M^2+m_a^2}{2M}, 0, 0, - \frac{M^2 - m_a^2}{2M})$$
+  </span>
+
+<span class="math align-center">
+  $$k_b^\mu = \qty(\frac{M^2-m_a^2}{2M}, 0, 0, \frac{M^2 - m_a^2}{2M})$$
+  </span>이다.</li>
+</ul>
 
             <footer class="footline">
             </footer>
@@ -155,14 +240,14 @@
           <li data-nav-id="/posts/quantummechanics/griffiths/chap1/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/index.html">Chapter1<i class="fas fa-check read-icon"></i></a><ul id="subsections-b09ec7afa12da2cfdd3b9eb03d77dfb7">
           <li data-nav-id="/posts/quantummechanics/griffiths/chap1/1/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/1/index.html">1.1<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/posts/quantummechanics/griffiths/chap1/11/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/11/index.html">1.11<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
-          <li data-nav-id="/posts/particlephysics/index.html" class="dd-item"><a href="/posts/particlephysics/index.html">Particle Physics<i class="fas fa-check read-icon"></i></a><ul id="subsections-7de240f82140c9fd67511e39b7e63f43">
-          <li data-nav-id="/posts/particlephysics/martin/index.html" class="dd-item"><a href="/posts/particlephysics/martin/index.html">Martin<i class="fas fa-check read-icon"></i></a><ul id="subsections-57bcea17a09da4afd7094490f4d9a5e1">
-          <li data-nav-id="/posts/particlephysics/martin/chap2/index.html" class="dd-item"><a href="/posts/particlephysics/martin/chap2/index.html">Chapter2<i class="fas fa-check read-icon"></i></a><ul id="subsections-d3a64ac2487c1a79d4fc63f2ecc2132b">
+          <li data-nav-id="/posts/particlephysics/index.html" class="dd-item parent"><a href="/posts/particlephysics/index.html">Particle Physics<i class="fas fa-check read-icon"></i></a><ul id="subsections-7de240f82140c9fd67511e39b7e63f43">
+          <li data-nav-id="/posts/particlephysics/martin/index.html" class="dd-item parent"><a href="/posts/particlephysics/martin/index.html">Martin<i class="fas fa-check read-icon"></i></a><ul id="subsections-57bcea17a09da4afd7094490f4d9a5e1">
+          <li data-nav-id="/posts/particlephysics/martin/chap2/index.html" class="dd-item parent"><a href="/posts/particlephysics/martin/chap2/index.html">Chapter2<i class="fas fa-check read-icon"></i></a><ul id="subsections-d3a64ac2487c1a79d4fc63f2ecc2132b">
           <li data-nav-id="/posts/particlephysics/martin/chap2/1/index.html" class="dd-item"><a href="/posts/particlephysics/martin/chap2/1/index.html">2.1<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/posts/particlephysics/martin/chap2/2/index.html" class="dd-item"><a href="/posts/particlephysics/martin/chap2/2/index.html">2.2<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/posts/particlephysics/martin/chap2/5/index.html" class="dd-item"><a href="/posts/particlephysics/martin/chap2/5/index.html">2.5<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/particlephysics/martin/chap2/5/index.html" class="dd-item active"><a href="/posts/particlephysics/martin/chap2/5/index.html">2.5<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/posts/particlephysics/martin/chap2/8/index.html" class="dd-item"><a href="/posts/particlephysics/martin/chap2/8/index.html">2.8<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
-          <li data-nav-id="/posts/relativity/index.html" class="dd-item active parent"><a href="/posts/relativity/index.html">Relativity<i class="fas fa-check read-icon"></i></a><ul id="subsections-baa1e1cb0e3e633a43391b86eae21f22">
+          <li data-nav-id="/posts/relativity/index.html" class="dd-item"><a href="/posts/relativity/index.html">Relativity<i class="fas fa-check read-icon"></i></a><ul id="subsections-baa1e1cb0e3e633a43391b86eae21f22">
           <li data-nav-id="/posts/relativity/hartle/index.html" class="dd-item"><a href="/posts/relativity/hartle/index.html">Hartle<i class="fas fa-check read-icon"></i></a><ul id="subsections-0abece8efbfcdc3104cdb5ecabefed9a">
           <li data-nav-id="/posts/relativity/hartle/chap2/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap2/index.html">Chapter2<i class="fas fa-check read-icon"></i></a><ul id="subsections-84992a7ce5c61e33688f5a47eb5b4f86">
           <li data-nav-id="/posts/relativity/hartle/chap2/1/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap2/1/index.html">2.1<i class="fas fa-check read-icon"></i></a></li>
