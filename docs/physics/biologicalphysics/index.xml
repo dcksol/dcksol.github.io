@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Biological Physics on DCK Solution</title>
+    <link>http://dcksol.site/docs/physics/biologicalphysics/index.html</link>
+    <description>Recent content in Biological Physics on DCK Solution</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language><atom:link href="http://dcksol.site/docs/physics/biologicalphysics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Philip Nelson</title>
+      <link>http://dcksol.site/docs/physics/biologicalphysics/philip-nelson/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/docs/physics/biologicalphysics/philip-nelson/index.html</guid>
+      <description>DCK Solution 메인 페이지입니다.!
+Chapter 7</description>
+    </item>
+  </channel>
+</rss>
