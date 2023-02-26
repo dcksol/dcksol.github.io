@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://dcksol.site/posts/quantummechanics/griffiths/chap1/1/index.html</loc>
+  </url>
+  <url>
     <loc>http://dcksol.site/posts/particlephysics/martin/chap2/1/index.html</loc>
   </url>
   <url>
+    <loc>http://dcksol.site/posts/relativity/hartle/chap7/1/index.html</loc>
+  </url>
+  <url>
     <loc>http://dcksol.site/posts/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dcksol.site/posts/quantummechanics/griffiths/chap1/2/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/posts/particlephysics/martin/chap2/2/index.html</loc>
@@ -16,19 +25,37 @@
     <loc>http://dcksol.site/posts/relativity/hartle/chap4/2/index.html</loc>
   </url>
   <url>
+    <loc>http://dcksol.site/posts/relativity/hartle/chap7/2/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dcksol.site/posts/relativity/hartle/chap2/index.html</loc>
+  </url>
+  <url>
     <loc>http://dcksol.site/docs/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/posts/mathematicalphysics/index.html</loc>
   </url>
   <url>
+    <loc>http://dcksol.site/posts/quantummechanics/griffiths/chap1/3/index.html</loc>
+  </url>
+  <url>
     <loc>http://dcksol.site/posts/relativity/hartle/chap4/3/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dcksol.site/posts/relativity/hartle/chap3/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/posts/quantummechanics/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/posts/relativity/hartle/chap4/4/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dcksol.site/posts/relativity/hartle/chap7/4/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dcksol.site/posts/relativity/hartle/chap4/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/posts/particlephysics/index.html</loc>
@@ -43,10 +70,16 @@
     <loc>http://dcksol.site/posts/relativity/hartle/chap4/5/index.html</loc>
   </url>
   <url>
+    <loc>http://dcksol.site/posts/relativity/hartle/chap5/index.html</loc>
+  </url>
+  <url>
     <loc>http://dcksol.site/manim/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/posts/relativity/hartle/chap4/6/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dcksol.site/posts/relativity/hartle/chap7/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/posts/particlephysics/martin/chap2/8/index.html</loc>
@@ -56,6 +89,9 @@
   </url>
   <url>
     <loc>http://dcksol.site/posts/mathematicalphysics/arfken/chap3/sec5/9/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dcksol.site/posts/quantummechanics/griffiths/chap1/11/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/posts/mathematicalphysics/arfken/chap3/sec2/13/index.html</loc>
@@ -77,12 +113,6 @@
   </url>
   <url>
     <loc>http://dcksol.site/manim/example/index.html</loc>
-  </url>
-  <url>
-    <loc>http://dcksol.site/posts/quantummechanics/griffiths/chap1/1/index.html</loc>
-  </url>
-  <url>
-    <loc>http://dcksol.site/posts/quantummechanics/griffiths/chap1/11/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/posts/relativity/hartle/chap2/1/index.html</loc>
@@ -121,22 +151,10 @@
     <loc>http://dcksol.site/posts/particlephysics/martin/chap2/index.html</loc>
   </url>
   <url>
-    <loc>http://dcksol.site/posts/relativity/hartle/chap2/index.html</loc>
-  </url>
-  <url>
     <loc>http://dcksol.site/posts/relativity/schutz/chap2/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/posts/mathematicalphysics/arfken/chap3/index.html</loc>
-  </url>
-  <url>
-    <loc>http://dcksol.site/posts/relativity/hartle/chap3/index.html</loc>
-  </url>
-  <url>
-    <loc>http://dcksol.site/posts/relativity/hartle/chap4/index.html</loc>
-  </url>
-  <url>
-    <loc>http://dcksol.site/posts/relativity/hartle/chap5/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/manim/example/codesnippet/index.html</loc>
