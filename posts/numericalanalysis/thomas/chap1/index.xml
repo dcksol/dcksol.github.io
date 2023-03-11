@@ -13,5 +13,33 @@
       <guid>http://dcksol.site/posts/numericalanalysis/thomas/chap1/1_2_1/index.html</guid>
       <description>아래 코드에서 사용된 step의 값은 그래프를 더 직관적으로 표현하기 위해 $t=0.5$까지로 조정되었다. import math import numpy as np import matplotlib.pyplot as plt # parameter a, b = 0, 0 M = 10 nu = 1 / 6 dt = 0.02 step = int(0.5 / dt) dx = 1 / M color = plt.cm.jet(np.linspace(0, 1, step)) # initial data v = [0] * (M + 1) for i in range(1, M): x = 0 + i * dx v[i] = math.</description>
     </item>
+    <item>
+      <title>1.4.1</title>
+      <link>http://dcksol.site/posts/numericalanalysis/thomas/chap1/1_4_1/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/numericalanalysis/thomas/chap1/1_4_1/index.html</guid>
+      <description>import math import numpy as np import matplotlib.pyplot as plt # parameter a, b = 0, 0 M = 10 nu = 1 dt = 0.004 step = int(0.9 / dt) dx = 1 / M color = plt.cm.jet(np.linspace(0, 1, step)) # initial data v = [0] * (M + 1) for i in range(M + 1): x = 0 + i * dx v[i] = math.cos(math.pi * x / 2) # evolution for _ in range(step): v_new = v[:] for i in range(1, M): v_new[i] = v[i] + (nu * (v[i + 1] - 2 * v[i] + v[i - 1]) / dx ** 2) * dt v_new[0] = v[0] + (nu * 2 * (v[1] - v[0]) / dx ** 2) * dt v = v_new[:] plt.</description>
+    </item>
+    <item>
+      <title>1.4.2</title>
+      <link>http://dcksol.site/posts/numericalanalysis/thomas/chap1/1_4_2/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/numericalanalysis/thomas/chap1/1_4_2/index.html</guid>
+      <description>$M = 20, \Delta t = 0.001$ import math import numpy as np import matplotlib.pyplot as plt # parameter a, b = 0, 0 M = 20 nu = 1 dt = 0.001 step = int(0.9 / dt) dx = 1 / M color = plt.cm.jet(np.linspace(0, 1, step)) # initial data v = [0] * (M + 1) for i in range(M + 1): x = 0 + i * dx v[i] = math.</description>
+    </item>
+    <item>
+      <title>1.5.1</title>
+      <link>http://dcksol.site/posts/numericalanalysis/thomas/chap1/1_5_1/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/numericalanalysis/thomas/chap1/1_5_1/index.html</guid>
+      <description>그래프는 $t = 0.06$까지 나타내었다. import math import numpy as np import matplotlib.pyplot as plt # parameter a = 2 M = 20 nu = 1 dt = 0.001 step = int(0.06 / dt) dx = 1 / M color = plt.cm.jet(np.linspace(0, 1, step)) # initial data v = [0] * (M + 1) for i in range(M + 1): x = 0 + i * dx v[i] = math.</description>
+    </item>
+    <item>
+      <title>1.5.2</title>
+      <link>http://dcksol.site/posts/numericalanalysis/thomas/chap1/1_5_2/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/numericalanalysis/thomas/chap1/1_5_2/index.html</guid>
+      <description>그래프는 $t = 0.1$까지 나타내었다. import math import numpy as np import matplotlib.pyplot as plt # parameter a = 2 M = 20 nu = 0.01 dt = 0.001 step = int(0.1 / dt) dx = 1 / M color = plt.cm.jet(np.linspace(0, 1, step)) # initial data v = [0] * (M + 1) for i in range(M + 1): x = 0 + i * dx v[i] = math.</description>
+    </item>
   </channel>
 </rss>
