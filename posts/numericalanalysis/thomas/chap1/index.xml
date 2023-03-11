@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chapter1 on DCK Solution</title>
+    <link>http://dcksol.site/posts/numericalanalysis/thomas/chap1/index.html</link>
+    <description>Recent content in Chapter1 on DCK Solution</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language><atom:link href="http://dcksol.site/posts/numericalanalysis/thomas/chap1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.2.1</title>
+      <link>http://dcksol.site/posts/numericalanalysis/thomas/chap1/1_2_1/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/numericalanalysis/thomas/chap1/1_2_1/index.html</guid>
+      <description>아래 코드에서 사용된 step의 값은 그래프를 더 직관적으로 표현하기 위해 $t=0.5$까지로 조정되었다. import math import numpy as np import matplotlib.pyplot as plt # parameter a, b = 0, 0 M = 10 nu = 1 / 6 dt = 0.02 step = int(0.5 / dt) dx = 1 / M color = plt.cm.jet(np.linspace(0, 1, step)) # initial data v = [0] * (M + 1) for i in range(1, M): x = 0 + i * dx v[i] = math.</description>
+    </item>
+  </channel>
+</rss>

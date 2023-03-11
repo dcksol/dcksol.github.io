@@ -10,6 +10,9 @@
     <loc>http://dcksol.site/posts/relativity/hartle/chap7/1/index.html</loc>
   </url>
   <url>
+    <loc>http://dcksol.site/posts/numericalanalysis/thomas/chap1/index.html</loc>
+  </url>
+  <url>
     <loc>http://dcksol.site/posts/index.html</loc>
   </url>
   <url>
@@ -31,6 +34,9 @@
     <loc>http://dcksol.site/posts/relativity/hartle/chap2/index.html</loc>
   </url>
   <url>
+    <loc>http://dcksol.site/posts/statisticalmechanics/schroeder/chap2/index.html</loc>
+  </url>
+  <url>
     <loc>http://dcksol.site/docs/index.html</loc>
   </url>
   <url>
@@ -46,7 +52,13 @@
     <loc>http://dcksol.site/posts/relativity/hartle/chap3/index.html</loc>
   </url>
   <url>
+    <loc>http://dcksol.site/posts/numericalanalysis/index.html</loc>
+  </url>
+  <url>
     <loc>http://dcksol.site/posts/quantummechanics/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dcksol.site/posts/statisticalmechanics/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/posts/relativity/hartle/chap4/4/index.html</loc>
@@ -88,6 +100,9 @@
     <loc>http://dcksol.site/posts/relativity/hartle/chap4/8/index.html</loc>
   </url>
   <url>
+    <loc>http://dcksol.site/posts/statisticalmechanics/schroeder/chap8/index.html</loc>
+  </url>
+  <url>
     <loc>http://dcksol.site/posts/mathematicalphysics/arfken/chap3/sec5/9/index.html</loc>
   </url>
   <url>
@@ -100,7 +115,13 @@
     <loc>http://dcksol.site/posts/relativity/hartle/chap4/13/index.html</loc>
   </url>
   <url>
+    <loc>http://dcksol.site/posts/statisticalmechanics/schroeder/chap2/1/index.html</loc>
+  </url>
+  <url>
     <loc>http://dcksol.site/posts/mathematicalphysics/arfken/chap3/sec2/14/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dcksol.site/posts/statisticalmechanics/schroeder/chap8/16/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/posts/relativity/schutz/chap2/19/index.html</loc>
@@ -113,6 +134,9 @@
   </url>
   <url>
     <loc>http://dcksol.site/manim/example/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dcksol.site/posts/numericalanalysis/thomas/chap1/1_2_1/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/posts/relativity/hartle/chap2/1/index.html</loc>
@@ -202,6 +226,9 @@
     <loc>http://dcksol.site/docs/physics/relativity/index.html</loc>
   </url>
   <url>
+    <loc>http://dcksol.site/posts/statisticalmechanics/schroeder/index.html</loc>
+  </url>
+  <url>
     <loc>http://dcksol.site/posts/relativity/schutz/index.html</loc>
   </url>
   <url>
@@ -215,6 +242,9 @@
   </url>
   <url>
     <loc>http://dcksol.site/tags/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dcksol.site/posts/numericalanalysis/thomas/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/manim/tips/index.html</loc>

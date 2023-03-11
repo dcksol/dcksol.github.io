@@ -15,11 +15,25 @@
 Arfken</description>
     </item>
     <item>
+      <title>Numerical Analysis</title>
+      <link>http://dcksol.site/posts/numericalanalysis/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/numericalanalysis/index.html</guid>
+      <description>Numerical Analysis Thomas</description>
+    </item>
+    <item>
       <title>Quantum Mechanics</title>
       <link>http://dcksol.site/posts/quantummechanics/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://dcksol.site/posts/quantummechanics/index.html</guid>
       <description>Quanmtum Mechanics Griffiths</description>
+    </item>
+    <item>
+      <title>Statistical Mechanics</title>
+      <link>http://dcksol.site/posts/statisticalmechanics/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/statisticalmechanics/index.html</guid>
+      <description>Statistical Mechanics Schroeder</description>
     </item>
     <item>
       <title>Particle Physics</title>
