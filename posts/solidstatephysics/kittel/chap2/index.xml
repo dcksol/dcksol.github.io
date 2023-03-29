@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chapter2 on DCK Solution</title>
+    <link>http://dcksol.site/posts/solidstatephysics/kittel/chap2/index.html</link>
+    <description>Recent content in Chapter2 on DCK Solution</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language><atom:link href="http://dcksol.site/posts/solidstatephysics/kittel/chap2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2.1</title>
+      <link>http://dcksol.site/posts/solidstatephysics/kittel/chap2/1/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/solidstatephysics/kittel/chap2/1/index.html</guid>
+      <description>임의의 lattice에서 평면 $hkl$은 각 축 $\vb{a}_1$, $\vb{a}_2$, $\vb{a}_3$와 각각 $\frac{1}{h}$, $\frac{1}{k}$, $\frac{1}{l}$에서 만난다. (a) reciprocal lattice vector $\vb{G} = h \vb{b}_1 + k \vb{b}_2 + l \vb{b}_3$가 이 평면과 수직하기 위해, 평면 위의 서로 다른 두 벡터에 대해 각각 내적하였을 때 모두 그 값이 $0$이 되어야 한다. 평면 위의 두 벡터는 각각 다음과 같이 평면이 각 축과 만나는 점을 이용해 잡는 것이 편하다. $$\vb{v}_1 = \frac{1}{h}\vb{a}_1 - \frac{1}{k}\vb{a}_2, \quad \vb{v}_2 = \frac{1}{h}\vb{a}_1 - \frac{1}{l}\vb{a}_3$$이제 각각의 벡터와 내적하면, \begin{align}\vb{G} \cdot \vb{v}_1 &amp;= (h \vb{b}_1 + k \vb{b}_2 + l \vb{b}_3) \cdot (\frac{1}{h}\vb{a}_1 - \frac{1}{k}\vb{a}_2) \\&amp;= h\vb{b}_1 \cdot \frac{1}{h} \vb{a}_1 - k \vb{b}_2 \cdot \frac{1}{k}\vb{a}_2\\&amp;= 2\pi - 2\pi \\&amp;= 0\end{align}\begin{align}\vb{G} \cdot \vb{v}_2 &amp;= (h \vb{b}_1 + k \vb{b}_2 + l \vb{b}_3) \cdot (\frac{1}{h}\vb{a}_1 - \frac{1}{l}\vb{a}_3) \\&amp;= h\vb{b}_1 \cdot \frac{1}{h} \vb{a}_1 - l \vb{b}_3 \cdot \frac{1}{l}\vb{a}_3\\&amp;= 2\pi - 2\pi \\&amp;= 0\end{align}따라서 $\vb{G}$는 이 평면의 normal vector이다.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.107.0">
+    <meta name="generator" content="Relearn 5.8.0+tip">
+    <meta name="description" content="">
+    <title>2.1 - DCK Solution</title>
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1680102259" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1680102259" rel="stylesheet"></noscript>
+    <link href="/css/featherlight.min.css?1680102259" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1680102259" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1680102259" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1680102259" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1680102259" rel="stylesheet">
+    <link href="/css/nucleus.css?1680102259" rel="stylesheet">
+    <link href="/css/fonts.css?1680102259" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1680102259" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1680102259" rel="stylesheet">
+    <link href="/css/theme-blue.css?1680102259" rel="stylesheet" id="variant-style">
+    <link href="/css/ie.css?1680102259" rel="stylesheet">
+    <link href="/css/variant.css?1680102259" rel="stylesheet">
+    <link href="/css/print.css?1680102259" rel="stylesheet" media="print">
+    <script src="/js/url.js?1680102259"></script>
+    <script src="/js/variant.js?1680102259"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
+      // some further base stuff
+      var baseUriFull='http:\/\/dcksol.site/';
+      window.variants && variants.init( [ 'blue' ] );
+    </script>
+    <script src="/js/jquery.min.js?1680102259" defer></script>
+
+
+    
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-86EFE70L83"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-86EFE70L83');
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/posts/solidstatephysics/kittel/chap2/1/index.html">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
+            <span class="links">
+              2.1
+            </span>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper" dir="ltr">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#a">(a)</a></li>
+        <li><a href="#b">(b)</a></li>
+        <li><a href="#c">(c)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1 id="2.1">2.1</h1>
+
+<ul>
+<li>임의의 lattice에서 평면 
+<span class="math align-center">$hkl$</span>은 각 축 
+<span class="math align-center">$\vb{a}_1$</span>, 
+<span class="math align-center">$\vb{a}_2$</span>, 
+<span class="math align-center">$\vb{a}_3$</span>와 각각 
+<span class="math align-center">$\frac{1}{h}$</span>, 
+<span class="math align-center">$\frac{1}{k}$</span>, 
+<span class="math align-center">$\frac{1}{l}$</span>에서 만난다.</li>
+</ul>
+<h3 id="a">(a)</h3>
+<ul>
+<li>reciprocal lattice vector 
+<span class="math align-center">$\vb{G} = h \vb{b}_1 + k \vb{b}_2 + l \vb{b}_3$</span>가 이 평면과 수직하기 위해, 평면 위의 서로 다른 두 벡터에 대해 각각 내적하였을 때 모두 그 값이 
+<span class="math align-center">$0$</span>이 되어야 한다.</li>
+<li>평면 위의 두 벡터는 각각 다음과 같이 평면이 각 축과 만나는 점을 이용해 잡는 것이 편하다.
+
+<span class="math align-center">
+  $$\vb{v}_1 = \frac{1}{h}\vb{a}_1 - \frac{1}{k}\vb{a}_2, \quad \vb{v}_2 = \frac{1}{h}\vb{a}_1 - \frac{1}{l}\vb{a}_3$$
+  </span></li>
+<li>이제 각각의 벡터와 내적하면,
+<ul>
+<li>
+<span class="math align-center">
+  \begin{align}\vb{G} \cdot \vb{v}_1 &= (h \vb{b}_1 + k \vb{b}_2 + l \vb{b}_3) \cdot (\frac{1}{h}\vb{a}_1 - \frac{1}{k}\vb{a}_2) \\&= h\vb{b}_1 \cdot \frac{1}{h} \vb{a}_1 - k \vb{b}_2 \cdot \frac{1}{k}\vb{a}_2\\&= 2\pi - 2\pi \\&= 0\end{align}
+  </span></li>
+<li>
+<span class="math align-center">
+  \begin{align}\vb{G} \cdot \vb{v}_2 &= (h \vb{b}_1 + k \vb{b}_2 + l \vb{b}_3) \cdot (\frac{1}{h}\vb{a}_1 - \frac{1}{l}\vb{a}_3) \\&= h\vb{b}_1 \cdot \frac{1}{h} \vb{a}_1 - l \vb{b}_3 \cdot \frac{1}{l}\vb{a}_3\\&= 2\pi - 2\pi \\&= 0\end{align}
+  </span></li>
+</ul>
+</li>
+<li>따라서 
+<span class="math align-center">$\vb{G}$</span>는 이 평면의 normal vector이다.</li>
+</ul>
+<h3 id="b">(b)</h3>
+<ul>
+<li>원점으로부터 이 평면까지의 거리를 구하는 것과 같다.</li>
+<li>점과 평면 사이의 거리는, 점과 평면 위 임의의 한 점을 잇는 벡터 
+<span class="math align-center">$\vb{v}$</span>를 평면의 단위 법선 벡터와 내적하여 얻은 값을 절댓값과 같다.</li>
+<li>여기서 
+<span class="math align-center">$\vb{v} = \frac{1}{h}\vb{a}_1$</span>으로 잡는 것이 편하고,</li>
+<li>앞서 (a)에서 평면의 법선 벡터가 
+<span class="math align-center">$\vb{G}$</span>임을 보였으므로 단위 법선 벡터는 
+<span class="math align-center">$\frac{\vb{G}}{|\vb{G}|}$</span>이다.</li>
+<li>따라서 거리는 
+<span class="math align-center">
+$$d(hkl) = \frac{1}{|\vb{G}|}\vb{G}\cdot \vb{v} = \frac{1}{|\vb{G}|} (h \vb{b}_1 + k \vb{b}_2 + l \vb{b}_3)\cdot \frac{1}{h}\vb{a}_1 = \frac{2\pi}{|\vb{G}|}$$
+</span>
+이다.</li>
+</ul>
+<h3 id="c">(c)</h3>
+<ul>
+<li>simple cubic lattice에서 
+<span class="math align-center">$\vb{b}_1$</span>, 
+<span class="math align-center">$\vb{b}_2$</span>, 
+<span class="math align-center">$\vb{b}_3$</span>는 각각 
+<span class="math align-center">$\vb{a}_1$</span>, 
+<span class="math align-center">$\vb{a}_2$</span>, 
+<span class="math align-center">$\vb{a}_3$</span>와 방향이 같고 크기가 
+<span class="math align-center">$\frac{2\pi}{a}$</span>이다.</li>
+<li>또한 각 축 벡터는 서로 수직하므로 
+<span class="math align-center">$|\vb{G}| = \frac{2\pi}{a}\sqrt{h^2+k^2+l^2}$</span>이다.</li>
+<li>따라서 이를 (b)에서 구한 결과에 대압하고 제곱하면
+
+<span class="math align-center">
+  $$d^2 = \frac{a^2}{h^2+k^2+l^2}$$
+  </span>이다.</li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks" dir="ltr">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+          <style>
+             
+            a#logo {
+              color: #282828;
+              color: var(--MENU-SECTIONS-BG-color);
+              font-family: 'Work Sans', 'Nanum Myeongjo', 'Helvetica', 'Work Sans', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+              font-size: 25px;
+              font-weight: 300;
+              margin-top: 0px;
+              max-width: 100%;
+               
+              width: 226px;
+              white-space: nowrap;
+            }
+             
+             
+             
+              
+          </style>
+          <a id="logo" href="/index.html">
+            
+            DCK Solution
+          </a>
+        </div>
+        <div class="searchbox default-animation">
+          <i class="fas fa-search" title="Search (CTRL+ALT+f)"></i>
+          <label class="a11y-only" for="search-by">Search</label>
+          <input data-search-input id="search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/js/auto-complete.js?1680102259" defer></script>
+        <script src="/js/lunr.min.js?1680102259" defer></script>
+        <script src="/js/lunr.stemmer.support.min.js?1680102259" defer></script>
+        <script src="/js/lunr.multi.min.js?1680102259" defer></script>
+        <script src="/js/lunr.en.min.js?1680102259" defer></script>
+        <script src="/js/search.js?1680102259" defer></script>
+      </div>
+      <div id="homelinks" class="default-animation">
+        <ul>
+          <li><a class="padding" href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics">
+          <li data-nav-id="/posts/index.html" class="dd-item parent"><a href="/posts/index.html">Solutions<i class="fas fa-check read-icon"></i></a><ul id="subsections-a07783f405300745807d39eacf150420">
+          <li data-nav-id="/posts/mathematicalphysics/index.html" class="dd-item"><a href="/posts/mathematicalphysics/index.html">Mathematical Physics<i class="fas fa-check read-icon"></i></a><ul id="subsections-47f80f8b2c75d0600f23f168deb4b4cb">
+          <li data-nav-id="/posts/mathematicalphysics/arfken/index.html" class="dd-item"><a href="/posts/mathematicalphysics/arfken/index.html">Arfken<i class="fas fa-check read-icon"></i></a><ul id="subsections-590828bc8a90be535a623f7b7b2835be">
+          <li data-nav-id="/posts/mathematicalphysics/arfken/chap3/index.html" class="dd-item"><a href="/posts/mathematicalphysics/arfken/chap3/index.html">Chapter3<i class="fas fa-check read-icon"></i></a><ul id="subsections-526c310fd4b7628b682f8c48776a6be6">
+          <li data-nav-id="/posts/mathematicalphysics/arfken/chap3/sec2/index.html" class="dd-item"><a href="/posts/mathematicalphysics/arfken/chap3/sec2/index.html">Section2<i class="fas fa-check read-icon"></i></a><ul id="subsections-d227aca02e7e1668cc08e50ab59a9bcc">
+          <li data-nav-id="/posts/mathematicalphysics/arfken/chap3/sec2/2/index.html" class="dd-item"><a href="/posts/mathematicalphysics/arfken/chap3/sec2/2/index.html">3.2.2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/mathematicalphysics/arfken/chap3/sec2/13/index.html" class="dd-item"><a href="/posts/mathematicalphysics/arfken/chap3/sec2/13/index.html">3.2.13<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/mathematicalphysics/arfken/chap3/sec2/14/index.html" class="dd-item"><a href="/posts/mathematicalphysics/arfken/chap3/sec2/14/index.html">3.2.14<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/posts/mathematicalphysics/arfken/chap3/sec5/index.html" class="dd-item"><a href="/posts/mathematicalphysics/arfken/chap3/sec5/index.html">Section5<i class="fas fa-check read-icon"></i></a><ul id="subsections-ff78d7b14fa558b74d9474abfca88111">
+          <li data-nav-id="/posts/mathematicalphysics/arfken/chap3/sec5/9/index.html" class="dd-item"><a href="/posts/mathematicalphysics/arfken/chap3/sec5/9/index.html">3.5.9<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li></ul></li>
+          <li data-nav-id="/posts/numericalanalysis/index.html" class="dd-item"><a href="/posts/numericalanalysis/index.html">Numerical Analysis<i class="fas fa-check read-icon"></i></a><ul id="subsections-445511a5fa838ac2bf6ec49d1a93d472">
+          <li data-nav-id="/posts/numericalanalysis/thomas/index.html" class="dd-item"><a href="/posts/numericalanalysis/thomas/index.html">Thomas<i class="fas fa-check read-icon"></i></a><ul id="subsections-46da11674b0b69e209f8ebd14340f956">
+          <li data-nav-id="/posts/numericalanalysis/thomas/chap1/index.html" class="dd-item"><a href="/posts/numericalanalysis/thomas/chap1/index.html">Chapter1<i class="fas fa-check read-icon"></i></a><ul id="subsections-e9d1dc4641c82a1a84204d50456a38b3">
+          <li data-nav-id="/posts/numericalanalysis/thomas/chap1/1_2_1/index.html" class="dd-item"><a href="/posts/numericalanalysis/thomas/chap1/1_2_1/index.html">1.2.1<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/numericalanalysis/thomas/chap1/1_4_1/index.html" class="dd-item"><a href="/posts/numericalanalysis/thomas/chap1/1_4_1/index.html">1.4.1<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/numericalanalysis/thomas/chap1/1_4_2/index.html" class="dd-item"><a href="/posts/numericalanalysis/thomas/chap1/1_4_2/index.html">1.4.2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/numericalanalysis/thomas/chap1/1_5_1/index.html" class="dd-item"><a href="/posts/numericalanalysis/thomas/chap1/1_5_1/index.html">1.5.1<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/numericalanalysis/thomas/chap1/1_5_2/index.html" class="dd-item"><a href="/posts/numericalanalysis/thomas/chap1/1_5_2/index.html">1.5.2<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
+          <li data-nav-id="/posts/quantummechanics/index.html" class="dd-item"><a href="/posts/quantummechanics/index.html">Quantum Mechanics<i class="fas fa-check read-icon"></i></a><ul id="subsections-14474e6644bd8a887bb72a60d455d515">
+          <li data-nav-id="/posts/quantummechanics/griffiths/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/index.html">Griffiths<i class="fas fa-check read-icon"></i></a><ul id="subsections-77f9534280830eb728124659092808f4">
+          <li data-nav-id="/posts/quantummechanics/griffiths/chap1/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/index.html">Chapter1<i class="fas fa-check read-icon"></i></a><ul id="subsections-b09ec7afa12da2cfdd3b9eb03d77dfb7">
+          <li data-nav-id="/posts/quantummechanics/griffiths/chap1/1/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/1/index.html">1.1<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/quantummechanics/griffiths/chap1/2/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/2/index.html">1.2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/quantummechanics/griffiths/chap1/3/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/3/index.html">1.3<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/quantummechanics/griffiths/chap1/11/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/11/index.html">1.11<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
+          <li data-nav-id="/posts/statisticalmechanics/index.html" class="dd-item"><a href="/posts/statisticalmechanics/index.html">Statistical Mechanics<i class="fas fa-check read-icon"></i></a><ul id="subsections-eccb7ada9689fae00195c05c3220afdd">
+          <li data-nav-id="/posts/statisticalmechanics/schroeder/index.html" class="dd-item"><a href="/posts/statisticalmechanics/schroeder/index.html">Schroeder<i class="fas fa-check read-icon"></i></a><ul id="subsections-f7622f0a92d1d8e8dcac234906f801ee">
+          <li data-nav-id="/posts/statisticalmechanics/schroeder/chap2/index.html" class="dd-item"><a href="/posts/statisticalmechanics/schroeder/chap2/index.html">Chapter2<i class="fas fa-check read-icon"></i></a><ul id="subsections-376987d69158d5c83fa97ee95a6e02e4">
+          <li data-nav-id="/posts/statisticalmechanics/schroeder/chap2/1/index.html" class="dd-item"><a href="/posts/statisticalmechanics/schroeder/chap2/1/index.html">2.14<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/posts/statisticalmechanics/schroeder/chap8/index.html" class="dd-item"><a href="/posts/statisticalmechanics/schroeder/chap8/index.html">Chapter8<i class="fas fa-check read-icon"></i></a><ul id="subsections-a7c22c3dae670168d244d27b11871e33">
+          <li data-nav-id="/posts/statisticalmechanics/schroeder/chap8/16/index.html" class="dd-item"><a href="/posts/statisticalmechanics/schroeder/chap8/16/index.html">8.16<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
+          <li data-nav-id="/posts/particlephysics/index.html" class="dd-item"><a href="/posts/particlephysics/index.html">Particle Physics<i class="fas fa-check read-icon"></i></a><ul id="subsections-7de240f82140c9fd67511e39b7e63f43">
+          <li data-nav-id="/posts/particlephysics/martin/index.html" class="dd-item"><a href="/posts/particlephysics/martin/index.html">Martin<i class="fas fa-check read-icon"></i></a><ul id="subsections-57bcea17a09da4afd7094490f4d9a5e1">
+          <li data-nav-id="/posts/particlephysics/martin/chap2/index.html" class="dd-item"><a href="/posts/particlephysics/martin/chap2/index.html">Chapter2<i class="fas fa-check read-icon"></i></a><ul id="subsections-d3a64ac2487c1a79d4fc63f2ecc2132b">
+          <li data-nav-id="/posts/particlephysics/martin/chap2/1/index.html" class="dd-item"><a href="/posts/particlephysics/martin/chap2/1/index.html">2.1<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/particlephysics/martin/chap2/2/index.html" class="dd-item"><a href="/posts/particlephysics/martin/chap2/2/index.html">2.2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/particlephysics/martin/chap2/5/index.html" class="dd-item"><a href="/posts/particlephysics/martin/chap2/5/index.html">2.5<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/particlephysics/martin/chap2/8/index.html" class="dd-item"><a href="/posts/particlephysics/martin/chap2/8/index.html">2.8<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
+          <li data-nav-id="/posts/relativity/index.html" class="dd-item"><a href="/posts/relativity/index.html">Relativity<i class="fas fa-check read-icon"></i></a><ul id="subsections-baa1e1cb0e3e633a43391b86eae21f22">
+          <li data-nav-id="/posts/relativity/hartle/index.html" class="dd-item"><a href="/posts/relativity/hartle/index.html">Hartle<i class="fas fa-check read-icon"></i></a><ul id="subsections-0abece8efbfcdc3104cdb5ecabefed9a">
+          <li data-nav-id="/posts/relativity/hartle/chap2/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap2/index.html">Chapter2<i class="fas fa-check read-icon"></i></a><ul id="subsections-84992a7ce5c61e33688f5a47eb5b4f86">
+          <li data-nav-id="/posts/relativity/hartle/chap2/1/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap2/1/index.html">2.1<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/relativity/hartle/chap2/2/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap2/2/index.html">2.2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/relativity/hartle/chap2/9/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap2/9/index.html">2.9<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/posts/relativity/hartle/chap3/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap3/index.html">Chapter3<i class="fas fa-check read-icon"></i></a><ul id="subsections-d8447ccf854261953f6cd1adc7c678e6">
+          <li data-nav-id="/posts/relativity/hartle/chap3/3/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap3/3/index.html">3.3<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/relativity/hartle/chap3/4/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap3/4/index.html">3.4<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/posts/relativity/hartle/chap4/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap4/index.html">Chapter4<i class="fas fa-check read-icon"></i></a><ul id="subsections-7565d825e0e864c23481c80e3731ff70">
+          <li data-nav-id="/posts/relativity/hartle/chap4/2/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap4/2/index.html">4.2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/relativity/hartle/chap4/3/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap4/3/index.html">4.3<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/relativity/hartle/chap4/4/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap4/4/index.html">4.4<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/relativity/hartle/chap4/5/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap4/5/index.html">4.5<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/relativity/hartle/chap4/6/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap4/6/index.html">4.6<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/relativity/hartle/chap4/8/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap4/8/index.html">4.8<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/relativity/hartle/chap4/13/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap4/13/index.html">4.13<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/posts/relativity/hartle/chap5/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap5/index.html">Chapter5<i class="fas fa-check read-icon"></i></a><ul id="subsections-31a8f39351fd0f66b9c49adeec9d146a">
+          <li data-nav-id="/posts/relativity/hartle/chap5/1/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap5/1/index.html">5.1<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/posts/relativity/hartle/chap7/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap7/index.html">Chapter7<i class="fas fa-check read-icon"></i></a><ul id="subsections-8cc6585d9d115126f2ae01f17b539e21">
+          <li data-nav-id="/posts/relativity/hartle/chap7/1/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap7/1/index.html">7.1<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/relativity/hartle/chap7/2/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap7/2/index.html">7.2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/relativity/hartle/chap7/4/index.html" class="dd-item"><a href="/posts/relativity/hartle/chap7/4/index.html">7.4<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/posts/relativity/schutz/index.html" class="dd-item"><a href="/posts/relativity/schutz/index.html">Schutz<i class="fas fa-check read-icon"></i></a><ul id="subsections-d6a40b1b2e4202c495cd631293c7d168">
+          <li data-nav-id="/posts/relativity/schutz/chap2/index.html" class="dd-item"><a href="/posts/relativity/schutz/chap2/index.html">Chapter2<i class="fas fa-check read-icon"></i></a><ul id="subsections-29011c373d798641a542f93667f19964">
+          <li data-nav-id="/posts/relativity/schutz/chap2/19/index.html" class="dd-item"><a href="/posts/relativity/schutz/chap2/19/index.html">2.19<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/relativity/schutz/chap2/28/index.html" class="dd-item"><a href="/posts/relativity/schutz/chap2/28/index.html">2.28<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/relativity/schutz/chap2/29/index.html" class="dd-item"><a href="/posts/relativity/schutz/chap2/29/index.html">2.29<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
+          <li data-nav-id="/posts/solidstatephysics/index.html" class="dd-item parent"><a href="/posts/solidstatephysics/index.html">Solid State Physics<i class="fas fa-check read-icon"></i></a><ul id="subsections-94038b5192343237e6eba9206095c584">
+          <li data-nav-id="/posts/solidstatephysics/kittel/index.html" class="dd-item parent"><a href="/posts/solidstatephysics/kittel/index.html">Kittel<i class="fas fa-check read-icon"></i></a><ul id="subsections-670a1cabd17de40070230420adbeb08d">
+          <li data-nav-id="/posts/solidstatephysics/kittel/chap2/index.html" class="dd-item parent"><a href="/posts/solidstatephysics/kittel/chap2/index.html">Chapter2<i class="fas fa-check read-icon"></i></a><ul id="subsections-09d91d5c01973f061de30b88e0191bab">
+          <li data-nav-id="/posts/solidstatephysics/kittel/chap2/1/index.html" class="dd-item active"><a href="/posts/solidstatephysics/kittel/chap2/1/index.html">2.1<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li></ul></li>
+          <li data-nav-id="/docs/index.html" class="dd-item"><a href="/docs/index.html">Docs<i class="fas fa-check read-icon"></i></a><ul id="subsections-2f67fdc9a362fd86f1cfd4450ed56551">
+          <li data-nav-id="/docs/physics/index.html" class="dd-item"><a href="/docs/physics/index.html">Physics<i class="fas fa-check read-icon"></i></a><ul id="subsections-2d49e7dfb4c72adddcb1e6c5844fd248">
+          <li data-nav-id="/docs/physics/biologicalphysics/index.html" class="dd-item"><a href="/docs/physics/biologicalphysics/index.html">Biological Physics<i class="fas fa-check read-icon"></i></a><ul id="subsections-563d5b9942f44bb1fb025c53422e7f77">
+          <li data-nav-id="/docs/physics/biologicalphysics/philip-nelson/index.html" class="dd-item"><a href="/docs/physics/biologicalphysics/philip-nelson/index.html">Philip Nelson<i class="fas fa-check read-icon"></i></a><ul id="subsections-be99ea73018fec46a2aefa3e4f578638">
+          <li data-nav-id="/docs/physics/biologicalphysics/philip-nelson/chapter7/index.html" class="dd-item"><a href="/docs/physics/biologicalphysics/philip-nelson/chapter7/index.html">Chapter 7<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/docs/physics/em/index.html" class="dd-item"><a href="/docs/physics/em/index.html">Electrodynamics<i class="fas fa-check read-icon"></i></a><ul id="subsections-b2e467d583ad2cbbb407ac4d510934b5">
+          <li data-nav-id="/docs/physics/em/delta-function-identities/index.html" class="dd-item"><a href="/docs/physics/em/delta-function-identities/index.html">Delta function Identities<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docs/physics/em/earnshaw/index.html" class="dd-item"><a href="/docs/physics/em/earnshaw/index.html">Earnshaw&#39;s Theorem<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/docs/physics/relativity/index.html" class="dd-item"><a href="/docs/physics/relativity/index.html">Relativity<i class="fas fa-check read-icon"></i></a><ul id="subsections-8e587598e20a615e2866ded45c32e066">
+          <li data-nav-id="/docs/physics/relativity/kerr_embed/index.html" class="dd-item"><a href="/docs/physics/relativity/kerr_embed/index.html">Kerr metric embedding diagrams<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/docs/physics/relativity/gauge_transformations/index.html" class="dd-item"><a href="/docs/physics/relativity/gauge_transformations/index.html">Linearized Gravity<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
+          <li data-nav-id="/manim/index.html" class="dd-item"><a href="/manim/index.html">Manim<i class="fas fa-check read-icon"></i></a><ul id="subsections-ebfb7ad9532e691873d74c98efc8f3c4">
+          <li data-nav-id="/manim/example/index.html" class="dd-item"><a href="/manim/example/index.html">Examples<i class="fas fa-check read-icon"></i></a><ul id="subsections-b96dda4c702353d0783c921560fa65e5">
+          <li data-nav-id="/manim/example/codesnippet/index.html" class="dd-item"><a href="/manim/example/codesnippet/index.html">Code Snippet<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/manim/example/moving_dot/index.html" class="dd-item"><a href="/manim/example/moving_dot/index.html">Moving dot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/manim/example/pointwithtrace/index.html" class="dd-item"><a href="/manim/example/pointwithtrace/index.html">Point with trace<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/manim/example/simplemaths/index.html" class="dd-item"><a href="/manim/example/simplemaths/index.html">Simple math equations<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/manim/tips/index.html" class="dd-item"><a href="/manim/tips/index.html">Tips<i class="fas fa-check read-icon"></i></a><ul id="subsections-6224915234e36bf69d4e97db6c18b8da">
+          <li data-nav-id="/manim/tips/configuration/index.html" class="dd-item"><a href="/manim/tips/configuration/index.html">Configuration<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/manim/tips/preamble/index.html" class="dd-item"><a href="/manim/tips/preamble/index.html">커스텀 패키지 사용하기<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+        </ul>
+        <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
+        <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-language">Language</label>
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-variant">Theme</label>
+                  <select id="select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                    <option id="blue" value="blue" selected>Blue</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+              <script>window.variants && variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><button class="padding" onclick="clearHistory();"><i class="fas fa-history fa-fw"></i> Clear History</button></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter">		<style>
+			#footer {
+			font-size: 11px;
+			height: 100px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 2rem 1rem;
+			text-align: center;
+			min-width: 230px;
+			max-width: 300px;
+			}
+			#footer p {
+			margin: 0;
+			}
+		</style>
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" target='_blank' title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/"target='_blank'>Hugo</a></p>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1680102259" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1680102259" defer></script>
+    <script src="/js/featherlight.min.js?1680102259" defer></script>
+    <script>
+      function useMathJax( config ){
+        if( !Object.assign ){
+          
+          return;
+        }
+        window.MathJax = Object.assign( window.MathJax || {}, {
+          loader: {
+            load: ['[tex]/mhchem', '[tex]/physics']
+          },
+          startup: {
+            elements: [
+              '.math'
+            ]
+          },
+          tex: {
+            inlineMath: [
+              ['$', '$'], 
+              ['\\(', '\\)']
+            ],
+            packages: {'[+]': ['physics']}
+          },
+          options: {
+            enableMenu: false 
+          },
+          chtml: {
+            scale: 0.9
+          },
+          svg: {
+              scale: 0.9
+          }
+        }, config );
+      }
+      useMathJax( JSON.parse("{}") );
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1680102259" defer></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js" defer></script>
+    <script>
+      window.themeUseMermaid = JSON.parse("{ \"theme\": \"default\" }");
+    </script>
+    <script src="https://unpkg.com/rapidoc/dist/rapidoc-min.js" defer></script>
+    <script>
+      window.themeUseSwagger = JSON.parse("{ \"theme\": \"light\" }");
+    </script>
+    <script src="/js/theme.js?1680102259" defer></script>
+  </body>
+</html>

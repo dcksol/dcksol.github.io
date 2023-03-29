@@ -49,5 +49,12 @@ Arfken</description>
       <guid>http://dcksol.site/posts/relativity/index.html</guid>
       <description>Relativity HartleSchutz</description>
     </item>
+    <item>
+      <title>Solid State Physics</title>
+      <link>http://dcksol.site/posts/solidstatephysics/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/posts/solidstatephysics/index.html</guid>
+      <description>Solid State Physics Kittel</description>
+    </item>
   </channel>
 </rss>
