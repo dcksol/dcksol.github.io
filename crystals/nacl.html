@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>bcc</title>
+		<title>NaCl</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link type="text/css" rel="stylesheet" href="main.css">
 	</head>
 	<body>
 
-		<div id="info">bcc</div>
+		<div id="info">NaCl</div>
 
 		<!-- Import maps polyfill -->
 		<!-- Remove this when import maps will be widely supported -->
@@ -83,12 +83,13 @@
 				// Materials
 
 				const cubeWidth = 400;
-				const numberOfSphersPerSide = 3;
-				const sphereRadius = ( cubeWidth / numberOfSphersPerSide ) * 0.8 * 0.5 * 0.2;
+				const numberOfSphersPerSide = 4;
+				const sphereRadius = ( cubeWidth / numberOfSphersPerSide ) * 0.8 * 0.5 * 0.4;
 				const stepSize = 1.0 / numberOfSphersPerSide;
 				const format = ( renderer.capabilities.isWebGL2 ) ? THREE.RedFormat : THREE.LuminanceFormat;
 
 				const geometry = new THREE.SphereGeometry( sphereRadius, 32, 16 );
+				const geometry2 = new THREE.SphereGeometry( sphereRadius * 1.4, 32, 16 );
 
 				for ( let alpha = 0, alphaIndex = 0; alpha <= 1.0; alpha += stepSize, alphaIndex ++ ) {
 
@@ -103,72 +104,52 @@
 					const gradientMap = new THREE.DataTexture( colors, colors.length, 1, format );
 					gradientMap.needsUpdate = true;
 
-					for ( let beta = 0; beta <= 1.0; beta += stepSize ) {
+					for ( let beta = 0, betaIndex = 0; beta <= 1.0; beta += stepSize, betaIndex++ ) {
 
-						for ( let gamma = 0; gamma <= 1.0; gamma += stepSize ) {
+						for ( let gamma = 0, gammaIndex = 0; gamma <= 1.0; gamma += stepSize, gammaIndex++ ) {
 
 							// basic monochromatic energy preservation
-							const diffuseColor = new THREE.Color().setHSL( 0, 0.5, 0.5 * 0.5 + 0.1 ).multiplyScalar( 1 - beta * 0.2 );
+							var parity = 0;
+							if ((alphaIndex + betaIndex + gammaIndex) % 2 == 0) {
+								// const diffuseColor = new THREE.Color().setHSL( alpha, 0.5, gamma * 0.5 + 0.1 ).multiplyScalar( 1 - beta * 0.2 );
+								parity = 1;
+							}
+							else {
+								// const diffuseColor = new THREE.Color().setHSL( alpha, 0.5, gamma * 0.5 + 0.1 ).multiplyScalar( 1 - beta * 0.2 );
+							}
+
+							const diffuseColor = new THREE.Color().setHSL( parity / 2, 0.5, gamma * 0.5 + 0.1 ).multiplyScalar( 1 - beta * 0.2 );
 
 							const material = new THREE.MeshToonMaterial( {
 								color: diffuseColor,
 								gradientMap: gradientMap
 							} );
+							
+							if (parity) {
+								const mesh = new THREE.Mesh( geometry, material );
 
-							const mesh = new THREE.Mesh( geometry, material );
+								mesh.position.x = alpha * 400 - 200;
+								mesh.position.y = beta * 400 - 200;
+								mesh.position.z = gamma * 400 - 200;
 
-							mesh.position.x = (alpha + stepSize / 2) * 400 - 200;
-							mesh.position.y = (beta + stepSize / 2) * 400 - 200;
-							mesh.position.z = (gamma + stepSize / 2) * 400 - 200;
+								scene.add( mesh );
+							}
+							else {
+								const mesh = new THREE.Mesh( geometry2, material );
 
-							scene.add( mesh );
+								mesh.position.x = alpha * 400 - 200;
+								mesh.position.y = beta * 400 - 200;
+								mesh.position.z = gamma * 400 - 200;
+
+								scene.add( mesh );
+							}
+							
 
 						}
 
 					}
 
 				}
-
-				
-
-				for ( let alpha = stepSize, alphaIndex = 0; alpha <= 1.0; alpha += stepSize, alphaIndex ++ ) {
-
-					const colors = new Uint8Array( alphaIndex + 2 );
-
-					for ( let c = 0; c <= colors.length; c ++ ) {
-
-						colors[ c ] = ( c / colors.length ) * 256;
-
-					}
-
-					const gradientMap = new THREE.DataTexture( colors, colors.length, 1, format );
-					gradientMap.needsUpdate = true;
-
-					for ( let beta = stepSize; beta <= 1.0; beta += stepSize ) {
-
-						for ( let gamma = stepSize; gamma <= 1.0; gamma += stepSize ) {
-
-							// basic monochromatic energy preservation
-							const diffuseColor = new THREE.Color().setHSL( 0.5, 0.5, gamma * 0.5 + 0.1 ).multiplyScalar( 1 - beta * 0.2 );
-
-							const material = new THREE.MeshToonMaterial( {
-								color: diffuseColor,
-								gradientMap: gradientMap
-							} );
-
-							const mesh = new THREE.Mesh( geometry, material );
-
-							mesh.position.x = alpha * 400 - 200 + stepSize;
-							mesh.position.y = beta * 400 - 200 + stepSize;
-							mesh.position.z = gamma * 400 - 200 + stepSize;
-
-							scene.add( mesh );
-
-						}
-
-					}
-
-					}
 
 				function addLabel( name, location ) {
 
