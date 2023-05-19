@@ -21,5 +21,12 @@
       <description>Weak-field limit 아인슈타인의 장 방정식 $$G_{\mu\nu} = 8\pi T_{\mu\nu}, \quad G_{\mu\nu} \equiv R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}R\label{1}\tag{1}$$는 $10$개의 비선형 편미분 방정식으로, 어떤 특별한 조건들에 대해서만 해를 구할 수 있음이 알려져있다. 여기서는 아래와 같은 약한 중력장 내에서 선형 항들만 취함으로써 선형 근사 해를 구한다.
 약한 중력장에서 metric은 다음과 같이 민코프스키 시공간에 대한 작은 변화로 표현된다. $$g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$$Ricci tensor in weak-field 크리스토펠 심볼은 약한 장에서 $$\Gamma^\rho{}_{\mu\nu} = \frac{1}{2}\eta^{\rho\lambda}(h_{\nu\lambda,\mu} + h_{\mu\lambda,\nu}-h_{\mu\nu,\lambda})+\mathcal{O}(h^2)$$와 같이 쓸 수 있고, 리만 텐서는 \begin{align}R^\sigma {}_{\rho\mu\nu} &amp;= (\Gamma^\sigma{}_{\nu\rho,\mu} + \Gamma^\sigma{}_{\mu\kappa}\Gamma^\kappa{}_{\nu\rho}) - (\Gamma^\rho{}_{\mu\rho,\nu}+\Gamma^\rho{}_{\nu\kappa}\Gamma^\kappa{}_{\mu\rho}) \\&amp;= \Gamma^\sigma{}_{\nu\rho,\mu} - \Gamma^\sigma_{\mu\rho,\nu} + \mathcal{O}(h^2)\end{align}이다.</description>
     </item>
+    <item>
+      <title>Schwarzschild geodesic</title>
+      <link>http://dcksol.site/docs/physics/relativity/schwarzschild_geodesic/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/docs/physics/relativity/schwarzschild_geodesic/index.html</guid>
+      <description>Circular orbit Elliptic orbit(Precession) Plunge orbit Scattering orbit Inner horizon orbit Red, green, blue : $\tilde{L}^2 = 0, 10, 100$ Proper time : about $3.14(=\pi) : 1.31 : 0.46$ </description>
+    </item>
   </channel>
 </rss>
