@@ -6,7 +6,7 @@
     <meta name="generator" content="Hugo 0.107.0">
     <meta name="generator" content="Relearn 5.8.0+tip">
     <meta name="description" content="">
-    <title>1.2 - DCK Solution</title>
+    <title>정수 나눗셈 - DCK Solution</title>
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/css/fontawesome-all.min.css?1688815358" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1688815358" rel="stylesheet"></noscript>
     <link href="/css/featherlight.min.css?1688815358" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/featherlight.min.css?1688815358" rel="stylesheet"></noscript>
@@ -52,7 +52,7 @@
       gtag('config', 'G-86EFE70L83');
     </script>
   </head>
-  <body class="mobile-support html" data-url="/posts/quantummechanics/griffiths/chap1/2/index.html">
+  <body class="mobile-support html" data-url="/docs/ps/tips/intdiv/index.html">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
@@ -64,17 +64,18 @@
             </span>
             <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
             <span class="links">
-              1.2
+              정수 나눗셈
             </span>
           </div>
           <div class="default-animation progress">
             <div class="toc-wrapper" dir="ltr">
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#버림-올림-반올림">버림, 올림, 반올림</a>
       <ul>
-        <li><a href="#a">(a)</a></li>
-        <li><a href="#b">(b)</a></li>
+        <li><a href="#버림">버림</a></li>
+        <li><a href="#올림">올림</a></li>
+        <li><a href="#반올림">반올림</a></li>
       </ul>
     </li>
   </ul>
@@ -88,45 +89,19 @@
           <div id="head-tags">
           </div>
           <article class="default">
-<h1 id="1.2">1.2</h1>
+<h1 id="%EC%A0%95%EC%88%98-%EB%82%98%EB%88%97%EC%85%88">정수 나눗셈</h1>
 
-<h3 id="a">(a)</h3>
-<ul>
-<li>표준편차는
-
-<span class="math align-center">
-  $$\sigma^2 = \expval{x^2} - \expval{x}^2$$
-  </span>이다.</li>
-<li>
-<span class="math align-center">$\expval{x} = \frac{h}{3}$</span>임을 본문의 예제에서 구했다.</li>
-<li>
-<span class="math align-center">$\expval{x^2}$</span>의 경우,
-
-<span class="math align-center">
-  $$\expval{x^2} = \int_0^hx^2\rho (x)dx = \int_0^h \frac{1}{2\sqrt{h}}x^{3/2}dx = \frac{1}{5\sqrt{h}}h^{5/2} = \frac{h^2}{5}$$
-  </span>이다.</li>
-<li>따라서
-
-<span class="math align-center">
-  $$\sigma^2 = \frac{h^2}{5} - \frac{h^2}{9} = \frac{4h^2}{45}$$
-  </span>이고,
-
-<span class="math align-center">
-  $$\sigma = \frac{2h}{\sqrt{45}} \approx 0.30 h$$
-  </span>이다.</li>
-</ul>
-<h3 id="b">(b)</h3>
-<ul>
-<li>구하고자 하는 확률을 
-<span class="math align-center">$P$</span>라 하면, 
-<span class="math align-center">$1-P$</span>를 구하는 것이 더 쉽다.</li>
-<li>
-<span class="math align-center">
-$$1 - P = \int_{h/3 - \sigma}^{h/3 + \sigma} \rho(x)dx = \frac{1}{2\sqrt{h}} \qty[2x^{1/2}]^{h/3+\sigma}_{h/3-\sigma} = \frac{\sqrt{h/3 +\sigma} - \sqrt{h/3 - \sigma}}{\sqrt{h}} \approx 0.61$$
-</span></li>
-<li>따라서 
-<span class="math align-center">$P \approx 0.39$</span></li>
-</ul>
+<h2 id="버림-올림-반올림">버림, 올림, 반올림</h2>
+<p>정수 나눗셈 
+<span class="math align-center">$x / y$</span>을 굳이 <code>math</code> 라이브러리를 사용하지 않고 버림, 올림, 반올림을 할 수 있다.</p>
+<h3 id="버림">버림</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#f92672">//</span> y
+</span></span></code></pre></div><h3 id="올림">올림</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>(x <span style="color:#f92672">+</span> y <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">//</span> y
+</span></span></code></pre></div><h3 id="반올림">반올림</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>(<span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> x <span style="color:#f92672">+</span> y) <span style="color:#f92672">//</span> (<span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> y)
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
             <footer class="footline">
             </footer>
@@ -170,12 +145,12 @@ $$1 - P = \int_{h/3 - \sigma}^{h/3 + \sigma} \rho(x)dx = \frac{1}{2\sqrt{h}} \qt
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/js/auto-complete.js?1688815359" defer></script>
-        <script src="/js/lunr.min.js?1688815359" defer></script>
-        <script src="/js/lunr.stemmer.support.min.js?1688815359" defer></script>
-        <script src="/js/lunr.multi.min.js?1688815359" defer></script>
-        <script src="/js/lunr.en.min.js?1688815359" defer></script>
-        <script src="/js/search.js?1688815359" defer></script>
+        <script src="/js/auto-complete.js?1688815358" defer></script>
+        <script src="/js/lunr.min.js?1688815358" defer></script>
+        <script src="/js/lunr.stemmer.support.min.js?1688815358" defer></script>
+        <script src="/js/lunr.multi.min.js?1688815358" defer></script>
+        <script src="/js/lunr.en.min.js?1688815358" defer></script>
+        <script src="/js/search.js?1688815358" defer></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -184,7 +159,7 @@ $$1 - P = \int_{h/3 - \sigma}^{h/3 + \sigma} \rho(x)dx = \frac{1}{2\sqrt{h}} \qt
       </div>
       <div id="content-wrapper" class="highlightable">
         <ul class="topics">
-          <li data-nav-id="/posts/index.html" class="dd-item parent"><a href="/posts/index.html">Solutions<i class="fas fa-check read-icon"></i></a><ul id="subsections-a07783f405300745807d39eacf150420">
+          <li data-nav-id="/posts/index.html" class="dd-item"><a href="/posts/index.html">Solutions<i class="fas fa-check read-icon"></i></a><ul id="subsections-a07783f405300745807d39eacf150420">
           <li data-nav-id="/posts/mathematicalphysics/index.html" class="dd-item"><a href="/posts/mathematicalphysics/index.html">Mathematical Physics<i class="fas fa-check read-icon"></i></a><ul id="subsections-47f80f8b2c75d0600f23f168deb4b4cb">
           <li data-nav-id="/posts/mathematicalphysics/arfken/index.html" class="dd-item"><a href="/posts/mathematicalphysics/arfken/index.html">Arfken<i class="fas fa-check read-icon"></i></a><ul id="subsections-590828bc8a90be535a623f7b7b2835be">
           <li data-nav-id="/posts/mathematicalphysics/arfken/chap3/index.html" class="dd-item"><a href="/posts/mathematicalphysics/arfken/chap3/index.html">Chapter3<i class="fas fa-check read-icon"></i></a><ul id="subsections-526c310fd4b7628b682f8c48776a6be6">
@@ -202,11 +177,11 @@ $$1 - P = \int_{h/3 - \sigma}^{h/3 + \sigma} \rho(x)dx = \frac{1}{2\sqrt{h}} \qt
           <li data-nav-id="/posts/numericalanalysis/thomas/chap1/1_4_2/index.html" class="dd-item"><a href="/posts/numericalanalysis/thomas/chap1/1_4_2/index.html">1.4.2<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/posts/numericalanalysis/thomas/chap1/1_5_1/index.html" class="dd-item"><a href="/posts/numericalanalysis/thomas/chap1/1_5_1/index.html">1.5.1<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/posts/numericalanalysis/thomas/chap1/1_5_2/index.html" class="dd-item"><a href="/posts/numericalanalysis/thomas/chap1/1_5_2/index.html">1.5.2<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
-          <li data-nav-id="/posts/quantummechanics/index.html" class="dd-item parent"><a href="/posts/quantummechanics/index.html">Quantum Mechanics<i class="fas fa-check read-icon"></i></a><ul id="subsections-14474e6644bd8a887bb72a60d455d515">
-          <li data-nav-id="/posts/quantummechanics/griffiths/index.html" class="dd-item parent"><a href="/posts/quantummechanics/griffiths/index.html">Griffiths<i class="fas fa-check read-icon"></i></a><ul id="subsections-77f9534280830eb728124659092808f4">
-          <li data-nav-id="/posts/quantummechanics/griffiths/chap1/index.html" class="dd-item parent"><a href="/posts/quantummechanics/griffiths/chap1/index.html">Chapter1<i class="fas fa-check read-icon"></i></a><ul id="subsections-b09ec7afa12da2cfdd3b9eb03d77dfb7">
+          <li data-nav-id="/posts/quantummechanics/index.html" class="dd-item"><a href="/posts/quantummechanics/index.html">Quantum Mechanics<i class="fas fa-check read-icon"></i></a><ul id="subsections-14474e6644bd8a887bb72a60d455d515">
+          <li data-nav-id="/posts/quantummechanics/griffiths/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/index.html">Griffiths<i class="fas fa-check read-icon"></i></a><ul id="subsections-77f9534280830eb728124659092808f4">
+          <li data-nav-id="/posts/quantummechanics/griffiths/chap1/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/index.html">Chapter1<i class="fas fa-check read-icon"></i></a><ul id="subsections-b09ec7afa12da2cfdd3b9eb03d77dfb7">
           <li data-nav-id="/posts/quantummechanics/griffiths/chap1/1/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/1/index.html">1.1<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/posts/quantummechanics/griffiths/chap1/2/index.html" class="dd-item active"><a href="/posts/quantummechanics/griffiths/chap1/2/index.html">1.2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/posts/quantummechanics/griffiths/chap1/2/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/2/index.html">1.2<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/posts/quantummechanics/griffiths/chap1/3/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/3/index.html">1.3<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/posts/quantummechanics/griffiths/chap1/11/index.html" class="dd-item"><a href="/posts/quantummechanics/griffiths/chap1/11/index.html">1.11<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
           <li data-nav-id="/posts/statisticalmechanics/index.html" class="dd-item"><a href="/posts/statisticalmechanics/index.html">Statistical Mechanics<i class="fas fa-check read-icon"></i></a><ul id="subsections-eccb7ada9689fae00195c05c3220afdd">
@@ -254,7 +229,7 @@ $$1 - P = \int_{h/3 - \sigma}^{h/3 + \sigma} \rho(x)dx = \frac{1}{2\sqrt{h}} \qt
           <li data-nav-id="/posts/solidstatephysics/kittel/index.html" class="dd-item"><a href="/posts/solidstatephysics/kittel/index.html">Kittel<i class="fas fa-check read-icon"></i></a><ul id="subsections-670a1cabd17de40070230420adbeb08d">
           <li data-nav-id="/posts/solidstatephysics/kittel/chap2/index.html" class="dd-item"><a href="/posts/solidstatephysics/kittel/chap2/index.html">Chapter2<i class="fas fa-check read-icon"></i></a><ul id="subsections-09d91d5c01973f061de30b88e0191bab">
           <li data-nav-id="/posts/solidstatephysics/kittel/chap2/1/index.html" class="dd-item"><a href="/posts/solidstatephysics/kittel/chap2/1/index.html">2.1<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li></ul></li>
-          <li data-nav-id="/docs/index.html" class="dd-item"><a href="/docs/index.html">Docs<i class="fas fa-check read-icon"></i></a><ul id="subsections-2f67fdc9a362fd86f1cfd4450ed56551">
+          <li data-nav-id="/docs/index.html" class="dd-item parent"><a href="/docs/index.html">Docs<i class="fas fa-check read-icon"></i></a><ul id="subsections-2f67fdc9a362fd86f1cfd4450ed56551">
           <li data-nav-id="/docs/physics/index.html" class="dd-item"><a href="/docs/physics/index.html">Physics<i class="fas fa-check read-icon"></i></a><ul id="subsections-2d49e7dfb4c72adddcb1e6c5844fd248">
           <li data-nav-id="/docs/physics/biologicalphysics/index.html" class="dd-item"><a href="/docs/physics/biologicalphysics/index.html">Biological Physics<i class="fas fa-check read-icon"></i></a><ul id="subsections-563d5b9942f44bb1fb025c53422e7f77">
           <li data-nav-id="/docs/physics/biologicalphysics/philip-nelson/index.html" class="dd-item"><a href="/docs/physics/biologicalphysics/philip-nelson/index.html">Philip Nelson<i class="fas fa-check read-icon"></i></a><ul id="subsections-be99ea73018fec46a2aefa3e4f578638">
@@ -267,9 +242,9 @@ $$1 - P = \int_{h/3 - \sigma}^{h/3 + \sigma} \rho(x)dx = \frac{1}{2\sqrt{h}} \qt
           <li data-nav-id="/docs/physics/relativity/gauge_transformations/index.html" class="dd-item"><a href="/docs/physics/relativity/gauge_transformations/index.html">Linearized Gravity<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/docs/physics/relativity/schwarzschild_geodesic/index.html" class="dd-item"><a href="/docs/physics/relativity/schwarzschild_geodesic/index.html">Schwarzschild geodesic<i class="fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/docs/physics/textbook/index.html" class="dd-item"><a href="/docs/physics/textbook/index.html">Textbook recommendations<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/docs/ps/index.html" class="dd-item"><a href="/docs/ps/index.html">Problem Solving<i class="fas fa-check read-icon"></i></a><ul id="subsections-0949c8b455700948c2974daaff603e28">
-          <li data-nav-id="/docs/ps/tips/index.html" class="dd-item"><a href="/docs/ps/tips/index.html">Tips<i class="fas fa-check read-icon"></i></a><ul id="subsections-36d160d76da3606eb17552e7c33bb643">
-          <li data-nav-id="/docs/ps/tips/intdiv/index.html" class="dd-item"><a href="/docs/ps/tips/intdiv/index.html">정수 나눗셈<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
+          <li data-nav-id="/docs/ps/index.html" class="dd-item parent"><a href="/docs/ps/index.html">Problem Solving<i class="fas fa-check read-icon"></i></a><ul id="subsections-0949c8b455700948c2974daaff603e28">
+          <li data-nav-id="/docs/ps/tips/index.html" class="dd-item parent"><a href="/docs/ps/tips/index.html">Tips<i class="fas fa-check read-icon"></i></a><ul id="subsections-36d160d76da3606eb17552e7c33bb643">
+          <li data-nav-id="/docs/ps/tips/intdiv/index.html" class="dd-item active"><a href="/docs/ps/tips/intdiv/index.html">정수 나눗셈<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
           <li data-nav-id="/visual/index.html" class="dd-item"><a href="/visual/index.html">Visualization<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/manim/index.html" class="dd-item"><a href="/manim/index.html">Manim<i class="fas fa-check read-icon"></i></a><ul id="subsections-ebfb7ad9532e691873d74c98efc8f3c4">
           <li data-nav-id="/manim/example/index.html" class="dd-item"><a href="/manim/example/index.html">Examples<i class="fas fa-check read-icon"></i></a><ul id="subsections-b96dda4c702353d0783c921560fa65e5">
@@ -333,9 +308,9 @@ $$1 - P = \int_{h/3 - \sigma}^{h/3 + \sigma} \rho(x)dx = \frac{1}{2\sqrt{h}} \qt
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard.min.js?1688815359" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1688815359" defer></script>
-    <script src="/js/featherlight.min.js?1688815359" defer></script>
+    <script src="/js/clipboard.min.js?1688815358" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1688815358" defer></script>
+    <script src="/js/featherlight.min.js?1688815358" defer></script>
     <script>
       function useMathJax( config ){
         if( !Object.assign ){
@@ -372,7 +347,7 @@ $$1 - P = \int_{h/3 - \sigma}^{h/3 + \sigma} \rho(x)dx = \frac{1}{2\sqrt{h}} \qt
       useMathJax( JSON.parse("{}") );
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="/js/jquery.svg.pan.zoom.js?1688815359" defer></script>
+    <script src="/js/jquery.svg.pan.zoom.js?1688815358" defer></script>
     <script src="https://unpkg.com/mermaid/dist/mermaid.min.js" defer></script>
     <script>
       window.themeUseMermaid = JSON.parse("{ \"theme\": \"default\" }");
@@ -381,6 +356,6 @@ $$1 - P = \int_{h/3 - \sigma}^{h/3 + \sigma} \rho(x)dx = \frac{1}{2\sqrt{h}} \qt
     <script>
       window.themeUseSwagger = JSON.parse("{ \"theme\": \"light\" }");
     </script>
-    <script src="/js/theme.js?1688815359" defer></script>
+    <script src="/js/theme.js?1688815358" defer></script>
   </body>
 </html>

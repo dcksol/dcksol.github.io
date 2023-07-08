@@ -253,6 +253,9 @@
     <loc>http://dcksol.site/manim/example/pointwithtrace/index.html</loc>
   </url>
   <url>
+    <loc>http://dcksol.site/docs/ps/index.html</loc>
+  </url>
+  <url>
     <loc>http://dcksol.site/docs/physics/relativity/index.html</loc>
   </url>
   <url>
@@ -283,7 +286,13 @@
     <loc>http://dcksol.site/posts/numericalanalysis/thomas/index.html</loc>
   </url>
   <url>
+    <loc>http://dcksol.site/docs/ps/tips/index.html</loc>
+  </url>
+  <url>
     <loc>http://dcksol.site/manim/tips/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dcksol.site/docs/ps/tips/intdiv/index.html</loc>
   </url>
   <url>
     <loc>http://dcksol.site/manim/tips/preamble/index.html</loc>

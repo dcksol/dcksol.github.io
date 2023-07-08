@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Problem Solving on DCK Solution</title>
+    <link>http://dcksol.site/docs/ps/index.html</link>
+    <description>Recent content in Problem Solving on DCK Solution</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language><atom:link href="http://dcksol.site/docs/ps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tips</title>
+      <link>http://dcksol.site/docs/ps/tips/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://dcksol.site/docs/ps/tips/index.html</guid>
+      <description>사소한 팁들을 다룹니다.
+정수 나눗셈</description>
+    </item>
+  </channel>
+</rss>
