@@ -225,7 +225,7 @@ function getRandomHydrogen(n, l, m, maxP = 1, count = 1000){
   let prob;
   while (counter < COUNT) {
   	r = Math.random() * maxR;
-    theta = Math.random() *  Math.PI;
+    theta = Math.acos(Math.random() * 2 - 1);
     phi = Math.random() * 2 * Math.PI;
     prob = (Math.pow(2 / n, 3) * factorial(n - l - 1) / (2 * n * factorial(n + l))) * Math.exp(-2 * r / n) * Math.pow(2 * r / n, 2 * l) * aslaguerre(2 * r / n, n - l - 1, 2 * l + 1) * sphHarmonics(theta, m, l);
     var pprob = Math.min(1, prob / maxP);
