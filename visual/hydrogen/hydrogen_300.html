@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Hydrogen_300</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<!-- <link type="text/css" rel="stylesheet" href="main.css"> -->
+        <style>
+            body {
+                margin: 0;
+                background-color: #000;
+                color: #fff;
+                font-family: Monospace;
+                font-size: 13px;
+                line-height: 24px;
+                overscroll-behavior: none;
+            }
+
+            a {
+                color: #ff0;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            button {
+                cursor: pointer;
+                text-transform: uppercase;
+            }
+
+            #info {
+                position: absolute;
+                top: 0px;
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+                text-align: center;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                pointer-events: none;
+                z-index: 1; /* TODO Solve this in HTML */
+            }
+
+            a, button, input, select {
+                pointer-events: auto;
+            }
+
+            .dg.ac {
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                z-index: 2 !important; /* TODO Solve this in HTML */
+            }
+
+            #overlay {
+                position: absolute;
+                font-size: 16px;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background: rgba(0,0,0,0.7);
+            }
+
+                #overlay button {
+                    background: transparent;
+                    border: 0;
+                    border: 1px solid rgb(255, 255, 255);
+                    border-radius: 4px;
+                    color: #ffffff;
+                    padding: 12px 18px;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                }
+
+            #notSupported {
+                width: 50%;
+                margin: auto;
+                background-color: #f00;
+                margin-top: 20px;
+                padding: 10px;
+            }
+        </style>
+	</head>
+	<body>
+
+		<!-- <div id="info">sc</div> -->
+		<!-- <div id="info">sc structure! other : <a href="https://dcksol.github.io/crystals/bcc.html"  rel="noopener">bcc</a>, 
+			<a href="https://dcksol.github.io/crystals/fcc.html" rel="noopener">fcc</a>, 
+			<a href="https://dcksol.github.io/crystals/dia.html" rel="noopener">Diamond</a>, 
+			<a href="https://dcksol.github.io/crystals/nacl.html" rel="noopener">NaCl</a>,
+			<a href="https://dcksol.github.io/crystals/hcp.html" rel="noopener">hcp</a></div> -->
+
+		<script type="module">
+import * as THREE from "https://cdn.skypack.dev/three@0.136.0";
+import {
+  OrbitControls
+} from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls.js";
+
+let maxR = 20, dist = 45, n = 3, l = 0, m = 0, maxP = 0.0003;
+
+let scene = new THREE.Scene();
+let camera = new THREE.PerspectiveCamera(60, innerWidth / innerHeight, 1, 1000);
+camera.position.set(0, 0.375, 1).setLength(dist);
+let renderer = new THREE.WebGLRenderer({
+  antialias: true
+});
+renderer.setSize(innerWidth, innerHeight);
+renderer.setClearColor(0x404040);
+document.body.appendChild(renderer.domElement);
+
+let controls = new OrbitControls(camera, renderer.domElement);
+
+let light = new THREE.DirectionalLight(0xffffff, 1);
+light.position.set(0.25, 0.5, 1);
+scene.add(light, new THREE.AmbientLight(0xffffff, 0.5));
+
+
+
+// Hydrogen
+let ptH = getRandomHydrogen(n, l, m, maxP, 100000);
+let ptsH = ptH[0];
+let cols = ptH[1];
+let gH = new THREE.BufferGeometry().setFromPoints(ptsH);
+gH.setAttribute('color', new THREE.Float32BufferAttribute(cols, 3));
+let mH = new THREE.PointsMaterial({size: 0.01, vertexColors: THREE.VertexColors, blending: THREE.AdditiveBlending, transparent : true, sizeAttenuation: true, depthWrite: false});
+let pH = new THREE.Points(gH, mH);
+scene.add(pH);
+
+window.addEventListener("resize", onWindowResize);
+
+animate();
+
+function animate() {
+
+  requestAnimationFrame(animate);
+
+  pH.rotation.y += 0.001;
+  renderer.render(scene, camera);
+
+}
+
+function onWindowResize() {
+
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(innerWidth, innerHeight);
+
+}
+
+
+function factorial(n) {
+    var result = 1;
+    for(var i=2; i<=n; i++) result *= i;
+    return result;
+}
+
+function aslaguerre(x, n, k) {
+	let res = 0;
+  for (let m = 0; m <= n; m++) {
+  	res += Math.pow(-1, m) * factorial(n + k) / factorial(n - m) / factorial(k + m) / factorial(m) * Math.pow(x, m)
+  }
+  return res * res;
+}
+
+
+
+function sphHarmonics(theta, m, l) {
+	if (l == 0) {
+  	return 1 / 4 / Math.PI;
+  }
+  else if (l == 1) {
+  	if (m == 0) {
+    	return 3 / 4 / Math.PI * Math.cos(theta) * Math.cos(theta);
+    }
+    else {
+    	return 3 / 8 / Math.PI * Math.sin(theta) * Math.sin(theta);
+    }
+  }
+  else if (l == 2) {
+  	if (m == 0) {
+    	return 5 / 16 / Math.PI * Math.pow(3 * Math.cos(theta) * Math.cos(theta) - 1, 2);
+    }
+    else if (m == 1) {
+    	return 15 / 8 / Math.PI * Math.pow(Math.sin(theta) * Math.cos(theta), 2);
+    }
+    else {
+    	return 15 / 32 / Math.PI * Math.pow(Math.sin(theta), 2);
+    }
+  }
+  else if (l == 3) {
+  	if (m == 0) {
+    	return 7 / 16 / Math.PI * Math.pow(5 * Math.pow(Math.cos(theta), 3) - 3 * Math.cos(theta), 2);
+    }
+    else if (m == 1) {
+    	return 23 / 64 / Math.PI * Math.pow(Math.sin(theta) * (5 * Math.pow(Math.cos(theta), 2) - 1), 2);
+    }
+    else if (m == 2) {
+    	return 105 / 32 / Math.PI * Math.pow(Math.sin(theta) * Math.sin(theta) * Math.cos(theta), 2);
+    }
+    else {
+    	return 35 / 64 / Math.PI * Math.pow(Math.sin(theta), 6);
+    }
+  }
+}
+
+function getRandomHydrogen(n, l, m, maxP = 1, count = 1000){
+	let pts = [];
+  let cols = [];
+  
+  let counter = 0;
+  let COUNT = count;
+  let r, theta, phi;
+  let prob;
+  while (counter < COUNT) {
+  	r = Math.random() * maxR;
+    theta = Math.random() *  Math.PI;
+    phi = Math.random() * 2 * Math.PI;
+    prob = (Math.pow(2 / n, 3) * factorial(n - l - 1) / (2 * n * factorial(n + l))) * Math.exp(-2 * r / n) * Math.pow(2 * r / n, 2 * l) * aslaguerre(2 * r / n, n - l - 1, 2 * l + 1) * sphHarmonics(theta, m, l);
+    var pprob = Math.min(1, prob / maxP);
+    
+    if (Math.random() <= pprob) {
+    	counter ++;
+      pts.push(new THREE.Vector3(r * Math.sin(theta) * Math.cos(phi), r * Math.cos(theta), r * Math.sin(theta) * Math.sin(phi)));
+      var color = new THREE.Color();
+      color.setHSL(pprob * 31 / 36, 1, 0.5);
+      cols.push(color.r, color.g, color.b);
+      /* cols.push(pprob, 0,1 - pprob); */
+    }
+  }
+  return [pts, cols];
+}
+
+
+
+		</script>
+
+	</body>
+</html>
